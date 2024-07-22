@@ -23,12 +23,34 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
 
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-
+   
     <style>
         @media (max-width: 768px) {
             .animation-container {
                 display: none;
             }
+            #tejdeed-way {
+            padding: 10px !important;
+          }
+    
+          .col-md-5 h1 {
+            font-size: 24px !important;
+            line-height: 36px !important;
+            margin: 0 !important;
+            margin-bottom: 20px !important;
+            text-align: center !important;
+          }
+    
+          .col-md-5 img {
+            max-width: 100% !important;
+            height: auto !important;
+            margin-bottom: 10px !important;
+          }
+    
+          .col-md-7 p {
+            font-size: 18px !important;
+            margin-bottom: 15px !important;
+          }
         }
     </style>
 </head>
@@ -190,8 +212,9 @@
     </script>
 
 
-    
-    <div class="container-fluid" id="responsive-section" style="padding: 0; max-width: 100%; background-color: white; overflow: hidden; box-sizing: border-box;">
+
+    <div class="container-fluid" id="responsive-section"
+        style="padding: 0; max-width: 100%; background-color: white; overflow: hidden; box-sizing: border-box;">
 
         <div class="row no-gutters">
             <!-- Text Section -->
@@ -208,17 +231,19 @@
                         </h3>
                         <h6 data-aos="fade-up"
                             style="margin-top: clamp(2rem, 2vw, 5rem); font-size: clamp(18px, 2.5vw, 18px); line-height: 24px; font-family: 'Inter', sans-serif;">
-                            Recycling food waste into fertilizer not only enriches the soil but also supports environmental
+                            Recycling food waste into fertilizer not only enriches the soil but also supports
+                            environmental
                             sustainability and reduces landfill waste.
                         </h6>
                     </section>
                 </div>
             </div>
-    
+
             <!-- Image Section -->
             <div class="col-md-6 d-flex justify-content-center align-items-center;"
                 style="order: 1; background-color: white; padding-left: 6rem; padding-top: 6rem; box-sizing: border-box;">
-                <div style="height: 475px; position: relative; width: 100%; max-width: 100%; padding: 20px; box-sizing: border-box;">
+                <div
+                    style="height: 475px; position: relative; width: 100%; max-width: 100%; padding: 20px; box-sizing: border-box;">
                     <img style="position: absolute; top: 0; left: 0; width: 100%; height: auto; max-width: 388px; max-height: 299px; object-fit: cover; box-sizing: border-box; padding: 10px;"
                         loading="lazy" alt="" src="assets/fertilizer-img-2.png" />
                     <img style="position: absolute; top: 176px; left: -4rem; width: auto; height: auto; max-width: 229px; object-fit: cover; z-index: 1; box-sizing: border-box;"
@@ -227,7 +252,7 @@
             </div>
         </div>
     </div>
-    
+
 
 
     <div class="container-fluid" id="green-card">
@@ -259,265 +284,212 @@
         </div>
     </div>
 
-
-
-    <!-- <div style="position: relative; width: 90%; max-width: 800px; height: 0; padding-bottom: 90%; border-radius: 50%; background: rgba(255, 255, 255, 0.1); ">
-        <div id="dial" style="position: absolute; top: 50%; left: 50%; width: 90%; height: 90%; transform: translate(-50%, -50%); border-radius: 50%; transition: transform 0.5s ease-in-out;">
-            <div class="icon-container" style="position: absolute; top: 5%; left: 50%;">
-                <img src="assets/trash-bin-png.png" alt="Icon 1" style="width: 40px; height: 40px;">
-            </div>
-            <div class="icon-container" style="position: absolute; top: 50%; right: 5%; transform: translate(50%, -50%);">
-                <img src="assets/truck-image.svg" alt="Icon 2" style="width: 40px; height: 40px;">
-            </div>
-            <div class="icon-container" style="position: absolute; bottom: 5%; left: 50%; transform: translate(-50%, 50%);">
-                <img src="assets/grow-plant.svg" alt="Icon 3" style="width: 40px; height: 40px;">
-            </div>
-            <div class="icon-container" style="position: absolute; top: 50%; left: 5%; transform: translate(-50%, -50%);">
-                <img src="assets/food.svg" alt="Icon 4" style="width: 40px; height: 40px;">
-            </div>
-        </div>
-        <div id="description" style="position: absolute; top: 50%; left: 50%; width: 60%; transform: translate(-50%, -50%); text-align: center;">
-            <h2 style="margin: 0;">Step <span id="step-number">1</span></h2>
-            <p id="step-description">Description for step 1</p>
-        </div>
-        <button id="prev" onclick="rotateDial(-1)" style="position: absolute; top: 50%; left: -20px; transform: translateY(-50%); background: none; border: 2px solid grey; border-radius: 50%; width: 40px; height: 40px; color: black; cursor: pointer;">&lt;</button>
-        <button id="next" onclick="rotateDial(1)" style="position: absolute; top: 50%; right: -20px; transform: translateY(-50%); background: none; border: 2px solid grey; border-radius: 50%; width: 40px; height: 40px; color: black; cursor: pointer;">&gt;</button>
-    </div>
-
-    <script>
-        let currentStep = 0;
-        const steps = [
-            { number: 1, description: "Description for step 1" },
-            { number: 2, description: "Description for step 2" },
-            { number: 3, description: "Description for step 3" },
-            { number: 4, description: "Description for step 4" }
-        ];
-
-        function rotateDial(direction) {
-            currentStep = (currentStep + direction + steps.length) % steps.length;
-            const dial = document.getElementById('dial');
-            dial.style.transform = `translate(-50%, -50%) rotate(${currentStep * -90}deg)`;
-            document.getElementById('step-number').innerText = steps[currentStep].number;
-            document.getElementById('step-description').innerText = steps[currentStep].description;
-        }
-    </script> -->
-
-
-    <!-- <div style="position: relative; width: 80%; max-width: 600px; height: 0; padding-bottom: 80%; border-radius: 50%; background: rgba(255, 255, 255, 0.1); overflow: hidden;">
-        <div id="dial" style="position: absolute; top: 50%; left: 50%; width: 80%; height: 80%; transform: translate(-50%, -50%); border-radius: 50%; transition: transform 0.5s ease-in-out;">
-            <div class="icon-container" style="position: absolute; top: 5%; left: 50%; transform: translate(-50%, -50%);">
-                <img src="assets/trash-bin-image.svg" alt="Icon 1" style="width: 30px; height: 30px;">
-            </div>
-            <div class="icon-container" style="position: absolute; top: 50%; right: 5%; transform: translate(50%, -50%);">
-                <img src="assets/truck-image.svg" alt="Icon 2" style="width: 30px; height: 30px;">
-            </div>
-            <div class="icon-container" style="position: absolute; bottom: 5%; left: 50%; transform: translate(-50%, 50%);">
-                <img src="assets/grow-plant.svg" alt="Icon 3" style="width: 30px; height: 30px;">
-            </div>
-            <div class="icon-container" style="position: absolute; top: 50%; left: 5%; transform: translate(-50%, -50%);">
-                <img src="assets/food.svg" alt="Icon 4" style="width: 30px; height: 30px;">
-            </div>
-        </div>
-        <div id="description" style="position: absolute; top: 50%; left: 50%; width: 60%; transform: translate(-50%, -50%); text-align: center;">
-            <h2 style="margin: 0; font-size: 1.5rem;">Step <span id="step-number">1</span></h2>
-            <p id="step-description" style="font-size: 1rem;">Description for step 1</p>
-        </div>
-        <button id="prev" onclick="rotateDial(-1)" style="position: absolute; top: 50%; left: -15px; transform: translateY(-50%); background: none; border: 2px solid grey; border-radius: 50%; width: 30px; height: 30px; color: black; cursor: pointer;">&lt;</button>
-        <button id="next" onclick="rotateDial(1)" style="position: absolute; top: 50%; right: -15px; transform: translateY(-50%); background: none; border: 2px solid grey; border-radius: 50%; width: 30px; height: 30px; color: black; cursor: pointer;">&gt;</button>
-    </div>
-
-    <script>
-        let currentStep = 0;
-        const steps = [
-            { number: 1, description: "Description for step 1" },
-            { number: 2, description: "Description for step 2" },
-            { number: 3, description: "Description for step 3" },
-            { number: 4, description: "Description for step 4" }
-        ];
-
-        function rotateDial(direction) {
-            currentStep = (currentStep + direction + steps.length) % steps.length;
-            const dial = document.getElementById('dial');
-            dial.style.transform = `translate(-50%, -50%) rotate(${currentStep * -90}deg)`;
-            document.getElementById('step-number').innerText = steps[currentStep].number;
-            document.getElementById('step-description').innerText = steps[currentStep].description;
-        }
-    </script> -->
-
-
-
-
-<!-- <div style="position: relative; width: 100%; height: auto; background: #00a651; padding: 50px 0;">
-    <div style="position: relative; width: 100%; max-width: 760px; height: 760px; margin: auto;">
-        <img src="assets/ellipse-3.svg" style="position: absolute; width: 100%; height: 100%; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 1;">
-        <img src="assets/ellipse-2.svg" style="position: absolute; width: 80%; height: 80%; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 2;">
-        <div id="dial" style="position: absolute; top: 50%; left: 50%; width: 80%; height: 80%; transform: translate(-50%, -50%) rotate(0deg); border-radius: 50%; transition: transform 0.5s ease-in-out; z-index: 3;">
-            <div class="icon-container" style="position: absolute; top: 5%; left: 50%; transform: translate(-50%, -50%) rotate(0deg);">
-                <img src="assets/truck.svg" alt="Icon 1" style="width: 30px; height: 30px;">
-            </div>
-            <div class="icon-container" style="position: absolute; top: 50%; right: 5%; transform: translate(50%, -50%) rotate(0deg);">
-                <img src="assets/trash-bin.svg" alt="Icon 2" style="width: 30px; height: 30px;">
-            </div>
-            <div class="icon-container" style="position: absolute; bottom: 5%; left: 50%; transform: translate(-50%, 50%) rotate(0deg);">
-                <img src="assets/tajdeed-animation-icon.svg" alt="Icon 3" style="width: 30px; height: 30px;">
-            </div>
-            <div class="icon-container" style="position: absolute; top: 50%; left: 5%; transform: translate(-50%, -50%) rotate(0deg);">
-                <img src="assets/soil.svg" alt="Icon 4" style="width: 30px; height: 30px;">
-            </div>
-            <div class="icon-container" style="position: absolute; top: 50%; left: 5%; transform: translate(-50%, -50%) rotate(0deg);">
-                <img src="assets/carrot.svg" alt="Icon 5" style="width: 30px; height: 30px;">
-            </div>
-        </div>
-        <div id="description" style="position: absolute; top: 50%; left: 50%; width: 60%; transform: translate(-50%, -50%); text-align: center; z-index: 4;">
-            <h2 style="margin: 0; font-size: 1.5rem; color: white;">Step <span id="step-number">1</span></h2>
-            <p id="step-description" style="font-size: 1rem; color: white;">Tejedec Waste Bins distributed to restaurants and food processors.</p>
-        </div>
-        <button id="prev" onclick="rotateDial(-1)" style="position: absolute; top: 50%; left: -15px; transform: translateY(-50%); background: gray; border: 2px solid white; border-radius: 50%; width: 50px; height: 50px; color: black; cursor: pointer;">&lt;</button>
-        <button id="next" onclick="rotateDial(1)" style="position: absolute; top: 50%; right: -15px; transform: translateY(-50%); background: gray; border: 2px solid white; border-radius: 50%; width: 50px; height: 50px; color: black; cursor: pointer;">&gt;</button>
-    </div>
-</div>
-
-<script>
-    let currentStep = 0;
-    const steps = [
-        { number: 1, description: "Tejedec Waste Bins distributed to restaurants and food processors." },
-        { number: 2, description: "Food waste collected and transported to the processing facility." },
-        { number: 3, description: "Waste processed and converted into valuable products." },
-        { number: 4, description: "Products distributed to customers and partners." },
-        { number: 5, description: "Products distributed to customers and partners." }
-    ];
-
-    function rotateDial(direction) {
-        currentStep = (currentStep + direction + steps.length) % steps.length;
-        const dial = document.getElementById('dial');
-        const angle = currentStep * -90;
-        dial.style.transform = `translate(-50%, -50%) rotate(${angle}deg)`;
-
-        // Update icons' rotation to counteract the dial rotation
-        // const icons = document.querySelectorAll('.icon-container');
-        // icons.forEach(icon => {
-        //     icon.style.transform = `translate(-50%, -50%) rotate(${angle}deg)`;
-        // });
-
-        document.getElementById('step-number').innerText = steps[currentStep].number;
-        document.getElementById('step-description').innerText = steps[currentStep].description;
-    }
-</script> -->
-
-
-
-<div class="animation-container" style="position: relative; width: 100%; height: auto; background: #00a651; padding: 50px 0;">
-    <h1 style="margin-left: 40px; width: 224px; height: 48px; font-family: 'Askan'; font-style: normal; font-weight: 500; font-size: 42px; line-height: 48px; text-transform: capitalize; color: white;">Our Process</h1>
-    <div style="position: relative; width: 100%; max-width: 760px; height: 760px; margin: auto;">
-        <img src="assets/ellipse-3.svg" style="position: absolute; width: 100%; height: 100%; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 1;">
-        <!-- <div style="position: relative; width: 135px; height: 19px; left: 100%; top: 30%; transform: translate(-50%, -50%) rotate(0deg); font-family: 'Inter'; font-style: normal; font-weight: 400; font-size: 16px; line-height: 19px; text-align: left; letter-spacing: -0.01em; text-transform: uppercase; color: #FFFFFF;">Consumamtion</div>
+    <div class="animation-container"
+        style="position: relative; width: 100%; height: auto; background: #00a651; padding: 50px 0;">
+        <h1
+            style="margin-left: 40px; width: 224px; height: 48px; font-family: 'Askan'; font-style: normal; font-weight: 500; font-size: 42px; line-height: 48px; text-transform: capitalize; color: white;">
+            Our Process</h1>
+        <div style="position: relative; width: 100%; max-width: 760px; height: 760px; margin: auto;">
+            <img src="assets/ellipse-3.svg"
+                style="position: absolute; width: 100%; height: 100%; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 1;">
+            <!-- <div style="position: relative; width: 135px; height: 19px; left: 100%; top: 30%; transform: translate(-50%, -50%) rotate(0deg); font-family: 'Inter'; font-style: normal; font-weight: 400; font-size: 16px; line-height: 19px; text-align: left; letter-spacing: -0.01em; text-transform: uppercase; color: #FFFFFF;">Consumamtion</div>
         <div style="position: relative; width: 135px; height: 19px;  top: 30%; transform: translate(-50%, -50%) rotate(0deg); font-family: 'Inter'; font-style: normal; font-weight: 400; font-size: 16px; line-height: 19px; text-align: left; letter-spacing: -0.01em; text-transform: uppercase; color: #FFFFFF;">PRODUCTION</div>
         <div style="position: relative; width: 135px; height: 19px; left: 100%; top: 70%; transform: translate(-50%, -50%) rotate(0deg); font-family: 'Inter'; font-style: normal; font-weight: 400; font-size: 16px; line-height: 19px; text-align: right; letter-spacing: -0.01em; text-transform: uppercase; color: #FFFFFF;">Collection</div>
         <div style="position: relative; width: 135px; height: 19px;  top: 70%; transform: translate(-50%, -50%) rotate(0deg); font-family: 'Inter'; font-style: normal; font-weight: 400; font-size: 16px; line-height: 19px; text-align: left; letter-spacing: -0.01em; text-transform: uppercase; color: #FFFFFF;">PROCESSING</div> -->
-        <img src="assets/ellipse-2.svg" style="position: absolute; width: 80%; height: 80%; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 2;">
-        
-        <div id="dial" style="position: absolute; top: 50%; left: 50%; width: 80%; height: 80%; transform: translate(-50%, -50%) rotate(0deg); border-radius: 50%; transition: transform 0.5s ease-in-out; z-index: 3;">
-            <div class="icon-container" style="position: absolute; top: 5%; left: 50%; transform: translate(-50%, -50%) rotate(0deg);">
-                <img src="assets/truck.svg" alt="Icon 1" style="width: 30px; height: 30px;">
+            <img src="assets/ellipse-2.svg"
+                style="position: absolute; width: 80%; height: 80%; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 2;">
+
+            <div id="dial"
+                style="position: absolute; top: 50%; left: 50%; width: 80%; height: 80%; transform: translate(-50%, -50%) rotate(0deg); border-radius: 50%; transition: transform 0.5s ease-in-out; z-index: 3;">
+                <div class="icon-container"
+                    style="position: absolute; top: 5%; left: 50%; transform: translate(-50%, -50%) rotate(0deg);">
+                    <img src="assets/truck.svg" alt="Icon 1" style="width: 30px; height: 30px;">
+                </div>
+                <div class="icon-container"
+                    style="position: absolute; top: 50%; right: 5%; transform: translate(50%, -50%) rotate(0deg);">
+                    <img src="assets/trash-bin.svg" alt="Icon 2" style="width: 30px; height: 30px;">
+                </div>
+                <div class="icon-container"
+                    style="position: absolute; bottom: 5%; left: 50%; transform: translate(-50%, 50%) rotate(0deg);">
+                    <img src="assets/tajdeed-animation-icon.svg" alt="Icon 3" style="width: 30px; height: 30px;">
+                </div>
+                <div class="icon-container"
+                    style="position: absolute; top: 50%; left: 5%; transform: translate(-50%, -50%) rotate(0deg);">
+                    <img src="assets/soil.svg" alt="Icon 4" style="width: 30px; height: 30px;">
+                </div>
+
             </div>
-            <div class="icon-container" style="position: absolute; top: 50%; right: 5%; transform: translate(50%, -50%) rotate(0deg);">
-                <img src="assets/trash-bin.svg" alt="Icon 2" style="width: 30px; height: 30px;">
+            <div id="description"
+                style="position: absolute; top: 50%; left: 50%; width: 60%; transform: translate(-50%, -50%); text-align: center; z-index: 4;">
+                <h2 style="margin: 0; font-size: 2rem; color: white;">Step <span id="step-number">1</span></h2>
+                <p id="step-description" style=" font-size: 1.5rem; color: rgb(255, 255, 255);">Tejedec Waste Bins
+                    distributed to restaurants and food processors.</p>
             </div>
-            <div class="icon-container" style="position: absolute; bottom: 5%; left: 50%; transform: translate(-50%, 50%) rotate(0deg);">
-                <img src="assets/tajdeed-animation-icon.svg" alt="Icon 3" style="width: 30px; height: 30px;">
-            </div>
-            <div class="icon-container" style="position: absolute; top: 50%; left: 5%; transform: translate(-50%, -50%) rotate(0deg);">
-                <img src="assets/soil.svg" alt="Icon 4" style="width: 30px; height: 30px;">
-            </div>
-           
+            <button id="prev" onclick="rotateDial(-1)"
+                style="position: absolute; top: 50%; left: -100px; transform: translateY(-50%); background: transparent; border: 2px solid white; border-radius: 50%; width: 50px; height: 50px; color: white; cursor: pointer; z-index: 5;">&larr;</button>
+            <button id="next" onclick="rotateDial(1)"
+                style="position: absolute; top: 50%; right: -100px; transform: translateY(-50%); background: transparent; border: 2px solid white; border-radius: 50%; width: 50px; height: 50px; color: white; cursor: pointer; z-index: 5;">&rarr;</button>
         </div>
-        <div id="description" style="position: absolute; top: 50%; left: 50%; width: 60%; transform: translate(-50%, -50%); text-align: center; z-index: 4;">
-            <h2 style="margin: 0; font-size: 2rem; color: white;">Step <span id="step-number">1</span></h2>
-            <p id="step-description" style=" font-size: 1.5rem; color: rgb(255, 255, 255);">Tejedec Waste Bins distributed to restaurants and food processors.</p>
-        </div>
-        <button id="prev" onclick="rotateDial(-1)" style="position: absolute; top: 50%; left: -100px; transform: translateY(-50%); background: transparent; border: 2px solid white; border-radius: 50%; width: 50px; height: 50px; color: white; cursor: pointer; z-index: 5;">&larr;</button>
-        <button id="next" onclick="rotateDial(1)" style="position: absolute; top: 50%; right: -100px; transform: translateY(-50%); background: transparent; border: 2px solid white; border-radius: 50%; width: 50px; height: 50px; color: white; cursor: pointer; z-index: 5;">&rarr;</button>
     </div>
-</div>
 
-<script>
-    let currentStep = 0;
-    const steps = [
-        { number: 1, description: "Tejedec Waste Bins distributed to restaurants and food processors." },
-        { number: 2, description: "Food waste collected and transported to the processing facility." },
-        { number: 3, description: "Waste processed and converted into valuable products." },
-        { number: 4, description: "Products distributed to customers and partners." }
-    ];
+    <script>
+        let currentStep = 0;
+        const steps = [
+            { number: 1, description: "Tejedec Waste Bins distributed to restaurants and food processors." },
+            { number: 2, description: "Food waste collected and transported to the processing facility." },
+            { number: 3, description: "Waste processed and converted into valuable products." },
+            { number: 4, description: "Products distributed to customers and partners." }
+        ];
 
-    function rotateDial(direction) {
-        currentStep = (currentStep + direction + steps.length) % steps.length;
-        const dial = document.getElementById('dial');
-        const angle = currentStep * -90; // 360 degrees / 5 steps = 72 degrees per step
-        dial.style.transform = `translate(-50%, -50%) rotate(${angle}deg)`;
+        function rotateDial(direction) {
+            currentStep = (currentStep + direction + steps.length) % steps.length;
+            const dial = document.getElementById('dial');
+            const angle = currentStep * -90; // 360 degrees / 5 steps = 72 degrees per step
+            dial.style.transform = `translate(-50%, -50%) rotate(${angle}deg)`;
 
-        // Keep icons upright
-        const icons = document.querySelectorAll('.icon-container img');
-        icons.forEach(icon => {
-            icon.style.transform = `rotate(${-angle}deg)`;
-        });
+            // Keep icons upright
+            const icons = document.querySelectorAll('.icon-container img');
+            icons.forEach(icon => {
+                icon.style.transform = `rotate(${-angle}deg)`;
+            });
 
-        document.getElementById('step-number').innerText = steps[currentStep].number;
-        document.getElementById('step-description').innerText = steps[currentStep].description;
+            document.getElementById('step-number').innerText = steps[currentStep].number;
+            document.getElementById('step-description').innerText = steps[currentStep].description;
 
-        // Highlight the current step icon
-        document.querySelectorAll('.icon-container img').forEach((img, index) => {
-            if (index === currentStep) {
-                img.parentElement.style.backgroundColor = '#f5cd61';
-                img.parentElement.style.borderRadius = '50%';
-                img.parentElement.style.padding = '5px';
-            } else {
-                img.parentElement.style.backgroundColor = 'transparent';
-                img.parentElement.style.padding = '0';
-            }
-        });
-    }
-</script>
-
+            // Highlight the current step icon
+            document.querySelectorAll('.icon-container img').forEach((img, index) => {
+                if (index === currentStep) {
+                    img.parentElement.style.backgroundColor = '#f5cd61';
+                    img.parentElement.style.borderRadius = '50%';
+                    img.parentElement.style.padding = '5px';
+                } else {
+                    img.parentElement.style.backgroundColor = 'transparent';
+                    img.parentElement.style.padding = '0';
+                }
+            });
+        }
+    </script>
 
 
-
-
-
-<div style="display: flex; flex-direction: column; align-items: center; gap: 32px; padding: 32px 20px; background-color: #25734a;">
-    <div style="width: 100%; max-width: calc(100% - 40px); padding: 0 5%; box-sizing: border-box;">
-      <div style="width: 100%; display: block; justify-content: space-between; padding-bottom: 20px;">
-        <div data-aos="fade-up"><img src="assets/tajdeed-logo-union.svg" alt="Logo" style="width: 133px; height: 33.85px;">
-        </div>
-          <div data-aos="fade-up" style="display: flex; gap: 16px; flex-wrap: wrap; justify-content: flex-end;">
-            <img src="assets/facebook.svg" alt="Facebook" style="width: 32px; height: 32px;" />
-            <img src="assets/linkedin.svg" alt="LinkedIn" style="width: 32px; height: 32px;" />
-            <img src="assets/youtube.svg" alt="YouTube" style="width: 32px; height: 32px;" />
-            <img src="assets/twitter.svg" alt="Twitter" style="width: 32px; height: 32px;" />
+    <div class="container-fluid" id="join-way" style="background-color: #f7f7f7; padding:clamp(1rem, 4vw, 4rem);">
+        <div class="row" data-aos="fade-up">
+          <div class="col-md-5">
+            <h1 data-aos="fade-up" 
+              style="padding-bottom: 8rem; margin-left: 100px; margin-bottom: 300px; line-height: 48px; font-weight:  00; font-family: ABeeZee; color: #123627;">
+              Join Us</h1>
+            <img class="img-fluid men-at-work-1" src="public/rectangle-351@2x.png" alt="men-at-work">
           </div>
-      </div>
-      <div data-aos="fade-up" style="box-sizing: border-box; display: flex; flex-direction: row; justify-content: space-between; align-items: center; padding: 32px 0; gap: 32px; width: 100%; border-top: 0.5px solid rgba(255, 255, 255, 0.2);">
-        <div style="font-size: clamp(1.5rem, 2vw, 2.625rem); color: #ffffff; font-family: 'IBM Plex Sans', sans-serif; font-weight: 500;">Get in <br />Touch</div>
-        <div style="display: flex; align-items: center; gap: 32px; flex-wrap: wrap; justify-content: center;">
-          <div style="display: flex; align-items: center; gap: 12px; color: #ffffff; font-size: clamp(0.875rem, 1.2vw, 1rem);">
-            <img src="assets/phone-icon.svg" alt="Phone" style="width: 24px; height: 24px;" />
-            <span style="font-family: 'Plus Jakarta Sans'; font-weight: 500;">+971 50 841 5960</span>
-          </div>
-          <div style="display: flex; align-items: center; gap: 12px; color: #ffffff; font-size: clamp(0.875rem, 1.2vw, 1rem);">
-            <img src="assets/phone-icon.svg" alt="Email" style="width: 24px; height: 24px;" />
-            <span style="font-family: 'Plus Jakarta Sans'; font-weight: 500;">info@tejdeed.com</span>
-          </div>
-          <div style="display: flex; align-items: center; gap: 12px; color: #ffffff; font-size: clamp(0.875rem, 1.2vw, 1rem);">
-            <img src="assets/phone-icon.svg" alt="Phone" style="width: 24px; height: 24px;" />
-            <span style="font-family: 'Plus Jakarta Sans'; font-weight: 500;">+971 50 841 5960</span>
+          <div class="col-md-7">
+            <div style="gap: 0.9375rem;  padding-bottom: 4.75rem;">
+                
+                <h2
+                    style="padding: 10px 0; width: 100%; font-family: 'Plus Jakarta Sans'; font-weight: 400; font-size: clamp(1.25rem, 3vw, 1.625rem); line-height: clamp(2rem, 4vw, 2.375rem); color: #123627;">
+                    We invite restaurants, factories, and large food processing companies to join us in our mission to create a greener, cleaner future for everyone. By partnering with us, you not only reduce your environmental footprint but also contribute to the growth of sustainable agriculture.
+                </h2>
+
+                <button
+                    style="cursor: pointer; box-sizing: border-box; display: flex; flex-direction: row; justify-content: center; align-items: center; padding: 0.75rem 1.875rem; gap: 0.625rem; background: #009E4C; border: 0.5px solid #F7F7F7; border-radius: 0.6875rem;">
+                    <div
+                        style="font-family: 'Plus Jakarta Sans'; font-weight: 500; font-size: 1.125rem; line-height: 1.4375rem; text-align: center; text-transform: capitalize; color: #F7F7F7;">
+                        Join Us</div>
+                </button>
+            </div>
+            <img class="img-fluid men-at-work-2" src="public/rectangle-341@2x.png" alt="men-at-work">
+            <p data-aos="fade-up"
+              style="padding-top: 50px; font-family: 'Plus Jakarta Sans'; font-size: 26px; font-style: normal; font-weight: 400; color: #123627;">
+              Let's work together to turn food waste into opportunity and make a positive impact on our environment.
+              Join Tejdeed Fertilizers today and let's move towards a more green and sustainable future for everyone.
+            </p>
           </div>
         </div>
       </div>
-      <div style="width: 100%; display: flex; flex-direction: column; align-items: center; border-top: 0.5px solid rgba(255, 255, 255, 0.2); padding: 20px 0; text-align: center; color: #ffffff; font-size: clamp(0.75rem, 1vw, 0.875rem);">
-        <p style="margin: 10px 0;">© Tajdeed 2024</p>
-        <!-- <p style="margin: 10px 0;">Due Ltd Is Registered In England And Wales (company Number 14369984). Due Ltd Is A Technology Services Provider, Not A Bank. Cryptocurrency-related Services Provided By Due Payments Eood And Its Partner(s). Due Payments Eood (uic 207457701) Is Registered As A Virtual Assets Service Provider With The National Revenue Agency Of Bulgaria.</p> -->
-      </div>
+
+
+    <div class="container-fluid" data-aos="fade-up" id="contact-us" >
+        <div class="row" data-aos="fade-up">
+            <div class="col-md-6 d-flex align-items-center justify-content-center p-0" style="height: 100vh; background-color: #f7f7f7;">
+                <div
+                    style="width: 100%; height: 100%; background: url('assets/join-us.png') no-repeat center center; background-size: cover;">
+                </div>
+            </div>
+            <div class="col-md-6 d-flex align-items-center justify-content-center p-0" style="height: 100vh; background-color: #f7f7f7;">
+                <section
+                    style="width: 100%; max-width: 40.875rem; padding-left: 5vw; padding-right: 5vw; margin: 0 auto;">
+                    <div>
+                        <div style="gap: 0.9375rem;">
+                            <h1
+                                style="width: 100%; font-family: 'Askan'; font-weight: 500; font-size: clamp(2rem, 5vw, 2.625rem); line-height: 3rem; text-transform: capitalize; color: #123627;">
+                                Contact us
+                            </h1>
+                            <h2
+                                style="padding: 10px 0; width: 100%; font-family: 'Plus Jakarta Sans'; font-weight: 400; font-size: clamp(1.25rem, 3vw, 1.625rem); line-height: clamp(2rem, 4vw, 2.375rem); color: #123627;">
+                                For more information, contact us. We are dedicated to providing the highest quality
+                                organic fertilizers locally.
+                            </h2>
+
+                            <button
+                                style="cursor: pointer; box-sizing: border-box; display: flex; flex-direction: row; justify-content: center; align-items: center; padding: 0.75rem 1.875rem; gap: 0.625rem; background: #009E4C; border: 0.5px solid #F7F7F7; border-radius: 0.6875rem;">
+                                <div
+                                    style="font-family: 'Plus Jakarta Sans'; font-weight: 500; font-size: 1.125rem; line-height: 1.4375rem; text-align: center; text-transform: capitalize; color: #F7F7F7;">
+                                    Email Us</div>
+                            </button>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
     </div>
-  </div>
+
+
+    
+
+
+
+
+    <div
+        style="display: flex; flex-direction: column; align-items: center; gap: 32px; padding: 32px 20px; background-color: #25734a;">
+        <div style="width: 100%; max-width: calc(100% - 40px); padding: 0 5%; box-sizing: border-box;">
+            <div style="width: 100%; display: block; justify-content: space-between; padding-bottom: 20px;">
+                <div data-aos="fade-up"><img src="assets/tajdeed-logo-union.svg" alt="Logo"
+                        style="width: 133px; height: 33.85px;">
+                </div>
+                <div data-aos="fade-up" style="display: flex; gap: 16px; flex-wrap: wrap; justify-content: flex-end;">
+                    <img src="assets/facebook.svg" alt="Facebook" style="width: 32px; height: 32px;" />
+                    <img src="assets/linkedin.svg" alt="LinkedIn" style="width: 32px; height: 32px;" />
+                    <img src="assets/youtube.svg" alt="YouTube" style="width: 32px; height: 32px;" />
+                    <img src="assets/twitter.svg" alt="Twitter" style="width: 32px; height: 32px;" />
+                </div>
+            </div>
+            <div data-aos="fade-up"
+                style="box-sizing: border-box; display: flex; flex-direction: row; justify-content: space-between; align-items: center; padding: 32px 0; gap: 32px; width: 100%; border-top: 0.5px solid rgba(255, 255, 255, 0.2);">
+                <div
+                    style="font-size: clamp(1.5rem, 2vw, 2.625rem); color: #ffffff; font-family: 'IBM Plex Sans', sans-serif; font-weight: 500;">
+                    Get in <br />Touch</div>
+                <div style="display: flex; align-items: center; gap: 32px; flex-wrap: wrap; justify-content: center;">
+                    <div
+                        style="display: flex; align-items: center; gap: 12px; color: #ffffff; font-size: clamp(0.875rem, 1.2vw, 1rem);">
+                        <img src="assets/phone-icon.svg" alt="Phone" style="width: 24px; height: 24px;" />
+                        <span style="font-family: 'Plus Jakarta Sans'; font-weight: 500;">+971 50 841 5960</span>
+                    </div>
+                    <div
+                        style="display: flex; align-items: center; gap: 12px; color: #ffffff; font-size: clamp(0.875rem, 1.2vw, 1rem);">
+                        <img src="assets/phone-icon.svg" alt="Email" style="width: 24px; height: 24px;" />
+                        <span style="font-family: 'Plus Jakarta Sans'; font-weight: 500;">info@tejdeed.com</span>
+                    </div>
+                    <div
+                        style="display: flex; align-items: center; gap: 12px; color: #ffffff; font-size: clamp(0.875rem, 1.2vw, 1rem);">
+                        <img src="assets/phone-icon.svg" alt="Phone" style="width: 24px; height: 24px;" />
+                        <span style="font-family: 'Plus Jakarta Sans'; font-weight: 500;">+971 50 841 5960</span>
+                    </div>
+                </div>
+            </div>
+            <div
+                style="width: 100%; display: flex; flex-direction: column; align-items: center; border-top: 0.5px solid rgba(255, 255, 255, 0.2); padding: 20px 0; text-align: center; color: #ffffff; font-size: clamp(0.75rem, 1vw, 0.875rem);">
+                <p style="margin: 10px 0;">© Tajdeed 2024</p>
+                <!-- <p style="margin: 10px 0;">Due Ltd Is Registered In England And Wales (company Number 14369984). Due Ltd Is A Technology Services Provider, Not A Bank. Cryptocurrency-related Services Provided By Due Payments Eood And Its Partner(s). Due Payments Eood (uic 207457701) Is Registered As A Virtual Assets Service Provider With The National Revenue Agency Of Bulgaria.</p> -->
+            </div>
+        </div>
+    </div>
 
 
 
