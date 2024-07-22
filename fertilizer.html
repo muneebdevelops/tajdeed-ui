@@ -27,7 +27,7 @@
     <style>
         @media (max-width: 768px) {
             .animation-container {
-                display: none;
+                display: block;
             }
             #tejdeed-way {
             padding: 10px !important;
@@ -289,33 +289,35 @@
         <h1
             style="margin-left: 40px; width: 224px; height: 48px; font-family: 'Askan'; font-style: normal; font-weight: 500; font-size: 42px; line-height: 48px; text-transform: capitalize; color: white;">
             Our Process</h1>
-        <div style="position: relative; width: 100%; max-width: 760px; height: 760px; margin: auto;">
+        <div class="container-fluid" style="position: relative; width: 100%; max-width: 760px; height: 760px; margin: auto;">
             <img src="assets/ellipse-3.svg"
                 style="position: absolute; width: 100%; height: 100%; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 1;">
             <!-- <div style="position: relative; width: 135px; height: 19px; left: 100%; top: 30%; transform: translate(-50%, -50%) rotate(0deg); font-family: 'Inter'; font-style: normal; font-weight: 400; font-size: 16px; line-height: 19px; text-align: left; letter-spacing: -0.01em; text-transform: uppercase; color: #FFFFFF;">Consumamtion</div>
         <div style="position: relative; width: 135px; height: 19px;  top: 30%; transform: translate(-50%, -50%) rotate(0deg); font-family: 'Inter'; font-style: normal; font-weight: 400; font-size: 16px; line-height: 19px; text-align: left; letter-spacing: -0.01em; text-transform: uppercase; color: #FFFFFF;">PRODUCTION</div>
         <div style="position: relative; width: 135px; height: 19px; left: 100%; top: 70%; transform: translate(-50%, -50%) rotate(0deg); font-family: 'Inter'; font-style: normal; font-weight: 400; font-size: 16px; line-height: 19px; text-align: right; letter-spacing: -0.01em; text-transform: uppercase; color: #FFFFFF;">Collection</div>
         <div style="position: relative; width: 135px; height: 19px;  top: 70%; transform: translate(-50%, -50%) rotate(0deg); font-family: 'Inter'; font-style: normal; font-weight: 400; font-size: 16px; line-height: 19px; text-align: left; letter-spacing: -0.01em; text-transform: uppercase; color: #FFFFFF;">PROCESSING</div> -->
-            <img src="assets/ellipse-2.svg"
+            
+        <div class="container-fluid">
+        <img src="assets/ellipse-2.svg"
                 style="position: absolute; width: 80%; height: 80%; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 2;">
 
             <div id="dial"
                 style="position: absolute; top: 50%; left: 50%; width: 80%; height: 80%; transform: translate(-50%, -50%) rotate(0deg); border-radius: 50%; transition: transform 0.5s ease-in-out; z-index: 3;">
                 <div class="icon-container"
                     style="position: absolute; top: 5%; left: 50%; transform: translate(-50%, -50%) rotate(0deg);">
-                    <img src="assets/truck.svg" alt="Icon 1" style="width: 30px; height: 30px;">
+                    <img src="assets/truck.svg" alt="Icon 1" style="width: 30px; height: 30px;" onclick="rotateDial(1)" >
                 </div>
                 <div class="icon-container"
                     style="position: absolute; top: 50%; right: 5%; transform: translate(50%, -50%) rotate(0deg);">
-                    <img src="assets/trash-bin.svg" alt="Icon 2" style="width: 30px; height: 30px;">
+                    <img src="assets/trash-bin.svg" alt="Icon 2" style="width: 30px; height: 30px;" onclick="rotateDial(1)" >
                 </div>
                 <div class="icon-container"
                     style="position: absolute; bottom: 5%; left: 50%; transform: translate(-50%, 50%) rotate(0deg);">
-                    <img src="assets/tajdeed-animation-icon.svg" alt="Icon 3" style="width: 30px; height: 30px;">
+                    <img src="assets/tajdeed-animation-icon.svg" alt="Icon 3" style="width: 30px; height: 30px;" onclick="rotateDial(1)" >
                 </div>
                 <div class="icon-container"
                     style="position: absolute; top: 50%; left: 5%; transform: translate(-50%, -50%) rotate(0deg);">
-                    <img src="assets/soil.svg" alt="Icon 4" style="width: 30px; height: 30px;">
+                    <img src="assets/soil.svg" alt="Icon 4" style="width: 30px; height: 30px;" onclick="rotateDial(1)" >
                 </div>
 
             </div>
@@ -325,10 +327,11 @@
                 <p id="step-description" style=" font-size: 1.5rem; color: rgb(255, 255, 255);">Tejedec Waste Bins
                     distributed to restaurants and food processors.</p>
             </div>
-            <button id="prev" onclick="rotateDial(-1)"
+            <button class="d-none d-lg-block" id="prev" onclick="rotateDial(-1)"
                 style="position: absolute; top: 50%; left: -100px; transform: translateY(-50%); background: transparent; border: 2px solid white; border-radius: 50%; width: 50px; height: 50px; color: white; cursor: pointer; z-index: 5;">&larr;</button>
-            <button id="next" onclick="rotateDial(1)"
+            <button class="d-none d-lg-block" id="next" onclick="rotateDial(1)"
                 style="position: absolute; top: 50%; right: -100px; transform: translateY(-50%); background: transparent; border: 2px solid white; border-radius: 50%; width: 50px; height: 50px; color: white; cursor: pointer; z-index: 5;">&rarr;</button>
+        </div>
         </div>
     </div>
 
