@@ -122,17 +122,17 @@
 
 
     <div data-aos="fade-up"
-        style="display: flex; flex-direction: column; height: 600px; align-items: center; justify-content: center; gap: 30px; position: relative; background-color: #009e4c;">
+        style="display: flex; flex-direction: column; height: clamp(300px,55vw,600px); align-items: left; justify-content: center; gap: 30px; position: relative; background-color: #009e4c; padding-left: 5vw;">
         <div
-            style="display: flex; flex-direction: column; width: 100%; max-width: 1050px; align-items: center; gap: 30px; position: relative; flex: 0 0 auto;">
+            style="display: flex; flex-direction: column; width: 100%; max-width: 1050px; align-items: left; gap: 30px; position: relative; flex: 0 0 auto;">
             <button
-                style="display: inline-flex; align-items: center; gap: 10px; padding: 10px 30px; border-radius: 10px; border: 0.5px solid #ffffff80; background-color: transparent; color: #ffffff; font-family: 'IBM Plex Sans-Regular', Helvetica; font-weight: 400; font-size: 21px; letter-spacing: -0.42px; cursor: pointer;">
+                style="display: inline-flex; align-items: left !important; gap: 10px; padding: 10px 30px; border-radius: 10px; border: 0.5px solid #ffffff80; background-color: transparent; color: #ffffff; font-family: 'IBM Plex Sans-Regular', Helvetica; font-weight: 400; font-size: 21px; letter-spacing: -0.42px; cursor: pointer; width: 9.5rem;">
                 Fertilizers
             </button>
             <div
                 style="display: flex; height: auto; align-items: center; justify-content: center; gap: 10px; position: relative; align-self: stretch; width: 100%;">
                 <div
-                    style="position: relative; flex: 1; font-family: 'IBM Plex Serif', Helvetica; font-weight: 500; color: #ffffff; font-size: clamp(42px, 8vw, 96px); line-height: clamp(47px, 8vw, 96px); letter-spacing: -0.022em; text-transform: capitalize; text-align: center;">
+                    style="position: relative; flex: 1; font-family: 'IBM Plex Serif', Helvetica; font-weight: 500; color: #ffffff; font-size: clamp(42px, 8vw, 96px); line-height: clamp(47px, 8vw, 96px); letter-spacing: -0.022em; text-transform: capitalize; text-align: left;">
                     Transforming Waste<br />into Growth.
                 </div>
             </div>
@@ -140,7 +140,34 @@
     </div>
 
 
-    <div data-aos="fade-up"
+    <div class="container-fluid g-0 m-0" style="position: relative; z-index: auto;">
+        <div class="row no-gutters g-0">
+            <div class="col mx-0">
+                <div class="video-container" style="position: relative;">
+                    <video controls controlslist="nofullscreen" poster="/public/rectangle-313@2x.png" style="height: 56.25vw; object-fit: cover; width: 100%;">
+                        <source src="/assets/renewable-page-video.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- <div class="container-fluid g-0" style="position: relative; z-index: auto;">
+        <div class="row no-gutters">
+            <div class="col mx-0 g-0" >
+                <div class="video-container" style="position: relative;">
+                    <video controls controlslist="nofullscreen" poster="/public/rectangle-313@2x.png" style="height: 56.25vw; object-fit: cover;" >
+                        <source src="/assets/renewable-page-video.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+
+    <!-- <div data-aos="fade-up"
         style="position: relative; width: 100%; height: 0; padding-bottom: 41.67%; overflow: hidden; background-color: #000;">
         <iframe id="videoFrame" src="assets/renewable-page-video.mp4" frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -209,7 +236,7 @@
         tag.onload = function () {
             checkAutoplaySupport();
         };
-    </script>
+    </script> -->
 
 
 
@@ -218,8 +245,8 @@
 
         <div class="row no-gutters">
             <!-- Text Section -->
-            <div class="col-md-6 d-flex align-items-center"
-                style="order: 2; background-color: white; padding: clamp(20px, 5vw, 80px); color: #123627; font-family: 'Plus Jakarta Sans', sans-serif; box-sizing: border-box;">
+            <div class="col-md-6 order-2 order-md-1 d-flex align-items-center"
+                style="background-color: white; padding: clamp(20px, 5vw, 80px); color: #123627; font-family: 'Plus Jakarta Sans', sans-serif; box-sizing: border-box;">
                 <div style="max-width: 100%; width: 100%; padding-right: 20px; box-sizing: border-box;">
                     <section data-aos="fade-up"
                         style="width: clamp(343px, 50vw, 651px); height: clamp(530px, 50vw, 386px); padding: 0 1rem; box-sizing: border-box;">
@@ -240,8 +267,8 @@
             </div>
 
             <!-- Image Section -->
-            <div class="col-md-6 d-flex justify-content-center align-items-center;"
-                style="order: 1; background-color: white; padding-left: 6rem; padding-top: 6rem; box-sizing: border-box;">
+            <div class="col-md-6 order-1 order-md-2 d-flex justify-content-center align-items-center;"
+                style=" background-color: white; padding-left: clamp( 6rem,20vw,12rem); padding-top: 7%; box-sizing: border-box;">
                 <div
                     style="height: 475px; position: relative; width: 100%; max-width: 100%; padding: 20px; box-sizing: border-box;">
                     <img style="position: absolute; top: 0; left: 0; width: 100%; height: auto; max-width: 388px; max-height: 299px; object-fit: cover; box-sizing: border-box; padding: 10px;"
