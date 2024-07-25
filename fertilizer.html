@@ -23,34 +23,35 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
 
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-   
+
     <style>
         @media (max-width: 768px) {
             .animation-container {
                 display: none;
             }
+
             #tejdeed-way {
-            padding: 10px !important;
-          }
-    
-          .col-md-5 h1 {
-            font-size: 24px !important;
-            line-height: 36px !important;
-            margin: 0 !important;
-            margin-bottom: 20px !important;
-            text-align: center !important;
-          }
-    
-          .col-md-5 img {
-            max-width: 100% !important;
-            height: auto !important;
-            margin-bottom: 10px !important;
-          }
-    
-          .col-md-7 p {
-            font-size: 18px !important;
-            margin-bottom: 15px !important;
-          }
+                padding: 10px !important;
+            }
+
+            .col-md-5 h1 {
+                font-size: 24px !important;
+                line-height: 36px !important;
+                margin: 0 !important;
+                margin-bottom: 20px !important;
+                text-align: center !important;
+            }
+
+            .col-md-5 img {
+                max-width: 100% !important;
+                height: auto !important;
+                margin-bottom: 10px !important;
+            }
+
+            .col-md-7 p {
+                font-size: 18px !important;
+                margin-bottom: 15px !important;
+            }
         }
     </style>
 </head>
@@ -122,7 +123,7 @@
 
 
     <div data-aos="fade-up"
-        style="display: flex; flex-direction: column; height: clamp(300px,55vw,600px); align-items: left; justify-content: center; gap: 30px; position: relative; background-color: #009e4c; padding-left: 5vw;">
+        style="display: flex; flex-direction: column; height: clamp(500px, 40.69vw, 600px); align-items: left; justify-content: center; gap: 30px; position: relative; background-color: #009e4c; padding-left: 5vw;">
         <div
             style="display: flex; flex-direction: column; width: 100%; max-width: 1050px; align-items: left; gap: 30px; position: relative; flex: 0 0 auto;">
             <button
@@ -144,7 +145,8 @@
         <div class="row no-gutters g-0">
             <div class="col mx-0">
                 <div class="video-container" style="position: relative;">
-                    <video controls controlslist="nofullscreen" poster="/public/rectangle-313@2x.png" style="height: 56.25vw; object-fit: cover; width: 100%;">
+                    <video controls controlslist="nofullscreen"
+                        style="height:clamp(500px, 40.69vw, 600px); object-fit: cover; width: 100%;">
                         <source src="/assets/renewable-page-video.mp4" type="video/mp4">
                     </video>
                 </div>
@@ -153,143 +155,50 @@
     </div>
 
 
-
-    <!-- <div class="container-fluid g-0" style="position: relative; z-index: auto;">
-        <div class="row no-gutters">
-            <div class="col mx-0 g-0" >
-                <div class="video-container" style="position: relative;">
-                    <video controls controlslist="nofullscreen" poster="/public/rectangle-313@2x.png" style="height: 56.25vw; object-fit: cover;" >
-                        <source src="/assets/renewable-page-video.mp4" type="video/mp4">
-                    </video>
+    <div class=" container-fluid" id="mid-section"
+        style="background-color: white; padding: 7vw; max-width: 100%; max-height: auto;">
+        <div class="row" data-aos="fade-up" style="margin: 0;">
+            <div class="col-md-6 order-md-2 d-flex justify-content-center align-items-center"
+                style="padding: 7vw; box-sizing: border-box;">
+                <div style="height: 475px; position: relative; width: 100%;">
+                    <img style="position: absolute; top: 0; left: 0; width: 100%; min-width: 16.5rem; height: auto; object-fit: cover;"
+                        loading="lazy" alt="" src="assets/fertilizer-img-2.png" />
+                    <img style="position: absolute; top:  clamp(8rem, 20vw, 13rem); left: clamp(-3rem, 20vw, -11rem); width: auto; height: auto; max-width: 14.313rem; object-fit: cover; z-index: 1;"
+                        alt="" src="assets/fertilizer-img-1.png" />
                 </div>
             </div>
-        </div>
-    </div> -->
-
-
-    <!-- <div data-aos="fade-up"
-        style="position: relative; width: 100%; height: 0; padding-bottom: 41.67%; overflow: hidden; background-color: #000;">
-        <iframe id="videoFrame" src="assets/renewable-page-video.mp4" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: none;"></iframe>
-        <div class="play-button"
-            style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 80px; height: 80px; background-color: rgba(255, 255, 255, 0.7); border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; z-index: 1;"
-            onclick="playVideo()">
-            <div
-                style="width: 0; height: 0; border-left: 20px solid transparent; border-right: 20px solid transparent; border-top: 30px solid #000; border-bottom: 15px solid transparent;">
-            </div>
-        </div>
-    </div>
-
-    <script>
-        function playVideo() {
-            var iframe = document.getElementById('videoFrame');
-            var playButton = document.querySelector('.play-button');
-
-            iframe.style.display = 'block'; // Show the iframe
-            playButton.style.display = 'none'; // Hide the play button
-
-            var player = new YT.Player(iframe, {
-                events: {
-                    'onReady': function (event) {
-                        event.target.playVideo();
-                    }
-                }
-            });
-        }
-
-        function checkAutoplaySupport() {
-            var video = document.createElement('video');
-            var canAutoplay = false;
-
-            try {
-                canAutoplay = video.play() !== undefined;
-            } catch (e) {
-                console.log(e)
-                // handle exception if needed
-            }
-
-            // Check if iPhone and low battery
-            if (/iPhone/.test(navigator.userAgent) && navigator.getBattery) {
-                navigator.getBattery().then(function (battery) {
-                    if (battery.level < 0.2) { // Battery level < 20%
-                        document.querySelector('.play-button').style.display = 'flex';
-                    } else if (canAutoplay) {
-                        document.querySelector('.play-button').style.display = 'none';
-                        playVideo();
-                    }
-                });
-            } else if (canAutoplay) {
-                playVideo();
-            } else {
-                document.querySelector('.play-button').style.display = 'flex';
-            }
-        }
-
-        // Load YouTube API
-        var tag = document.createElement('script');
-        tag.src = 'https://www.youtube.com/iframe_api';
-        var firstScriptTag = document.getElementsByTagName('script')[0];
-        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-        tag.onload = function () {
-            checkAutoplaySupport();
-        };
-    </script> -->
-
-
-
-    <div class="container-fluid" id="responsive-section"
-        style="padding: 0; max-width: 100%; background-color: white; overflow: hidden; box-sizing: border-box;">
-
-        <div class="row no-gutters">
-            <!-- Text Section -->
-            <div class="col-md-6 order-2 order-md-1 d-flex align-items-center"
-                style="background-color: white; padding: clamp(20px, 5vw, 80px); color: #123627; font-family: 'Plus Jakarta Sans', sans-serif; box-sizing: border-box;">
-                <div style="max-width: 100%; width: 100%; padding-right: 20px; box-sizing: border-box;">
-                    <section data-aos="fade-up"
-                        style="width: clamp(343px, 50vw, 651px); height: clamp(530px, 50vw, 386px); padding: 0 1rem; box-sizing: border-box;">
-                        <h3
-                            style="margin-top: clamp(1rem, 2vw, 4rem); font-size: clamp(24px, 2.5vw, 26px); line-height: 38px; font-weight: 400;">
+            <div class="col-md-6 order-md-1 d-flex align-items-center"
+                style="padding: clamp(20px, 5vw, 40px); display: flex; flex-wrap: wrap; text-align: left; color: #123627; font-family: 'Plus Jakarta Sans', sans-serif; box-sizing: border-box;">
+                <section data-aos="fade-up" style="width: 100%; height: auto;">
+                    <h3
+                        style="margin-top: clamp(1rem, 2vw, 2rem); font-size: clamp(24px, 2.5vw, 26px); line-height: 1.4; font-weight: 400;">
+                        <p>
                             Tejdeed Organic Fertilizer specializes in enhancing soil health and boosting crop yields
                             sustainably. Made from food waste, these products provide essential nutrients, improve soil
                             structure, and promote microbial activity for long-term agricultural benefits.
-                        </h3>
-                        <h6 data-aos="fade-up"
-                            style="margin-top: clamp(2rem, 2vw, 5rem); font-size: clamp(18px, 2.5vw, 18px); line-height: 24px; font-family: 'Inter', sans-serif;">
-                            Recycling food waste into fertilizer not only enriches the soil but also supports
-                            environmental
-                            sustainability and reduces landfill waste.
-                        </h6>
-                    </section>
-                </div>
-            </div>
-
-            <!-- Image Section -->
-            <div class="col-md-6 order-1 order-md-2 d-flex justify-content-center align-items-center;"
-                style=" background-color: white; padding-left: clamp( 6rem,20vw,12rem); padding-top: 7%; box-sizing: border-box;">
-                <div
-                    style="height: 475px; position: relative; width: 100%; max-width: 100%; padding: 20px; box-sizing: border-box;">
-                    <img style="position: absolute; top: 0; left: 0; width: 100%; height: auto; max-width: 388px; max-height: 299px; object-fit: cover; box-sizing: border-box; padding: 10px;"
-                        loading="lazy" alt="" src="assets/fertilizer-img-2.png" />
-                    <img style="position: absolute; top: 176px; left: -4rem; width: auto; height: auto; max-width: 229px; object-fit: cover; z-index: 1; box-sizing: border-box;"
-                        alt="" src="assets/fertilizer-img-1.png" />
-                </div>
+                        </p>
+                    </h3>
+                    <h6 data-aos="fade-up"
+                        style="margin-top: clamp(2rem, 2vw, 3rem); font-size: 1.125rem; line-height: 1.4; font-family: 'Inter', sans-serif;">
+                        The environment is under stress and it is asking for our help. Tejdeed Technologies is proud to
+                        be one of
+                        the concerned entities who has decided to be part of the solution to this global crisis.
+                    </h6>
+                </section>
             </div>
         </div>
     </div>
 
     <div class="container-fluid" id="green-card">
         <div class="row" data-aos="fade-up">
-            <div class="col-md-6" style="background-color: #f7f7f7; height: 766px;">
+            <div class="col-md-6" style="background-color: #f7f7f7; height: 41em;">
                 <section style="padding-left: 2.8vw; padding-right: 2.8vw ; align-items: flex-start; margin: 0 auto;">
                     <h1
-                        style="padding-top: 80px; width: 100%; font-family: 'Askan'; font-weight: 800; font-size: clamp(30px, 2.5vw, 42px); line-height: 48px; color: #123627;">
+                        style="padding-top: 80px; width: 100%; font-family: 'Askan'; font-weight: 500; font-size: clamp(30px, 3vw, 42px); line-height: 48px; color: #123627;">
                         Our Products
                     </h1>
                     <h2 data-aos="fade-up"
-                        style="padding-top: 80px; font-family: 'Plus Jakarta Sans'; font-weight: 600; font-size: clamp(32px, 2.5vw, 32px); line-height: 42px; color: #009E4C;">
+                        style="padding-top: 80px; font-family: 'Plus Jakarta Sans'; font-weight: 600; font-size: clamp(32px, 3vw, 32px); line-height: 42px; color: #009E4C;">
                         Coming Soon:<br>
                         <p style="color: #123627;">Premium Organic Compost, Top Soil, and More..
                     </h2>
@@ -301,29 +210,27 @@
                     </p>
                 </section>
             </div>
-            <div class="col-md-6" style="height: 766px; padding: 0;">
+            <div class="col-md-6" style="height: 41em; padding: 0;">
                 <div
-                    style="width: 100%; height: 100%; background: url('./public/rectangle-47@2x.png') no-repeat center center; background-size: cover;">
+                    style="width: 100%; height: 100%; background: url('public/rectangle-47@2x.png') no-repeat center center; background-size: cover;">
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="container-fluid g-0 m-0" style=" position: relative; background-color: #fff;color: #123627; font-family: 'IBM Plex Serif';padding: 6vw 0px; text-align: left; font-size: 42px">
+    <div class="container-fluid g-0 m-0"
+        style=" position: relative; background-color: #fff;color: #123627; font-family: 'IBM Plex Serif';padding: 6vw 0px; text-align: left; font-size: 42px">
         <div data-aos="fade-up" class="row no-gutters g-0 m-0">
             <div class="col-md d-flex justify-content-start p-3 p-md-4">
-                <div
-                style="
+                <div style="
                     margin-bottom: 2vw;
                     display: flex;
                     flex-direction: row;
                     align-items: flex-start;
                     justify-content: flex-start;
                     padding: 0px 2vw;
-                "
-            >
-                <h1
-                style="
+                ">
+                    <h1 style="
                 margin: 0;
                 position: relative;
                 font-size: inherit;
@@ -331,17 +238,15 @@
                 text-transform: capitalize;
                 font-weight: 500;
                 font-family: inherit;
-                "
-                >
-                Our Mission
-                </h1>
+                ">
+                        Our Mission
+                    </h1>
+                </div>
+
             </div>
-    
-            </div>
-             <div class="col-md d-flex justify-content-start justify-content-md-end p-3 p-md-0">
-    
-                <div
-                style="
+            <div class="col-md d-flex justify-content-start justify-content-md-end p-3 p-md-0">
+
+                <div style="
                 padding-left: 2vw;
                 width: 50rem;
                 display: flex;
@@ -353,10 +258,8 @@
                 max-width: 100vw;
                 font-size: 18px;
                 font-family: 'Plus Jakarta Sans';
-                "
-            >
-            <div
-              style="
+                ">
+                    <div style="
                 width: 100vw;
                 display: flex;
                 flex-direction: column;
@@ -366,10 +269,8 @@
                 box-sizing: border-box;
                 gap: 30px;
                 max-width: 90%;
-              "
-            >
-                <h2
-                style="
+              ">
+                        <h2 style="
                 margin: 0;
                 width: 70vw;
                 position: relative;
@@ -380,23 +281,21 @@
                 display: inline-block;
                 flex-shrink: 0;
                 max-width: 100%;
-                "
-                >
-                    Our mission is to produce premium organic fertilizers by
-                    maximizing the use of locally sourced organic waste, promoting
-                    sustainability, and enriching soil health for better crop
-                    yields.
-                </h2>
-            </div>
-            </div>
-                
-    
+                ">
+                            Our mission is to produce premium organic fertilizers by
+                            maximizing the use of locally sourced organic waste, promoting
+                            sustainability, and enriching soil health for better crop
+                            yields.
+                        </h2>
+                    </div>
+                </div>
+
+
             </div>
         </div>
         <div data-aos="fade-up" class=" row no-gutters g-0 m-0">
             <div class="col-md d-flex justify-content-start" style="padding-top: 20vw;">
-                <div
-                style="
+                <div style="
                 height: 36rem;
                 width: 30rem;
                 display: flex;
@@ -405,10 +304,8 @@
                 justify-content: flex-start;
                 gap: 578px;
                 max-width: 100%;
-                "
-                >
-                    <img
-                    style="
+                ">
+                    <img style="
                     align-self: stretch;
                     flex: 1;
                     position: relative;
@@ -416,16 +313,11 @@
                     overflow: hidden;
                     max-height: 100%;
                     object-fit: cover;
-                    "
-                    loading="lazy"
-                    alt=""
-                    src="./public/rectangle-46@2x.png"
-                    />
+                    " loading="lazy" alt="" src="public/rectangle-46@2x.png" />
                 </div>
             </div>
             <div class="col-md d-flex justify-content-end" style="padding-top: 5vw;">
-                <div
-                style="
+                <div style="
                 width: 47.5rem;
                 display: flex;
                 flex-direction: column;
@@ -435,10 +327,8 @@
                 max-width: 100%;
                 font-size: 18px;
                 font-family: 'Open Sans';
-                "
-            >
-            <img
-                style="
+                ">
+                    <img style="
                 align-self: stretch;
                 height: 30rem;
                 position: relative;
@@ -446,13 +336,8 @@
                 overflow: hidden;
                 flex-shrink: 0;
                 object-fit: cover;
-                "
-                loading="lazy"
-                alt=""
-                src="./public/rectangle-45@2x.png"
-            />
-            <div class="p-4 p-md-0"
-                style="
+                " loading="lazy" alt="" src="public/rectangle-45@2x.png" />
+                    <div class="p-4 p-md-0" style="
                   width: 42rem;
                   display: flex;
                   flex-direction: column;
@@ -462,10 +347,8 @@
                   box-sizing: border-box;
                   gap: 32px;
                   max-width: 100%;
-                "
-              >
-                <h1
-                  style="
+                ">
+                        <h1 style="
                     margin: 0;
                     position: relative;
                     font-size: inherit;
@@ -474,12 +357,10 @@
                     font-weight: 500;
                     font-family: inherit;
                     font-size: 42px;
-                  "
-                >
-                  Benefits
-                </h1>
-                <div
-                  style="
+                  ">
+                            Benefits
+                        </h1>
+                        <div style="
                     align-self: stretch;
                     display: flex;
                     flex-direction: column;
@@ -489,10 +370,8 @@
                     max-width: 100%;
                     font-size: 18px;
                     font-family: 'Plus Jakarta Sans';
-                  "
-                >
-                  <div
-                    style="
+                  ">
+                            <div style="
                       align-self: stretch;
                       border-top: 0.5px solid #123627;
                       border-bottom: 0.5px solid #123627;
@@ -503,25 +382,21 @@
                       justify-content: center;
                       padding: 19px 0px;
                       max-width: 100%;
-                    "
-                  >
-                    <div
-                      style="
+                    ">
+                                <div style="
                         flex: 1;
                         position: relative;
                         letter-spacing: -0.01em;
                         line-height: 26px;
                         display: inline-block;
                         max-width: 100%;
-                      "
-                    >
-                      By providing balanced nutrition and improving soil health,
-                      organic fertilizers lead to stronger, more resilient
-                      plants.
-                    </div>
-                  </div>
-                  <div
-                    style="
+                      ">
+                                    By providing balanced nutrition and improving soil health,
+                                    organic fertilizers lead to stronger, more resilient
+                                    plants.
+                                </div>
+                            </div>
+                            <div style="
                       align-self: stretch;
                       border-bottom: 0.5px solid #123627;
                       box-sizing: border-box;
@@ -531,25 +406,21 @@
                       justify-content: center;
                       padding: 20px 0px 19px;
                       max-width: 100%;
-                    "
-                  >
-                    <div
-                      style="
+                    ">
+                                <div style="
                         flex: 1;
                         position: relative;
                         letter-spacing: -0.01em;
                         line-height: 26px;
                         display: inline-block;
                         max-width: 100%;
-                      "
-                    >
-                      Organic fertilizers stimulate the growth of beneficial
-                      soil microorganisms, leading to healthier and more fertile
-                      soil.
-                    </div>
-                  </div>
-                  <div
-                    style="
+                      ">
+                                    Organic fertilizers stimulate the growth of beneficial
+                                    soil microorganisms, leading to healthier and more fertile
+                                    soil.
+                                </div>
+                            </div>
+                            <div style="
                       align-self: stretch;
                       border-bottom: 0.5px solid #123627;
                       box-sizing: border-box;
@@ -559,25 +430,21 @@
                       justify-content: center;
                       padding: 20px 0px 19px;
                       max-width: 100%;
-                    "
-                  >
-                    <div
-                      style="
+                    ">
+                                <div style="
                         flex: 1;
                         position: relative;
                         letter-spacing: -0.01em;
                         line-height: 26px;
                         display: inline-block;
                         max-width: 100%;
-                      "
-                    >
-                      They provide essential nutrients like nitrogen,
-                      phosphorus, and potassium, which are vital for plant
-                      growth.
-                    </div>
-                  </div>
-                  <div
-                    style="
+                      ">
+                                    They provide essential nutrients like nitrogen,
+                                    phosphorus, and potassium, which are vital for plant
+                                    growth.
+                                </div>
+                            </div>
+                            <div style="
                       align-self: stretch;
                       border-bottom: 0.5px solid #123627;
                       box-sizing: border-box;
@@ -587,25 +454,21 @@
                       justify-content: center;
                       padding: 20px 0px 19px;
                       max-width: 100%;
-                    "
-                  >
-                    <div
-                      style="
+                    ">
+                                <div style="
                         flex: 1;
                         position: relative;
                         letter-spacing: -0.01em;
                         line-height: 26px;
                         display: inline-block;
                         max-width: 100%;
-                      "
-                    >
-                      Recycling waste into fertilizer helps divert waste from
-                      landfills, contributing to waste reduction and better
-                      waste management.
-                    </div>
-                  </div>
-                  <div
-                    style="
+                      ">
+                                    Recycling waste into fertilizer helps divert waste from
+                                    landfills, contributing to waste reduction and better
+                                    waste management.
+                                </div>
+                            </div>
+                            <div style="
                       align-self: stretch;
                       border-bottom: 0.5px solid #123627;
                       box-sizing: border-box;
@@ -615,38 +478,35 @@
                       justify-content: center;
                       padding: 20px 0px 19px;
                       max-width: 100%;
-                    "
-                  >
-                    <div
-                      style="
+                    ">
+                                <div style="
                         flex: 1;
                         position: relative;
                         letter-spacing: -0.01em;
                         line-height: 26px;
                         display: inline-block;
                         max-width: 100%;
-                      "
-                    >
-                      Being natural, they minimize pollution and reduce the risk
-                      of harmful runoff into water bodies.
+                      ">
+                                    Being natural, they minimize pollution and reduce the risk
+                                    of harmful runoff into water bodies.
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                  </div>
+
+
+
                 </div>
-                </div>
-    
-    
-    
-            </div>
-    
+
             </div>
         </div>
-    
+
     </div>
-    
+
 
 
     <div class="animation-container"
-        style="position: relative; width: 100%; height: auto; background: #00a651; padding: 50px 0;">
+        style="position: relative; width: auto; height: auto; background: #00a651; padding: 50px 0;">
         <h1
             style="margin-left: 40px; width: 224px; height: 48px; font-family: 'Askan'; font-style: normal; font-weight: 500; font-size: 42px; line-height: 48px; text-transform: capitalize; color: white;">
             Our Process</h1>
@@ -658,10 +518,10 @@
         <div style="position: relative; width: 135px; height: 19px; left: 100%; top: 70%; transform: translate(-50%, -50%) rotate(0deg); font-family: 'Inter'; font-style: normal; font-weight: 400; font-size: 16px; line-height: 19px; text-align: right; letter-spacing: -0.01em; text-transform: uppercase; color: #FFFFFF;">Collection</div>
         <div style="position: relative; width: 135px; height: 19px;  top: 70%; transform: translate(-50%, -50%) rotate(0deg); font-family: 'Inter'; font-style: normal; font-weight: 400; font-size: 16px; line-height: 19px; text-align: left; letter-spacing: -0.01em; text-transform: uppercase; color: #FFFFFF;">PROCESSING</div> -->
             <img src="assets/ellipse-2.svg"
-                style="position: absolute; width: 80%; height: 80%; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 2;">
+                style="position: absolute; width: 70%; height: 70%; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 2;">
 
             <div id="dial"
-                style="position: absolute; top: 50%; left: 50%; width: 80%; height: 80%; transform: translate(-50%, -50%) rotate(0deg); border-radius: 50%; transition: transform 0.5s ease-in-out; z-index: 3;">
+                style="position: absolute; top: 50%; left: 50%; width: 70%; height: 70%; transform: translate(-50%, -50%) rotate(0deg); border-radius: 50%; transition: transform 0.5s ease-in-out; z-index: 3;">
                 <div class="icon-container"
                     style="position: absolute; top: 5%; left: 50%; transform: translate(-50%, -50%) rotate(0deg);">
                     <img src="assets/truck.svg" alt="Icon 1" style="width: 30px; height: 30px;">
@@ -732,21 +592,19 @@
     </script>
 
 
-<div class="container-fluid g-0 m-0" style=" position: relative; background-color: #fff;color: #123627; font-family: 'Open Sans';padding: 11vw 0px; text-align: left; font-size: 42px">
-    <div data-aos="fade-up" class="row no-gutters g-0 m-0">
-        <div class="col-md d-flex justify-content-start p-3 p-md-4">
-            <div
-            style="
+    <div class="container-fluid g-0 m-0"
+        style=" position: relative; background-color: #fff;color: #123627; font-family: 'Open Sans';padding: 11vw 0px; text-align: left; font-size: 42px">
+        <div data-aos="fade-up" class="row no-gutters g-0 m-0">
+            <div class="col-md d-flex justify-content-start p-3 p-md-4">
+                <div style="
                 margin-bottom: 2vw;
                 display: flex;
                 flex-direction: row;
                 align-items: flex-start;
                 justify-content: flex-start;
                 padding: 0px 2vw;
-            "
-        >
-          <h1
-            style="
+            ">
+                    <h1 style="
               margin: 0;
               position: relative;
               font-size: inherit;
@@ -754,17 +612,15 @@
               text-transform: capitalize;
               font-weight: 500;
               font-family: inherit;
-            "
-          >
-            Join Us
-          </h1>
-        </div>
+            ">
+                        Join Us
+                    </h1>
+                </div>
 
-        </div>
-         <div class="col-md d-flex justify-content-start justify-content-md-end p-3 p-md-0">
+            </div>
+            <div class="col-md d-flex justify-content-start justify-content-md-end p-3 p-md-0">
 
-            <div
-            style="
+                <div style="
             padding-left: 2vw;
             width: 50rem;
             display: flex;
@@ -776,10 +632,8 @@
             max-width: 100vw;
             font-size: 18px;
             font-family: 'Plus Jakarta Sans';
-            "
-        >
-        <div
-          style="
+            ">
+                    <div style="
             width: 100vw;
             display: flex;
             flex-direction: column;
@@ -789,10 +643,8 @@
             box-sizing: border-box;
             gap: 30px;
             max-width: 90%;
-          "
-        >
-          <h3
-            style="
+          ">
+                        <h3 style="
               margin: 0;
               align-self: stretch;
               position: relative;
@@ -800,28 +652,22 @@
               line-height: 38px;
               font-weight: 400;
               font-family: inherit;
-            "
-          >
-            Are you a hotel, restaurant, supermarket, or food processing
-            facility?
-          </h3>
-          <div
-            style="align-self: stretch; position: relative; line-height: 26px"
-          >
-            Join us in our mission to create a greener, cleaner future for
-            everyone. By partnering with us, you not only reduce your
-            environmental footprint but also contribute to the growth of
-            sustainable agriculture.
-          </div>
-          <div
-            style="align-self: stretch; position: relative; line-height: 26px"
-          >
-            Your collaboration ensures that organic waste is transformed into
-            high-quality organic fertilizers, promoting environmentally friendly
-            practices and supporting the local farming community.
-          </div>
-          <button
-            style="
+            ">
+                            Are you a hotel, restaurant, supermarket, or food processing
+                            facility?
+                        </h3>
+                        <div style="align-self: stretch; position: relative; line-height: 26px">
+                            Join us in our mission to create a greener, cleaner future for
+                            everyone. By partnering with us, you not only reduce your
+                            environmental footprint but also contribute to the growth of
+                            sustainable agriculture.
+                        </div>
+                        <div style="align-self: stretch; position: relative; line-height: 26px">
+                            Your collaboration ensures that organic waste is transformed into
+                            high-quality organic fertilizers, promoting environmentally friendly
+                            practices and supporting the local farming community.
+                        </div>
+                        <button style="
               cursor: pointer;
               border: none;
               padding: 13.5px 30px;
@@ -832,10 +678,8 @@
               align-items: center;
               justify-content: center;
               white-space: nowrap;
-            "
-          >
-            <div
-              style="
+            ">
+                            <div style="
                 position: relative;
                 font-size: 18px;
                 text-transform: capitalize;
@@ -845,21 +689,19 @@
                 text-align: center;
                 display: inline-block;
                 min-width: 77px;
-              "
-            >
-              Join Now
-            </div>
-          </button>
-        </div>
-        </div>
-            
+              ">
+                                Join Now
+                            </div>
+                        </button>
+                    </div>
+                </div>
 
+
+            </div>
         </div>
-    </div>
-    <div data-aos="fade-up" class=" row no-gutters g-0 m-0">
-        <div class="col-md d-flex justify-content-start" style="padding-top: 16vw;">
-            <div
-            style="
+        <div data-aos="fade-up" class=" row no-gutters g-0 m-0">
+            <div class="col-md d-flex justify-content-start" style="padding-top: 16vw;">
+                <div style="
             height: 25rem;
             width: 25rem;
             display: flex;
@@ -868,10 +710,8 @@
             justify-content: flex-start;
             gap: 578px;
             max-width: 100%;
-            "
-            >
-                <img
-                style="
+            ">
+                    <img style="
                 align-self: stretch;
                 flex: 1;
                 position: relative;
@@ -879,16 +719,11 @@
                 overflow: hidden;
                 max-height: 100%;
                 object-fit: cover;
-                "
-                loading="lazy"
-                alt=""
-                src="/public/rectangle-352@2x.png"
-                />
+                " loading="lazy" alt="" src="public/rectangle-352@2x.png" />
+                </div>
             </div>
-        </div>
-        <div class="col-md d-flex justify-content-end" style="padding-top: 5vw;">
-            <div
-            style="
+            <div class="col-md d-flex justify-content-end" style="padding-top: 5vw;">
+                <div style="
             width: 48.25rem;
             display: flex;
             flex-direction: column;
@@ -898,10 +733,8 @@
             max-width: 100%;
             font-size: 18px;
             font-family: 'Plus Jakarta Sans';
-            "
-        >
-        <img
-            style="
+            ">
+                    <img style="
             align-self: stretch;
             height: 30rem;
             position: relative;
@@ -909,13 +742,8 @@
             overflow: hidden;
             flex-shrink: 0;
             object-fit: cover;
-            "
-            loading="lazy"
-            alt=""
-            src="/public/rectangle-342@2x.png"
-        />
-        <div class="px-4 px-md-0"
-            style="
+            " loading="lazy" alt="" src="public/rectangle-342@2x.png" />
+                    <div class="px-4 px-md-0" style="
 
             width: 50rem;
             position: relative;
@@ -924,21 +752,20 @@
             max-width: 90%;
             box-sizing: border-box;
             padding-right: 20px;
-            "
-        >
-            Let's work together to turn food waste into opportunity and make a
-            positive impact on our environment. Join Tejdeed Fertilizers today and
-            let's move towards a more green and sustainable future for everyone.
+            ">
+                        Let's work together to turn food waste into opportunity and make a
+                        positive impact on our environment. Join Tejdeed Fertilizers today and
+                        let's move towards a more green and sustainable future for everyone.
+                    </div>
+
+
+
+                </div>
+
+            </div>
         </div>
 
-
-
-        </div>
-
-        </div>
     </div>
-
-</div>
 
 
     <!-- <div class="container-fluid" id="join-way" style="background-color: #f7f7f7; padding:clamp(1rem, 4vw, 5rem);">
@@ -975,14 +802,16 @@
       </div> -->
 
 
-    <div class="container-fluid" data-aos="fade-up" id="contact-us" >
+    <div class="container-fluid" data-aos="fade-up" id="contact-us">
         <div class="row" data-aos="fade-up">
-            <div class="col-md-6 d-flex align-items-center justify-content-center p-0" style="height: 28rem; background-color: #f7f7f7;">
+            <div class="col-md-6 d-flex align-items-center justify-content-center p-0"
+                style="height: 31.25rem; background-color: #f7f7f7;">
                 <div
                     style="width: 100%; height: 100%; background: url('assets/join-us.png') no-repeat center center; background-size: cover;">
                 </div>
             </div>
-            <div class="col-md-6 d-flex align-items-center justify-content-center p-0" style="height: 28rem; background-color: #f7f7f7;">
+            <div class="col-md-6 d-flex align-items-center justify-content-center p-0"
+                style="height: 31.25rem; background-color: #f7f7f7;">
                 <section
                     style="width: 100%; max-width: 40.875rem; padding-left: 5vw; padding-right: 5vw; margin: 0 auto;">
                     <div>
@@ -1011,63 +840,67 @@
     </div>
 
 
-    
 
 
 
 
-    
 
-    <div class="container-fluid" style="display: flex; flex-direction: column; align-items: left; padding: 32px 8vw; background-color: #25734a;">
-        <div class="row" style="padding-top: 3vw;padding-bottom: 3vw;" >
+
+
+    <div class="container-fluid"
+        style="display: flex; flex-direction: column; align-items: left; padding: 32px 8vw; background-color: #25734a;">
+        <div class="row" style="padding-top: 3vw;padding-bottom: 3vw;">
             <div class="col-md d-flex justify-content-start">
                 <div style="display: flex; justify-content: left;">
-                    <img src="assets/tajdeed-logo-union.svg" alt="Logo" style="width: 133px; height: 33.85px;">
+                    <img src="assets/tajdeed-logo-union.svg" alt="Logo" style="width: 8.313em; height: 2.116em;">
                 </div>
             </div>
             <div class="col-md d-flex justify-content-start justify-content-md-end mt-3 mt-md-0 ">
                 <div class="d-flex gap-3">
-                    <img src="assets/facebook.svg" alt="Facebook" style="width: 32px; height: 32px;">
-                    <img src="assets/linkedin.svg" alt="LinkedIn" style="width: 32px; height: 32px;">
-                    <img src="assets/youtube.svg" alt="YouTube" style="width: 32px; height: 32px;">
-                    <img src="assets/twitter.svg" alt="Twitter" style="width: 32px; height: 32px;">
+                    <img src="assets/facebook.svg" alt="Facebook" style="width: 2em; height: 2em;">
+                    <img src="assets/linkedin.svg" alt="LinkedIn" style="width: 2em; height: 2rem;">
+                    <img src="assets/youtube.svg" alt="YouTube" style="width: 2em; height: 2em;">
+                    <img src="assets/twitter.svg" alt="Twitter" style="width: 2em; height: 2em;">
                 </div>
             </div>
         </div>
-        <div class="row" style="padding-top: 3vw;padding-bottom: 3vw; border-top: 0.5px solid rgba(255, 255, 255, 0.2); ">
+        <div class="row"
+            style="padding-top: 3vw;padding-bottom: 3vw; border-top: 0.5px solid rgba(255, 255, 255, 0.2); ">
             <div class="col-md d-flex justify-content-start">
                 <div
-                    style="font-size: clamp(1.5rem, 2vw, 2.625rem); color: #ffffff; font-family: 'IBM Plex Sans', sans-serif; font-weight: 500;">
+                    style="font-size: clamp(1.5em, 2vw, 2.625em); color: #ffffff; font-family: 'IBM Plex Sans', sans-serif; font-weight: 500;">
                     Get in <br class="d-none d-md-block" /> Touch</div>
             </div>
-            <div class="col-md d-flex justify-content-start justify-content-md-end flex-wrap flex-md-nowrap mt-3 mt-md-0">
+            <div
+                class="col-md d-flex justify-content-start justify-content-md-end flex-wrap flex-md-nowrap mt-3 mt-md-0">
                 <div class="px-1 mt-2 mt-md-0"
-                    style="display: flex; align-items: center; gap: 12px; color: #ffffff; font-size: clamp(0.875rem, 1.2vw, 1rem);">
-                    <img src="assets/phone-icon.svg" alt="Phone" style="width: 24px; height: 24px;" />
+                    style="display: flex; align-items: center; gap: 12px; color: #ffffff; font-size: clamp(0.875em, 1.2vw, 1em);">
+                    <img src="assets/phone-icon.svg" alt="Phone" style="width: 1.5em; height: 1.5em;" />
                     <span style="font-family: 'Plus Jakarta Sans'; font-weight: 500;">+971 50 841 5960</span>
                 </div>
                 <div class="px-1 mt-2 mt-md-0"
-                    style="display: flex; align-items: center; gap: 12px; color: #ffffff; font-size: clamp(0.875rem, 1.2vw, 1rem);">
-                    <img src="assets/phone-icon.svg" alt="Email" style="width: 24px; height: 24px;" />
+                    style="display: flex; align-items: center; gap: 12px; color: #ffffff; font-size: clamp(0.875em, 1.2vw, 1em);">
+                    <img src="assets/phone-icon.svg" alt="Email" style="width: 1.5em; height: 1.5em;" />
                     <span style="font-family: 'Plus Jakarta Sans'; font-weight: 500;">info@tejdeed.com</span>
                 </div>
                 <div class="px-1 mt-2 mt-md-0"
-                    style="display: flex; align-items: center; gap: 12px; color: #ffffff; font-size: clamp(0.875rem, 1.2vw, 1rem);">
-                    <img src="assets/phone-icon.svg" alt="Phone" style="width: 24px; height: 24px;" />
+                    style="display: flex; align-items: center; gap: 12px; color: #ffffff; font-size: clamp(0.875em, 1.2vw, 1em);">
+                    <img src="assets/phone-icon.svg" alt="Phone" style="width: 1.5em; height: 1.5em;" />
                     <span style="font-family: 'Plus Jakarta Sans'; font-weight: 500;">+971 50 841 5960</span>
                 </div>
             </div>
         </div>
-        <div class="row" style="padding-top: 3vw;padding-bottom: 3vw; border-top: 0.5px solid rgba(255, 255, 255, 0.2); " >
+        <div class="row"
+            style="padding-top: 1vw;padding-bottom: 1vw; border-top: 0.5px solid rgba(255, 255, 255, 0.2); ">
             <div class="col-md d-flex justify-content-start">
                 <div
-                    style="width: 100%; display: flex; flex-direction: column; align-items: left; text-align: left; color: #ffffff; font-size: clamp(0.75rem, 1vw, 0.875rem);">
+                    style="width: 100%; display: flex; flex-direction: column; align-items: left; text-align: left; color: #ffffff; font-size: clamp(0.75em, 1vw, 0.875em);">
                     <p style="margin: 10px 0;">© Tajdeed 2024</p>
                 </div>
             </div>
         </div>
     </div>
-    
+
 
 
 
