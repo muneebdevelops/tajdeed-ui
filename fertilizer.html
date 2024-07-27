@@ -25,9 +25,15 @@
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 
     <style>
+        .alternate-component {
+        display: none !important;
+      }
         @media (max-width: 768px) {
             .animation-container {
                 display: none;
+            }
+            .alternate-component {
+                display: block !important; 
             }
 
             #tejdeed-way {
@@ -65,9 +71,9 @@
     </script>
 
     <nav
-        style="display: flex; flex-direction: row; align-items: center; justify-content: space-between; width: 100%; height: 60px; padding: 18px 25px; position: relative; border-bottom: 1px solid rgba(255, 255, 255, 0.2); background-color: #009E4C;">
+        style="display: flex; flex-direction: row; align-items: center; justify-content: space-between; width: 100%; height: 60px; padding: 18px 25px; position: relative; border-bottom: 1px solid rgba(255, 255, 255, 0.2); background-color: #ffffff;">
         <div>
-            <img src="assets/tagdeed-white-logo.svg" alt="Logo" style="height: 24px;" />
+            <img src="assets/tajdeed-green-logo.svg" alt="Logo" style="height: 24px;" />
         </div>
         <div onclick="toggleMenu()">
             <img src="assets/menu-clean.svg" alt="Menu Icon" style="height: 24px;" />
@@ -126,10 +132,10 @@
         style="display: flex; flex-direction: column; height: clamp(500px, 40.69vw, 600px); align-items: left; justify-content: center; gap: 30px; position: relative; background-color: #009e4c; padding-left: 5vw;">
         <div
             style="display: flex; flex-direction: column; width: 100%; max-width: 1050px; align-items: left; gap: 30px; position: relative; flex: 0 0 auto;">
-            <button
-                style="display: inline-flex; align-items: left !important; gap: 10px; padding: 10px 30px; border-radius: 10px; border: 0.5px solid #ffffff80; background-color: transparent; color: #ffffff; font-family: 'IBM Plex Sans-Regular', Helvetica; font-weight: 400; font-size: 21px; letter-spacing: -0.42px; cursor: pointer; width: 9.5rem;">
-                Fertilizers
-            </button>
+            <div
+                style="display: inline-flex; align-items: left !important; gap: 10px;  background-color: transparent; color: #ffffff; font-family: 'Plus Jakarta Sans'; font-style: normal; font-weight: 400; font-size: clamp(1rem, 0.9697rem + 0.1294vw, 1.125rem); line-height: 23px; letter-spacing: -0.02em;">
+                Tejdeed Organic Fertilizer
+            </div>
             <div
                 style="display: flex; height: auto; align-items: center; justify-content: center; gap: 10px; position: relative; align-self: stretch; width: 100%;">
                 <div
@@ -147,7 +153,7 @@
                 <div class="video-container" style="position: relative;">
                     <video controls controlslist="nofullscreen"
                         style="height:clamp(500px, 40.69vw, 600px); object-fit: cover; width: 100%;">
-                        <source src="/assets/renewable-page-video.mp4" type="video/mp4">
+                        <source src="/assets/tejdeed-fertilizers-vid.mp4" type="video/mp4">
                     </video>
                 </div>
             </div>
@@ -162,27 +168,25 @@
                 style="padding: 7vw; box-sizing: border-box;">
                 <div style="height: 475px; position: relative; width: 100%;">
                     <img style="position: absolute; top: 0; left: 0; width: 100%; min-width: 16.5rem; height: auto; object-fit: cover;"
-                        loading="lazy" alt="" src="assets/fertilizer-img-2.png" />
-                    <img style="position: absolute; top:  clamp(8rem, 20vw, 13rem); left: clamp(-3rem, 20vw, -11rem); width: auto; height: auto; max-width: 14.313rem; object-fit: cover; z-index: 1;"
-                        alt="" src="assets/fertilizer-img-1.png" />
+                        loading="lazy" alt="" src="assets/food-waste.png" />
+                    <img style="position: absolute; top:  clamp(8rem, 20vw, 13rem); left: clamp(-3rem, 20vw, -11rem); width: auto; min-height: auto; max-width: 14.313rem; object-fit: cover; z-index: 1; filter: brightness(100%);"
+                        alt="" src="assets/red-pepper.png" />
                 </div>
             </div>
             <div class="col-md-6 order-md-1 d-flex align-items-center"
-                style="padding: clamp(20px, 5vw, 40px); display: flex; flex-wrap: wrap; text-align: left; color: #123627; font-family: 'Plus Jakarta Sans', sans-serif; box-sizing: border-box;">
+                style="padding: clamp(25px, 5vw, 180px); display: flex; flex-wrap: wrap; text-align: left; color: #123627; font-family: 'Plus Jakarta Sans'; box-sizing: border-box;">
                 <section data-aos="fade-up" style="width: 100%; height: auto;">
                     <h3
-                        style="margin-top: clamp(1rem, 2vw, 2rem); font-size: clamp(24px, 2.5vw, 26px); line-height: 1.4; font-weight: 400;">
+                        style="margin-top: clamp(0.5rem, 5vw, 2rem); font-size: clamp(1.375rem, 1.3143rem + 0.2589vw, 1.625rem); line-height: clamp(1.875rem, 1.7536rem + 0.5178vw, 2.375rem); font-weight: 400;">
                         <p>
                             Tejdeed Organic Fertilizer specializes in enhancing soil health and boosting crop yields
                             sustainably. Made from food waste, these products provide essential nutrients, improve soil
                             structure, and promote microbial activity for long-term agricultural benefits.
                         </p>
                     </h3>
-                    <h6 data-aos="fade-up"
-                        style="margin-top: clamp(2rem, 2vw, 3rem); font-size: 1.125rem; line-height: 1.4; font-family: 'Inter', sans-serif;">
-                        The environment is under stress and it is asking for our help. Tejdeed Technologies is proud to
-                        be one of
-                        the concerned entities who has decided to be part of the solution to this global crisis.
+                    <h6 
+                        style="margin-top: clamp(2rem, 2vw, 3rem); font-size: clamp(1rem, 0.9697rem + 0.1294vw, 1.125rem); line-height: clamp(1.5rem, 1.4697rem + 0.1294vw, 1.625rem); font-family: 'Plus Jakarta Sans';">
+                        We sell organic fertilizer that enhances soil health and boosts crop yields, providing essential nutrients and promoting long-term sustainability.
                     </h6>
                 </section>
             </div>
@@ -194,32 +198,33 @@
             <div class="col-md-6" style="background-color: #f7f7f7; height: 41em;">
                 <section style="padding-left: 2.8vw; padding-right: 2.8vw ; align-items: flex-start; margin: 0 auto;">
                     <h1
-                        style="padding-top: 80px; width: 100%; font-family: 'Askan'; font-weight: 500; font-size: clamp(30px, 3vw, 42px); line-height: 48px; color: #123627;">
+                        style="padding: 25px; width: 100%; font-family: 'IBM Plex Serif'; font-weight: 500; font-size: clamp(32px, 3vw, 42px); line-height: clamp(2.375rem, 2.2233rem + 0.6472vw, 3rem); color: #123627;">
                         Our Products
                     </h1>
                     <h2 data-aos="fade-up"
-                        style="padding-top: 80px; font-family: 'Plus Jakarta Sans'; font-weight: 600; font-size: clamp(32px, 3vw, 32px); line-height: 42px; color: #009E4C;">
+                        style="padding: 25px; font-family: 'Plus Jakarta Sans'; font-weight: 600; font-size: clamp(22px, 3vw, 26px); line-height: clamp(1.75rem, 1.659rem + 0.3883vw, 2.125rem); color: #009E4C;">
                         Coming Soon:<br>
-                        <p style="color: #123627;">Premium Organic Compost, Top Soil, and More..
+                        <p style="color: #009E4C;">Premium Organic Compost,<br> Top Soil, and More..
                     </h2>
                     <p data-aos="fade-up"
-                        style="padding-top: 40px; width: 100%; font-family: 'Plus Jakarta Sans'; font-weight: 400; font-size: clamp(16px, 2.5vw, 18px); line-height: 24px; color: #123627;">
+                        style="padding: 25px;  width: 100%; font-family: 'Plus Jakarta Sans'; font-weight: 400; font-size: clamp(16px, 2.5vw, 16px); line-height: 24px; color: #123627;">
                         We are thrilled to launch our premium organic products to enrich your garden and nourish your
-                        plants. Crafted from locally sourced organic waste, our compost, top soil, and fertilizers offer
+                        plants.<br><br>
+                        Crafted from locally sourced organic waste, our compost, top soil, and fertilizers offer
                         sustainable and high-quality solutions. Stay tuned for updates on our eco-friendly offerings.
                     </p>
                 </section>
             </div>
             <div class="col-md-6" style="height: 41em; padding: 0;">
                 <div
-                    style="width: 100%; height: 100%; background: url('public/rectangle-47@2x.png') no-repeat center center; background-size: cover;">
+                    style="width: 100%; height: 100%; background: url('assets/soil.png') no-repeat center center; background-size: cover;">
                 </div>
             </div>
         </div>
     </div>
 
     <div class="container-fluid g-0 m-0"
-        style=" position: relative; background-color: #fff;color: #123627; font-family: 'IBM Plex Serif';padding: 6vw 0px; text-align: left; font-size: 42px">
+        style=" position: relative; background-color: #fff;color: #123627; font-family: 'IBM Plex Serif';padding: 6vw 0px; text-align: left;">
         <div data-aos="fade-up" class="row no-gutters g-0 m-0">
             <div class="col-md d-flex justify-content-start p-3 p-md-4">
                 <div style="
@@ -233,8 +238,8 @@
                     <h1 style="
                 margin: 0;
                 position: relative;
-                font-size: inherit;
-                line-height: 48px;
+                font-size: clamp(2rem, 1.8483rem + 0.6472vw, 2.625rem);
+                line-height: clamp(1.5rem, 1.2876rem + 0.9061vw, 2.375rem);
                 text-transform: capitalize;
                 font-weight: 500;
                 font-family: inherit;
@@ -256,7 +261,7 @@
                 gap: 60px;
                 min-width: 50vw;
                 max-width: 100vw;
-                font-size: 18px;
+                font-size: clamp(1rem, 0.8483rem + 0.6472vw, 1.625rem);
                 font-family: 'Plus Jakarta Sans';
                 ">
                     <div style="
@@ -274,11 +279,10 @@
                 margin: 0;
                 width: 70vw;
                 position: relative;
-                font-size: 26px;
-                line-height: 38px;
+                font-size: clamp(1rem, 0.8483rem + 0.6472vw, 1.625rem);
+                line-height: clamp(1.5rem, 1.2876rem + 0.9061vw, 2.375rem);
                 font-weight: 400;
                 font-family: 'Plus Jakarta Sans';
-                display: inline-block;
                 flex-shrink: 0;
                 max-width: 100%;
                 ">
@@ -313,7 +317,7 @@
                     overflow: hidden;
                     max-height: 100%;
                     object-fit: cover;
-                    " loading="lazy" alt="" src="public/rectangle-46@2x.png" />
+                    " loading="lazy" alt="" src="assets/our-mission-1.png" />
                 </div>
             </div>
             <div class="col-md d-flex justify-content-end" style="padding-top: 5vw;">
@@ -325,7 +329,7 @@
                 justify-content: flex-start;
                 gap: 60px;
                 max-width: 100%;
-                font-size: 18px;
+                font-size: clamp(1rem, 0.8483rem + 0.6472vw, 1.625rem);
                 font-family: 'Open Sans';
                 ">
                     <img style="
@@ -336,7 +340,7 @@
                 overflow: hidden;
                 flex-shrink: 0;
                 object-fit: cover;
-                " loading="lazy" alt="" src="public/rectangle-45@2x.png" />
+                " loading="lazy" alt="" src="assets/our-mission-2.png" />
                     <div class="p-4 p-md-0" style="
                   width: 42rem;
                   display: flex;
@@ -351,14 +355,13 @@
                         <h1 style="
                     margin: 0;
                     position: relative;
-                    font-size: inherit;
-                    line-height: 48px;
+                    line-height: clamp(1.5rem, 1.2876rem + 0.9061vw, 2.375rem);
                     text-transform: capitalize;
                     font-weight: 500;
                     font-family: inherit;
-                    font-size: 42px;
+                    font-size: clamp(2rem, 1.8483rem + 0.6472vw, 2.625rem);
                   ">
-                            Benefits
+                            Key Benefits
                         </h1>
                         <div style="
                     align-self: stretch;
@@ -368,7 +371,7 @@
                     justify-content: flex-start;
                     gap: 10px;
                     max-width: 100%;
-                    font-size: 18px;
+                    font-size: clamp(1rem, 0.8483rem + 0.6472vw, 1.625rem);
                     font-family: 'Plus Jakarta Sans';
                   ">
                             <div style="
@@ -387,7 +390,7 @@
                         flex: 1;
                         position: relative;
                         letter-spacing: -0.01em;
-                        line-height: 26px;
+                        line-height: clamp(1.5rem, 1.2876rem + 0.9061vw, 2.375rem);
                         display: inline-block;
                         max-width: 100%;
                       ">
@@ -411,7 +414,7 @@
                         flex: 1;
                         position: relative;
                         letter-spacing: -0.01em;
-                        line-height: 26px;
+                        line-height: clamp(1.5rem, 1.2876rem + 0.9061vw, 2.375rem);
                         display: inline-block;
                         max-width: 100%;
                       ">
@@ -435,7 +438,7 @@
                         flex: 1;
                         position: relative;
                         letter-spacing: -0.01em;
-                        line-height: 26px;
+                        line-height: clamp(1.5rem, 1.2876rem + 0.9061vw, 2.375rem);
                         display: inline-block;
                         max-width: 100%;
                       ">
@@ -459,7 +462,7 @@
                         flex: 1;
                         position: relative;
                         letter-spacing: -0.01em;
-                        line-height: 26px;
+                        line-height: clamp(1.5rem, 1.2876rem + 0.9061vw, 2.375rem);
                         display: inline-block;
                         max-width: 100%;
                       ">
@@ -483,7 +486,7 @@
                         flex: 1;
                         position: relative;
                         letter-spacing: -0.01em;
-                        line-height: 26px;
+                        line-height: clamp(1.5rem, 1.2876rem + 0.9061vw, 2.375rem);
                         display: inline-block;
                         max-width: 100%;
                       ">
@@ -592,6 +595,50 @@
     </script>
 
 
+<div class="alternate-component" style="width: 100%; position: relative; background-color: #009e4c; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; padding: 3.75em 1.563em; box-sizing: border-box; gap: 3.75em; line-height: normal; letter-spacing: normal;">
+      <header style="align-self: stretch; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start; padding: 0em 1.25em 0em 0em; text-align: left; color: #fff; font-family: 'IBM Plex Serif';">
+        <a style="text-decoration: none; position: relative; font-size: 2em; letter-spacing: -0.02em; line-height: 1.188em; text-transform: capitalize; font-weight: 500; color: inherit; white-space: nowrap;">Our Process</a>
+      </header>
+      <img style="align-self: stretch; position: relative; max-width: 100%;  max-height: 100%; object-fit: cover; margin-top: 1em;" alt="" src="assets/animation-mobile-veiw.png" />
+      <section style="align-self: stretch; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start; max-width: 100%; text-align: left; color: #fff; font-family: 'Plus Jakarta Sans'; margin-top: 1em;">
+        <div style="align-self: stretch; border-top: 0.5px solid #fff; border-bottom: 0.5px solid #fff; box-sizing: border-box; display: flex; flex-direction: row; align-items: center; justify-content: center; padding: 1.188em 0em; max-width: 100%;">
+          <div style="flex: 1; position: relative; font-size: 1em; line-height: 1.5em; display: inline-block; max-width: 100%;">
+            <ol style="margin: 0; font-family: inherit; font-size: inherit; padding-left: false;">
+              <li>We distribute food waste bins to restaurants & hotel, restaurant, supermarket, or food processing facility.</li>
+            </ol>
+          </div>
+        </div>
+        <div style="align-self: stretch; border-bottom: 0.5px solid #fff; box-sizing: border-box; display: flex; flex-direction: row; align-items: center; justify-content: center; padding: 1.25em 0em 1.188em; max-width: 100%;">
+          <div style="flex: 1; position: relative; font-size: 1em; line-height: 1.5em; display: inline-block; max-width: 100%;">
+            <ol style="margin: 0; font-family: inherit; font-size: inherit; padding-left: false;">
+              <li>We distribute food waste bins to restaurants & hotel, restaurant, supermarket, or food processing facility.</li>
+            </ol>
+          </div>
+        </div>
+        <div style="align-self: stretch; border-bottom: 0.5px solid #fff; box-sizing: border-box; display: flex; flex-direction: row; align-items: center; justify-content: center; padding: 1.25em 0em 1.188em; max-width: 100%;">
+          <div style="flex: 1; position: relative; font-size: 1em; line-height: 1.5em; display: inline-block; max-width: 100%;">
+            <ol style="margin: 0; font-family: inherit; font-size: inherit; padding-left: false;">
+              <li>We distribute food waste bins to restaurants & hotel, restaurant, supermarket, or food processing facility.</li>
+            </ol>
+          </div>
+        </div>
+        <div style="align-self: stretch; border-bottom: 0.5px solid #fff; box-sizing: border-box; display: flex; flex-direction: row; align-items: center; justify-content: center; padding: 1.25em 0em 1.188em; max-width: 100%;">
+          <div style="flex: 1; position: relative; font-size: 1em; line-height: 1.5em; display: inline-block; max-width: 100%;">
+            <ol style="margin: 0; font-family: inherit; font-size: inherit; padding-left: false;">
+              <li>We distribute food waste bins to restaurants & hotel, restaurant, supermarket, or food processing facility.</li>
+            </ol>
+          </div>
+        </div>
+        <div style="align-self: stretch; border-bottom: 0.5px solid #fff; box-sizing: border-box; display: flex; flex-direction: row; align-items: center; justify-content: center; padding: 1.25em 0em 1.188em; max-width: 100%;">
+          <div style="flex: 1; position: relative; font-size: 1em; line-height: 1.5em; display: inline-block; max-width: 100%;">
+            <ol style="margin: 0; font-family: inherit; font-size: inherit; padding-left: false;">
+              <li>We distribute food waste bins to restaurants & hotel, restaurant, supermarket, or food processing facility.</li>
+            </ol>
+          </div>
+        </div>
+      </section>
+    </div>
+
     <div class="container-fluid g-0 m-0"
         style=" position: relative; background-color: #fff;color: #123627; font-family: 'Open Sans';padding: 11vw 0px; text-align: left; font-size: 42px">
         <div data-aos="fade-up" class="row no-gutters g-0 m-0">
@@ -648,21 +695,22 @@
               margin: 0;
               align-self: stretch;
               position: relative;
-              font-size: 26px;
+              font-size: clamp(1.375rem, 1.3143rem + 0.2589vw, 1.625rem);
               line-height: 38px;
               font-weight: 400;
               font-family: inherit;
+              color: #009E4C;
             ">
                             Are you a hotel, restaurant, supermarket, or food processing
                             facility?
                         </h3>
-                        <div style="align-self: stretch; position: relative; line-height: 26px">
+                        <div style="align-self: stretch; position: relative; line-height: 26px; font-size: clamp(1rem, 0.9697rem + 0.1294vw, 1.125rem);">
                             Join us in our mission to create a greener, cleaner future for
                             everyone. By partnering with us, you not only reduce your
                             environmental footprint but also contribute to the growth of
                             sustainable agriculture.
                         </div>
-                        <div style="align-self: stretch; position: relative; line-height: 26px">
+                        <div style="align-self: stretch; position: relative; line-height: 26px; font-size: clamp(1rem, 0.9697rem + 0.1294vw, 1.125rem);">
                             Your collaboration ensures that organic waste is transformed into
                             high-quality organic fertilizers, promoting environmentally friendly
                             practices and supporting the local farming community.
@@ -731,7 +779,7 @@
             justify-content: flex-start;
             gap: 60px;
             max-width: 100%;
-            font-size: 18px;
+            font-size: clamp(1rem, 0.9697rem + 0.1294vw, 1.125rem);
             font-family: 'Plus Jakarta Sans';
             ">
                     <img style="
@@ -752,6 +800,7 @@
             max-width: 90%;
             box-sizing: border-box;
             padding-right: 20px;
+            font-size: clamp(1rem, 0.9697rem + 0.1294vw, 1.125rem);
             ">
                         Let's work together to turn food waste into opportunity and make a
                         positive impact on our environment. Join Tejdeed Fertilizers today and
@@ -802,7 +851,7 @@
       </div> -->
 
 
-    <div class="container-fluid" data-aos="fade-up" id="contact-us">
+    <!-- <div class="container-fluid" data-aos="fade-up" id="contact-us">
         <div class="row" data-aos="fade-up">
             <div class="col-md-6 d-flex align-items-center justify-content-center p-0"
                 style="height: 31.25rem; background-color: #f7f7f7;">
@@ -837,7 +886,21 @@
                 </section>
             </div>
         </div>
-    </div>
+    </div> -->
+
+
+
+    <div style="width: 100%; position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: clamp(7.5em, 6vw, 8.969em) clamp(0.938em, 1.5vw, 1.25em); box-sizing: border-box; background-image: url('assets/rectangle-313@2x.png'); background-size: cover; background-repeat: no-repeat; background-position: top; line-height: normal; letter-spacing: normal;">
+        <section style="width: clamp(80%, 40rem, 61.625em); border-radius: 15px; background-color: #f7f7f7; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: clamp(2.5em, 4vw, 3.188em) clamp(1.25em, 1vw, 1.25em); gap: clamp(1em, 2vw, 1.875em); max-width: 100%; text-align: center; color: #123627; font-family: 'IBM Plex Serif';">
+          <div style="width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: clamp(0.75em, 1.5vw, 0.938em); max-width: 100%;">
+            <h2 style="margin: 0;  font-size: clamp(1.5em, 3vw, 2em); letter-spacing: -0.02em; line-height: clamp(1em, 2vw, 1.188em); text-transform: capitalize; font-weight: 500; font-family: inherit; display: inline-block;">Email Us</h2>
+            <div style=" height: clamp(3em, 6vw, 4.333em); font-size: clamp(0.875em, 2vw, 1.125em); line-height: clamp(1.2em, 2.5vw, 1.444em); font-family: 'Plus Jakarta Sans'; display: inline-block; max-width: 100%;">For more information, please email us.<br> We are dedicated to providing the<br> highest quality products locally.</div>
+          </div>
+          <button style="cursor: pointer; border: 0.5px solid #f7f7f7; padding: clamp(0.5em, 1.5vw, 0.75em) clamp(2em, 5vw, 3.688em); background-color: #009e4c; border-radius: 11px; display: flex; flex-direction: row; align-items: center; justify-content: center; white-space: nowrap;">
+            <div style="font-size: clamp(1em, 2vw, 1.125em); text-transform: capitalize; font-weight: 500; font-family: 'Plus Jakarta Sans'; color: #f7f7f7; text-align: center; display: inline-block; min-width: 4em;">Email Us</div>
+          </button>
+        </section>
+      </div>
 
 
 
