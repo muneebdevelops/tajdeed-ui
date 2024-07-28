@@ -91,7 +91,7 @@
   </nav>
 
   <div id="menu"
-    style="display: none; flex-direction: column; width: 100%; max-width: 500px; height: 100vh; align-items: flex-start; justify-content: space-between; padding: 60px 33px; position: absolute; top: 60px; right: 0; background-color: #d9d9d9; z-index: 1000;">
+    style="display: none; flex-direction: column; width: 100%; max-width: 500px; height: 100vh; align-items: flex-start; justify-content: space-between; padding: 60px 33px; position: fixed; top: 0; right: 0; background-color: #d9d9d9; z-index: 1001;">
     <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 60px; width: 100%;">
       <div style="height: 48px; align-items: center; justify-content: flex-end; gap: 10px; display: flex; width: 100%;">
         <div style="width: 48px; height: 48px; position: relative;" onclick="toggleMenu()">
@@ -127,6 +127,7 @@
   <script>
     function toggleMenu() {
       var menu = document.getElementById('menu');
+
       if (menu.style.display === 'none' || menu.style.display === '') {
         menu.style.display = 'flex';
 
