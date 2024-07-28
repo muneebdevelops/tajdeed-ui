@@ -46,6 +46,27 @@
         font-size: 18px !important;
         margin-bottom: 15px !important;
       }
+
+      .hover-card {
+        border-radius: 11px !important;
+        align-items: flex-start !important;
+        margin-left: 0.6em;
+      }
+
+      .hover-card h1 {
+        text-align: left !important;
+        margin-left: 0.6em !important;
+      }
+
+      .hover-button {
+        align-self: flex-start !important;
+        margin-left: 1.3em !important;
+      }
+
+      .mycards {
+        padding-top: 0.6em !important;
+        padding-bottom: 0.6em !important;
+      }
     }
   </style>
 </head>
@@ -117,78 +138,70 @@
 
 
   <!-- FOUR CARDS todo: add links, make button pointy -->
-  <div class=" container-fluid" id="four-cards" style="padding: 0; ">
-    <div class="row" style="margin: 0; ">
-      <div class="col-md-3 p-1 p-md-0" style="padding-left:0; padding-right: 0; padding-top: 0; padding-bottom: 0;">
-        <div class="card hover-card" style="border: none; margin: 0; ">
-          <div
-            style="height: clamp(25rem, 18.3101rem + 28.5437vw, 52.5625rem); display: flex; flex-direction: column; align-items: center; justify-content: space-between; padding: 48px 20px; box-sizing: border-box; background-image: url('assets/fertilizer-image.png'); background-size: cover; background-repeat: no-repeat; background-position: center; width: 100%; max-width: 100%;">
-            <h1 data-aos="zoom-in"
-              style="margin: 0 auto; width: 171px; height: 47px; font-family: 'IBM Plex Serif'; font-style: normal; font-weight: 500; font-size: 36px; line-height: 47px; text-align: center; letter-spacing: -0.02em; color: #FFFFFF;">
-              Fertilizers
-            </h1>
-            <button class="hover-button"
-              style="cursor: pointer; border: 0.5px solid #fff; padding: 11px 28px; background-color: transparent; border-radius: 12px; box-sizing: border-box; display: flex; flex-direction: row; align-items: center; justify-content: center; max-width: 56%; margin-top: 20px;">
-              <a style="font-size: 14px; letter-spacing: 0.19em; text-transform: uppercase; font-weight: 600; font-family: 'Plus Jakarta Sans'; color: #fff; text-align: center; display: inline-block; min-width: 117px; white-space: nowrap; text-decoration: none;"
-                href="fertilizer.html">
-                Learn More
-              </a>
-            </button>
-          </div>
+  <div class=" container-fluid" id="four-cards" style="padding: 0;">
+    <div class="row" style="margin: 0; gap: 0;">
+      <div class="col-md-3 p-4 p-md-0 mycards">
+        <div class="card hover-card"
+          style="border: none; border-radius: 0%; margin: 0; height: clamp(25rem, 18.3101rem + 28.5437vw, 52.5625rem); display: flex; flex-direction: column; align-items: center; justify-content: space-between; background-image: url('assets/card-1.png'); background-size: cover; background-repeat: no-repeat; background-position: center; width: 100%; max-width: 100%; padding-top: clamp(1.875rem, 1.6019rem + 1.165vw, 3rem); padding-bottom: clamp(1.875rem, 1.6019rem + 1.165vw, 3rem);">
+          <h1 class="card-heading" data-aos="zoom-in"
+            style="border: 0; background: transparent; font-family: 'IBM Plex Serif'; font-style: normal; font-weight: 500; font-size:clamp(2rem, 1.8483rem + 0.6472vw, 2.625rem); line-height: clamp(2.375rem, 2.2233rem + 0.6472vw, 3rem); text-align: center; color: #F7F7F7;">
+            Fertilizers
+          </h1>
+          <button class="hover-button"
+            style="cursor: pointer; border: 0.006em solid #F7F7F7; background-color: transparent; border-radius: 11px;  display: flex; flex-direction: row; align-items: center; justify-content: center; width: 9.75em; height: 3.125em;">
+            <a style="font-size: 1.125em; text-transform: capitalize; font-weight: 500; font-family: 'Plus Jakarta Sans'; color: #F7F7F7; text-align: center; line-height: 1.438em; text-decoration: none;"
+              href="fertilizer.html">
+              Learn More
+            </a>
+          </button>
         </div>
       </div>
-      <div class="col-md-3 p-1 p-md-0" style="padding: 0;">
-        <div class="card hover-card" style="border: none; margin: 0; ;">
-          <div
-            style="height: clamp(25rem, 18.3101rem + 28.5437vw, 52.5625rem); display: flex; flex-direction: column; align-items: center; justify-content: space-between; padding: 48px 20px; box-sizing: border-box; background-image: url('assets/plastic-image.png'); background-size: cover; background-repeat: no-repeat; background-position: center; width: 100%; max-width: 100%;">
-            <h1 data-aos="zoom-in"
-              style="margin: 0 auto; width: 171px; height: 47px; font-family: 'IBM Plex Serif'; font-style: normal; font-weight: 500; font-size: 36px; line-height: 47px; text-align: center; letter-spacing: -0.02em; color: #FFFFFF;">
-              Plastic
-            </h1>
-            <button class="hover-button"
-              style="cursor: pointer; border: 0.5px solid #fff; padding: 11px 28px; background-color: transparent; border-radius: 12px; box-sizing: border-box; display: flex; flex-direction: row; align-items: center; justify-content: center; max-width: 56%; margin-top: 20px;">
-              <a style="font-size: 14px; letter-spacing: 0.19em; text-transform: uppercase; font-weight: 600; font-family: 'Plus Jakarta Sans'; color: #fff; text-align: center; display: inline-block; min-width: 117px; white-space: nowrap; text-decoration: none;"
-                href="fertilizer.html">
-                Learn More
-              </a>
-            </button>
-          </div>
+      <div class="col-md-3 p-4 p-md-0 mycards">
+        <div class="card hover-card"
+          style="border: none; border-radius: 0%; margin: 0; height: clamp(25rem, 18.3101rem + 28.5437vw, 52.5625rem); display: flex; flex-direction: column; align-items: center; justify-content: space-between; background-image: url('assets/card-2.png'); background-size: cover; background-repeat: no-repeat; background-position: center; width: 100%; max-width: 100%; padding-top: clamp(1.875rem, 1.6019rem + 1.165vw, 3rem); padding-bottom: clamp(1.875rem, 1.6019rem + 1.165vw, 3rem);">
+          <h1 class="card-heading" data-aos="zoom-in"
+            style="border: 0; background: transparent; font-family: 'IBM Plex Serif'; font-style: normal; font-weight: 500; font-size:clamp(2rem, 1.8483rem + 0.6472vw, 2.625rem); line-height: clamp(2.375rem, 2.2233rem + 0.6472vw, 3rem); text-align: center; color: #F7F7F7;">
+            Plastic
+          </h1>
+          <button class="hover-button"
+            style="cursor: pointer; border: 0.006em solid #F7F7F7; background-color: transparent; border-radius: 11px;  display: flex; flex-direction: row; align-items: center; justify-content: center; width: 9.75em; height: 3.125em;">
+            <a style="font-size: 1.125em; text-transform: capitalize; font-weight: 500; font-family: 'Plus Jakarta Sans'; color: #F7F7F7; text-align: center; line-height: 1.438em; text-decoration: none;"
+              href="fertilizer.html">
+              Learn More
+            </a>
+          </button>
         </div>
       </div>
-      <div class="col-md-3 p-1 p-md-0" style="padding-left: 1vw; padding-right: 0; padding-top: 0;padding-bottom: 0;">
-        <div class="card hover-card" style="border: none; margin: 0; ">
-          <div
-            style="height: clamp(25rem, 18.3101rem + 28.5437vw, 52.5625rem); display: flex; flex-direction: column; align-items: center; justify-content: space-between; padding: 48px 20px; box-sizing: border-box; background-image: url('assets/biomass-image.png'); background-size: cover; background-repeat: no-repeat; background-position: center; width: 100%; max-width: 100%;">
-            <h1 data-aos="zoom-in"
-              style="margin: 0 auto; width: 171px; height: 47px; font-family: 'IBM Plex Serif'; font-style: normal; font-weight: 500; font-size: 36px; line-height: 47px; text-align: center; letter-spacing: -0.02em; color: #FFFFFF;">
-              Biomass
-            </h1>
-            <button class="hover-button"
-              style="cursor: pointer; border: 0.5px solid #fff; padding: 11px 28px; background-color: transparent; border-radius: 12px; box-sizing: border-box; display: flex; flex-direction: row; align-items: center; justify-content: center; max-width: 56%; margin-top: 20px;">
-              <a style="font-size: 14px; letter-spacing: 0.19em; text-transform: uppercase; font-weight: 600; font-family: 'Plus Jakarta Sans'; color: #fff; text-align: center; display: inline-block; min-width: 117px; white-space: nowrap; text-decoration: none;"
-                href="fertilizer.html">
-                Learn More
-              </a>
-            </button>
-          </div>
+      <div class="col-md-3 p-4 p-md-0 mycards">
+        <div class="card hover-card"
+          style="border: none; border-radius: 0%; margin: 0; height: clamp(25rem, 18.3101rem + 28.5437vw, 52.5625rem); display: flex; flex-direction: column; align-items: center; justify-content: space-between; background-image: url('assets/card-3.png'); background-size: cover; background-repeat: no-repeat; background-position: center; width: 100%; max-width: 100%; padding-top: clamp(1.875rem, 1.6019rem + 1.165vw, 3rem); padding-bottom: clamp(1.875rem, 1.6019rem + 1.165vw, 3rem);">
+          <h1 class="card-heading" data-aos="zoom-in"
+            style="border: 0; background: transparent; font-family: 'IBM Plex Serif'; font-style: normal; font-weight: 500; font-size:clamp(2rem, 1.8483rem + 0.6472vw, 2.625rem); line-height: clamp(2.375rem, 2.2233rem + 0.6472vw, 3rem); text-align: center; color: #F7F7F7;">
+            Biomass
+          </h1>
+          <button class="hover-button"
+            style="cursor: pointer; border: 0.006em solid #F7F7F7; background-color: transparent; border-radius: 11px;  display: flex; flex-direction: row; align-items: center; justify-content: center; width: 9.75em; height: 3.125em;">
+            <a style="font-size: 1.125em; text-transform: capitalize; font-weight: 500; font-family: 'Plus Jakarta Sans'; color: #F7F7F7; text-align: center; line-height: 1.438em; text-decoration: none;"
+              href="fertilizer.html">
+              Learn More
+            </a>
+          </button>
         </div>
       </div>
-      <div class="col-md-3 p-1 p-md-0" style="padding:0">
-        <div class="card hover-card" style="border: none; margin: 0; ">
-          <div
-            style="height: clamp(25rem, 18.3101rem + 28.5437vw, 52.5625rem); display: flex; flex-direction: column; align-items: center; justify-content: space-between; padding: 48px 20px; box-sizing: border-box; background-image: url('assets/gas-image.png'); background-size: cover; background-repeat: no-repeat; background-position: center; width: 100%; max-width: 100%;">
-            <h1 data-aos="zoom-in"
-              style="margin: 0 auto; width: 171px; height: 47px; font-family: 'IBM Plex Serif'; font-style: normal; font-weight: 500; font-size: 36px; line-height: 47px; text-align: center; letter-spacing: -0.02em; color: #FFFFFF;">
-              Gas
-            </h1>
-            <button class="hover-button"
-              style="cursor: pointer; border: 0.5px solid #fff; padding: 11px 28px; background-color: transparent; border-radius: 12px; box-sizing: border-box; display: flex; flex-direction: row; align-items: center; justify-content: center; max-width: 56%; margin-top: 20px;">
-              <a style="font-size: 14px; letter-spacing: 0.19em; text-transform: uppercase; font-weight: 600; font-family: 'Plus Jakarta Sans'; color: #fff; text-align: center; display: inline-block; min-width: 117px; white-space: nowrap; text-decoration: none;"
-                href="fertilizer.html">
-                Learn More
-              </a>
-            </button>
-          </div>
+      <div class="col-md-3 p-4 p-md-0 mycards">
+        <div class="card hover-card"
+          style="border: none; border-radius: 0%; margin: 0; height: clamp(25rem, 18.3101rem + 28.5437vw, 52.5625rem); display: flex; flex-direction: column; align-items: center; justify-content: space-between; background-image: url('assets/card-4.png'); background-size: cover; background-repeat: no-repeat; background-position: center; width: 100%; max-width: 100%; padding-top: clamp(1.875rem, 1.6019rem + 1.165vw, 3rem); padding-bottom: clamp(1.875rem, 1.6019rem + 1.165vw, 3rem);">
+          <h1 class="card-heading" data-aos="zoom-in"
+            style="border: 0; background: transparent; font-family: 'IBM Plex Serif'; font-style: normal; font-weight: 500; font-size:clamp(2rem, 1.8483rem + 0.6472vw, 2.625rem); line-height: clamp(2.375rem, 2.2233rem + 0.6472vw, 3rem); text-align: center; color: #F7F7F7;">
+            Gas
+          </h1>
+          <button class="hover-button"
+            style="cursor: pointer; border: 0.006em solid #F7F7F7; background-color: transparent; border-radius: 11px;  display: flex; flex-direction: row; align-items: center; justify-content: center; width: 9.75em; height: 3.125em;">
+            <a style="font-size: 1.125em; text-transform: capitalize; font-weight: 500; font-family: 'Plus Jakarta Sans'; color: #F7F7F7; text-align: center; line-height: 1.438em; text-decoration: none;"
+              href="fertilizer.html">
+              Learn More
+            </a>
+          </button>
         </div>
       </div>
     </div>
@@ -197,30 +210,33 @@
   <script>
     document.querySelectorAll('.hover-card').forEach(card => {
       const button = card.querySelector('.hover-button');
-  
-      card.onmouseover = function() {
-        card.style.filter = 'brightness(1.2)';
+
+      card.onmouseover = function () {
+        card.style.filter = 'brightness(1.3)';
         button.style.backgroundColor = '#009E4C';
-        button.querySelector('a').style.color = '#fff';
+        button.style.borderColor = '#009E4C';
+        button.querySelector('a').style.color = '#F7F7F7';
       };
-  
-      card.onmouseout = function() {
-        card.style.filter = 'brightness(1)';
+
+      card.onmouseout = function () {
+        card.style.filter = 'brightness(0.9)';
         button.style.backgroundColor = 'transparent';
-        button.querySelector('a').style.color = '#fff';
+        button.style.borderColor = '#F7F7F7';
+        button.querySelector('a').style.color = '#F7F7F7';
       };
     });
-  
+
     if (window.innerWidth <= 768) {
       document.querySelectorAll('.hover-button').forEach(button => {
         button.style.backgroundColor = '#009E4C';
-        button.querySelector('a').style.color = '#fff';
+        button.style.borderColor = '#009E4C';
+        button.querySelector('a').style.color = '#F7F7F7';
       });
     }
   </script>
 
   <!-- MISSION todo: maybe add some padding-->
-  <div class=" container-fluid" id="mid-section"
+  <!-- <div class=" container-fluid" id="mid-section"
     style="background-color: #f7f7f7; padding: 7vw; max-width: 100%; max-height: auto;">
     <div class="row" data-aos="fade-up" style="margin: 0;">
       <div class="col-md-12 order-md-1 d-flex align-items-center"
@@ -242,12 +258,37 @@
         </section>
       </div>
     </div>
+  </div> -->
+
+  <!-- MISSION todo: maybe add some padding-->
+  <div class=" container-fluid" id="mid-section"
+    style="background-color: #FFFFFF; max-width: 100%; max-height: auto; padding: 0;">
+    <div class="row" data-aos="fade-up" style="margin: 0; padding: 0;">
+      <div class="col-md-12 order-md-1 d-flex align-items-center"
+        style="background-color: #FFFFFF; padding: 0; display: flex; flex-wrap: wrap; text-align: left; color: #123627; font-family: 'Plus Jakarta Sans', sans-serif; box-sizing: border-box;">
+        <section data-aos="fade-up"
+          style="width: 100%; height: auto; padding: clamp(5.625rem, -2.6188rem + 17.8404vw, 10.1875rem) clamp(1.5625rem, -2.6188rem + 17.8404vw, 14.4375rem);">
+          <h3
+            style="margin-top: clamp(1rem, 2vw, 2rem); font-size: clamp(1.375rem, 1.1626rem + 0.9061vw, 2.25rem); line-height: clamp(1.875rem, 1.5109rem + 1.5534vw, 3.375rem); font-weight: 400;">
+            <p>To 'Tejdeed' is to renew and to revive.
+              <br><br>
+              Our mission is to renew and revive discarded materials into new products that will help our customers
+              reduce cost and clean the environment.
+            </p>
+          </h3>
+          <h6
+            style="margin-top: clamp(2rem, 2vw, 3rem); font-size: clamp(1rem, 0.9697rem + 0.1294vw, 1.125rem); line-height: clamp(1.5rem, 1.4697rem + 0.1294vw, 1.625rem); font-family: 'Plus Jakarta Sans';">
+            The environment is under stress and it is asking for our help. Tejdeed Technologies is proud to be one of
+            the concerned entities who has decided to be part of the solution to this global crisis.
+          </h6>
+        </section>
+      </div>
+    </div>
   </div>
 
   <div class=" container-fluid" id="green-card">
     <div class="row" data-aos="fade-up">
-      <div class="col-md-6"
-        style="background-color: #25734B; margin: 0;">
+      <div class="col-md-6" style="background-color: #25734B; margin: 0;">
         <h1
           style="margin: 0; padding: clamp(0.938rem, 0.268rem + 1.786vw, 1.875rem);  font-family: 'IBM Plex Serif'; font-weight: 400; font-size: 1.875rem; line-height: 38px; color: #FFFFFF;">
           We are on a mission to
@@ -277,10 +318,10 @@
 
 
   <div class="container-fluid g-0 m-0"
-  style=" position: relative; background-color: #fff;color: #123627; font-family: 'IBM Plex Serif';padding: 6vw 0px; text-align: left;">
-  <div data-aos="fade-up" class="row no-gutters g-0 m-0">
+    style=" position: relative; background-color: #fff;color: #123627; font-family: 'IBM Plex Serif';padding: 6vw 0px; text-align: left;">
+    <div data-aos="fade-up" class="row no-gutters g-0 m-0">
       <div class="col-md d-flex justify-content-start p-3 pt-md-2">
-          <div style="
+        <div style="
               margin-bottom: 2vw;
               display: flex;
               flex-direction: row;
@@ -288,7 +329,7 @@
               justify-content: flex-start;
               padding: 0px 2vw;
           ">
-              <h1 style="
+          <h1 style="
           margin: 0;
           position: relative;
           font-size: clamp(2rem, 1.8483rem + 0.6472vw, 2.625rem);
@@ -297,14 +338,14 @@
           font-weight: 500;
           font-family: inherit;
           ">
-                  Tejdeed Way
-              </h1>
-          </div>
+            Tejdeed Way
+          </h1>
+        </div>
 
       </div>
       <div class="col-md d-flex justify-content-start justify-content-md-end p-3 p-md-0">
 
-          <div style="
+        <div style="
           padding-left: 2vw;
           padding-right: clamp(0rem, -2.8846rem + 12.3077vw, 12.5rem);
           width: 42.45rem;
@@ -318,7 +359,7 @@
           font-size: clamp(1rem, 0.8483rem + 0.6472vw, 1.625rem);
           font-family: 'Plus Jakarta Sans';
           ">
-              <div style="
+          <div style="
           width: 100vw;
           display: flex;
           flex-direction: column;
@@ -329,7 +370,7 @@
           gap: 30px;
           max-width: 100%;
         ">
-                  <h2 style="
+            <h2 style="
           margin: 0;
           position: relative;
           font-size: clamp(1rem, 0.8483rem + 0.6472vw, 1.625rem);
@@ -339,17 +380,18 @@
           flex-shrink: 0;
           max-width: 100%;
           ">
-                      With the engineering and scientific expertise of its founders and with the technical expertise of its colleagues, Tejdeed ensures the high quality of products and services to its customers.
-                  </h2>
-              </div>
+              With the engineering and scientific expertise of its founders and with the technical expertise of its
+              colleagues, Tejdeed ensures the high quality of products and services to its customers.
+            </h2>
           </div>
+        </div>
 
 
       </div>
-  </div>
-  <div data-aos="fade-up" class=" row no-gutters g-0 m-0">
+    </div>
+    <div data-aos="fade-up" class=" row no-gutters g-0 m-0">
       <div class="col-md d-flex justify-content-start" style="padding-top: 20vw;">
-          <div style="
+        <div style="
           height: clamp(18.75rem, 17.7013rem + 8.3893vw, 28.188rem);
           width: clamp(23rem, 22.4236rem + 4.6116vw, 28.188rem);
           display: flex;
@@ -359,7 +401,7 @@
           gap: 578px;
           max-width: 100%;
           ">
-              <img style="
+          <img style="
               align-self: stretch;
               flex: 1;
               position: relative;
@@ -368,10 +410,10 @@
               max-height: 100%;
               object-fit: cover;
               " loading="lazy" alt="" src="/assets/inside-factory-tejdeed-way-2.png" />
-          </div>
+        </div>
       </div>
       <div class="col-md d-flex justify-content-end" style="padding-top: 5vw;">
-          <div style="
+        <div style="
           width: clamp(22.688rem, 19.5561rem + 25.0551vw, 50.875rem);
           display: flex;
           flex-direction: column;
@@ -382,7 +424,7 @@
           font-size: clamp(1rem, 0.8483rem + 0.6472vw, 1.625rem);
           font-family: 'Open Sans';
           ">
-              <img style="
+          <img style="
           align-self: stretch;
           height: clamp(16.5rem, 14.8611rem + 13.1111vw, 31.25rem);
           position: relative;
@@ -391,7 +433,7 @@
           flex-shrink: 0;
           object-fit: cover;
           " loading="lazy" alt="" src="assets/overhead-shot-tejdeed-way-1.png" />
-              <div class="p-4 p-md-0" style="
+          <div class="p-4 p-md-0" style="
             width: 42rem;
             display: flex;
             flex-direction: column;
@@ -403,8 +445,8 @@
             max-width: 100%;
             
           ">
-            
-                  <div style="
+
+            <div style="
               padding-right: clamp(0rem, -2.8846rem + 12.3077vw, 12.5rem);
               align-self: stretch;
               display: flex;
@@ -416,7 +458,7 @@
               font-size: clamp(1rem, 0.8483rem + 0.6472vw, 1.625rem);
               font-family: 'Plus Jakarta Sans';
             ">
-                      <div style="
+              <div style="
                 align-self: stretch;
                 border-top: 0.5px solid #123627;
                 border-bottom: 0.5px solid #123627;
@@ -428,7 +470,7 @@
                 padding: 19px 0px;
                 max-width: 100%;
               ">
-                          <div style="
+                <div style="
                   flex: 1;
                   position: relative;
                   letter-spacing: -0.01em;
@@ -436,10 +478,11 @@
                   display: inline-block;
                   max-width: 100%;
                 ">
-                              With the engineering and scientific expertise of its founders and with the technical expertise of its colleagues, Tejdeed ensures the high quality of products and services to its customers.
-                          </div>
-                      </div>
-                      <div style="
+                  With the engineering and scientific expertise of its founders and with the technical expertise of its
+                  colleagues, Tejdeed ensures the high quality of products and services to its customers.
+                </div>
+              </div>
+              <div style="
                 align-self: stretch;
                 border-bottom: 0.5px solid #123627;
                 box-sizing: border-box;
@@ -450,7 +493,7 @@
                 padding: 20px 0px 19px;
                 max-width: 100%;
               ">
-                          <div style="
+                <div style="
                   flex: 1;
                   position: relative;
                   letter-spacing: -0.01em;
@@ -458,10 +501,12 @@
                   display: inline-block;
                   max-width: 100%;
                 ">
-                              We focus on procurement supply chain, state-of-the-art manufacturing equipment and processes, statistical quality control methods and clean storage facilities to ensure our products meet our customers’ high expectations.
-                          </div>
-                      </div>
-                      <div style="
+                  We focus on procurement supply chain, state-of-the-art manufacturing equipment and processes,
+                  statistical quality control methods and clean storage facilities to ensure our products meet our
+                  customers’ high expectations.
+                </div>
+              </div>
+              <div style="
                 align-self: stretch;
                 border-bottom: 0.5px solid #123627;
                 box-sizing: border-box;
@@ -472,7 +517,7 @@
                 padding: 20px 0px 19px;
                 max-width: 100%;
               ">
-                          <div style="
+                <div style="
                   flex: 1;
                   position: relative;
                   letter-spacing: -0.01em;
@@ -480,10 +525,12 @@
                   display: inline-block;
                   max-width: 100%;
                 ">
-                              Our customers will be able to monitor the current market rates and compare them with Tejdeed’s rate for the day. Customers can place order through our ecommerce website and mobile apps and they can monitor their order status.
-                          </div>
-                      </div>
-                      <div style="
+                  Our customers will be able to monitor the current market rates and compare them with Tejdeed’s rate
+                  for the day. Customers can place order through our ecommerce website and mobile apps and they can
+                  monitor their order status.
+                </div>
+              </div>
+              <div style="
                 align-self: stretch;
                 border-bottom: 0.5px solid #123627;
                 box-sizing: border-box;
@@ -494,7 +541,7 @@
                 padding: 20px 0px 19px;
                 max-width: 100%;
               ">
-                          <div style="
+                <div style="
                   flex: 1;
                   position: relative;
                   letter-spacing: -0.01em;
@@ -502,46 +549,49 @@
                   display: inline-block;
                   max-width: 100%;
                 ">
-                              Information technologies enables Tejdeed to track its inventory levels through key locations in Pakistan and deliver the materials to our customers as per agreed time lines. We can even monitor the inventories of Tejdeed-supplied materials for our customers and through the use of RFID technologies and physical site visits.
-                          </div>
-                      </div>
-                      
-                  </div>
+                  Information technologies enables Tejdeed to track its inventory levels through key locations in
+                  Pakistan and deliver the materials to our customers as per agreed time lines. We can even monitor the
+                  inventories of Tejdeed-supplied materials for our customers and through the use of RFID technologies
+                  and physical site visits.
+                </div>
               </div>
 
-
-
+            </div>
           </div>
 
+
+
+        </div>
+
       </div>
+    </div>
+
   </div>
 
-</div>
 
 
-
-<div
-style="width: 100%; position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: clamp(7.5em, 6vw, 8.969em) clamp(0.938em, 1.5vw, 1.25em); box-sizing: border-box; background-image: url('assets/rectangle-313@2x.png'); background-size: cover; background-repeat: no-repeat; background-position: top; line-height: normal; letter-spacing: normal;">
-<section
-    style="width: clamp(80%, 40rem, 61.625em); border-radius: 15px; background-color: #f7f7f7; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: clamp(2.5em, 4vw, 3.188em) clamp(1.25em, 1vw, 1.25em); gap: clamp(1em, 2vw, 1.875em); max-width: 100%; text-align: center; color: #123627; font-family: 'IBM Plex Serif';">
-    <div
+  <div
+    style="width: 100%; position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: clamp(7.5em, 6vw, 8.969em) clamp(0.938em, 1.5vw, 1.25em); box-sizing: border-box; background-image: url('assets/email-back-img.png'); background-size: cover; background-repeat: no-repeat; background-position: top; line-height: normal; letter-spacing: normal;">
+    <section
+      style="width: clamp(80%, 40rem, 61.625em); border-radius: 15px; background-color: #f7f7f7; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: clamp(2.5em, 4vw, 3.188em) clamp(1.25em, 1vw, 1.25em); gap: clamp(1em, 2vw, 1.875em); max-width: 100%; text-align: center; color: #123627; font-family: 'IBM Plex Serif';">
+      <div
         style="width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: clamp(0.75em, 1.5vw, 0.938em); max-width: 100%;">
         <h2
-            style="margin: 0;  font-size: clamp(1.5em, 3vw, 2em); letter-spacing: -0.02em; line-height: clamp(1em, 2vw, 1.188em); text-transform: capitalize; font-weight: 500; font-family: inherit; display: inline-block;">
-            Email Us</h2>
+          style="margin: 0;  font-size: clamp(1.5em, 3vw, 2em); letter-spacing: -0.02em; line-height: clamp(1em, 2vw, 1.188em); text-transform: capitalize; font-weight: 500; font-family: inherit; display: inline-block;">
+          Email Us</h2>
         <div
-            style=" font-size: clamp(0.875em, 2vw, 1.125em); line-height: clamp(1.2em, 2.5vw, 1.444em); font-family: 'Plus Jakarta Sans'; display: inline-block; max-width: 100%;">
-            For more information, please email us.<br> We are dedicated to providing the<br> highest quality
-            products locally.</div>
-    </div>
-    <button
+          style=" font-size: clamp(0.875em, 2vw, 1.125em); line-height: clamp(1.2em, 2.5vw, 1.444em); font-family: 'Plus Jakarta Sans'; display: inline-block; max-width: 100%;">
+          For more information, please email us.<br> We are dedicated to providing the<br> highest quality
+          products locally.</div>
+      </div>
+      <button
         style="cursor: pointer; border: 0.5px solid #f7f7f7; padding: clamp(0.5em, 1.5vw, 0.75em) clamp(2em, 5vw, 3.688em); background-color: #009e4c; border-radius: 11px; display: flex; flex-direction: row; align-items: center; justify-content: center; white-space: nowrap;">
         <div
-            style="font-size: clamp(1em, 2vw, 1.125em); text-transform: capitalize; font-weight: 500; font-family: 'Plus Jakarta Sans'; color: #f7f7f7; text-align: center; display: inline-block; min-width: 4em;">
-            Email Us</div>
-    </button>
-</section>
-</div>
+          style="font-size: clamp(1em, 2vw, 1.125em); text-transform: capitalize; font-weight: 500; font-family: 'Plus Jakarta Sans'; color: #f7f7f7; text-align: center; display: inline-block; min-width: 4em;">
+          Email Us</div>
+      </button>
+    </section>
+  </div>
 
 
 
@@ -599,11 +649,11 @@ style="width: 100%; position: relative; display: flex; flex-direction: column; a
           Get in Touch</div>
       </div>
       <div class="col-md d-flex justify-content-start justify-content-md-end flex-wrap flex-md-nowrap mt-3 mt-md-0">
-        <div class="px-1 mt-2 mt-md-0"
+        <!-- <div class="px-1 mt-2 mt-md-0"
           style="display: flex; align-items: center; gap: 12px; color: #ffffff; font-size: clamp(0.875em, 1.2vw, 1em);">
           <img src="assets/phone-icon.svg" alt="Phone" style="width: 1.5em; height: 1.5em;" />
           <span style="font-family: 'Plus Jakarta Sans'; font-weight: 500;">+971 50 841 5960</span>
-        </div>
+        </div> -->
         <div class="px-1 mt-2 mt-md-0"
           style="display: flex; align-items: center; gap: 12px; color: #ffffff; font-size: clamp(0.875em, 1.2vw, 1em);">
           <img src="assets/phone-icon.svg" alt="Email" style="width: 1.5em; height: 1.5em;" />
