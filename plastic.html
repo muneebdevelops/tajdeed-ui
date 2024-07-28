@@ -60,6 +60,9 @@
                 font-size: 18px !important;
                 margin-bottom: 15px !important;
             }
+            .product-container {
+                flex-flow: column wrap;
+            }
         }
     </style>
 </head>
@@ -195,7 +198,59 @@
 
 
 
-    <h1 style="width: 100px;">ADD OUR PRODUCTS</h1>
+    <!-- <h1 style="width: 100px;">ADD OUR PRODUCTS</h1> -->
+
+    <section class="product-container" style="display: flex; border-style: solid;">
+        <main class="product-left" style="flex: 1; background-color: white; padding-left: clamp(1.5625rem, 0.7282rem + 3.5599vw, 5rem); padding-top: clamp(5.625rem, 5.1699rem + 1.9417vw, 7.5rem);">
+            <div style=" font-family: 'IBM Plex Serif'; font-style: normal; font-weight: 500; font-size: clamp(2em, 4.15vw, 3.2em); line-height: clamp(2.375em, 5.0vw, 3.8em); letter-spacing: -0.02em; text-transform: capitalize; color: #123627; flex: none; order: 0; flex-grow: 0;">
+                Our Products
+            </div>
+            <div style="font-family: 'Plus Jakarta Sans'; font-style: normal; font-weight: 500; font-size: clamp(1.375rem, 1.3143rem + 0.2589vw, 1.625rem); color: rgba(18, 54, 39, 0.5);">
+                1. Packaging<br> 
+                2. Fiber (Polyester)<br> 
+                3. Construction<br>
+                4. Wood & Metal Substitutes
+            </div>
+        </main>
+        <aside class="product-right" style="display: flex; flex-flow: row wrap; flex: 1; background-color: white; padding-top: 0; padding-bottom: clamp(3.75rem, 2.8398rem + 3.8835vw, 7.5rem);"> 
+            <article class="nested" style="flex: 100%; padding-left: clamp(1.5625rem, 0.713rem + 3.6246vw, 5.0625rem); padding-top: clamp(2.75rem, 1.8398rem + 3.8835vw, 4.5rem); padding-right: clamp(1.5625rem, 0.713rem + 3.6246vw, 5.0625rem);" >
+                <img src="assets/plastic-product-1.png" alt="plastic-product-1" style="width: 100%;"/>
+                <div style="font-family: 'Plus Jakarta Sans', 'IBM Plex Serif'; font-style: normal; font-weight: 500; font-size: clamp(1.625em, 2.6vw, 2em); line-height: clamp(2.375em, 5.0vw, 2.6em); letter-spacing: clamp(-0.03em, -0.025em, -0.02em); text-transform: capitalize; color: #123627;">
+                    Packaging
+                </div>
+                <p style="font-family: 'Plus Jakarta Sans'; font-style: normal; font-weight: 400; font-size: clamp(0.8889em, 0.8393em + 0.1156vw, 1em); line-height: clamp(1.3333em, 1.25em + 0.1736vw, 1.5em); color: #123627;">
+                    Durable and eco-friendly materials for packaging solutions. Durable and eco-friendly materials for packaging solutions. Durable and eco-friendly materials for packaging solutions.
+                </p>    
+            </article>
+            <article class="nested" style="flex: 100%; padding-left: clamp(1.5625rem, 0.713rem + 3.6246vw, 5.0625rem); padding-top: clamp(3.75rem, 2.8398rem + 3.8835vw, 7.5rem); padding-right: clamp(1.5625rem, 0.713rem + 3.6246vw, 5.0625rem);" >
+                <img src="assets/plastic-product-2.png" alt="plastic-product-1" style="width: 100%;"/>
+                <div style="font-family: 'Plus Jakarta Sans', 'IBM Plex Serif'; font-style: normal; font-weight: 500; font-size: clamp(1.625em, 2.6vw, 2em); line-height: clamp(2.375em, 5.0vw, 2.6em); letter-spacing: clamp(-0.03em, -0.025em, -0.02em); text-transform: capitalize; color: #123627;">
+                    Fiber (Polyester)
+                </div>
+                <p style="font-family: 'Plus Jakarta Sans'; font-style: normal; font-weight: 400; font-size: clamp(0.8889em, 0.8393em + 0.1156vw, 1em); line-height: clamp(1.3333em, 1.25em + 0.1736vw, 1.5em); color: #123627;">
+                    Durable and eco-friendly materials for packaging solutions. Durable and eco-friendly materials for packaging solutions. Durable and eco-friendly materials for packaging solutions.
+                </p>    
+            </article>
+            <article class="nested" style="flex: 100%; padding-left: clamp(1.5625rem, 0.713rem + 3.6246vw, 5.0625rem); padding-top: clamp(3.75rem, 2.8398rem + 3.8835vw, 7.5rem); padding-right: clamp(1.5625rem, 0.713rem + 3.6246vw, 5.0625rem);" >
+                <img src="assets/plastic-product-3.png" alt="plastic-product-1" style="width: 100%;"/>
+                <div style="font-family: 'Plus Jakarta Sans', 'IBM Plex Serif'; font-style: normal; font-weight: 500; font-size: clamp(1.625em, 2.6vw, 2em); line-height: clamp(2.375em, 5.0vw, 2.6em); letter-spacing: clamp(-0.03em, -0.025em, -0.02em); text-transform: capitalize; color: #123627;">
+                    Construction
+                </div>
+                <p style="font-family: 'Plus Jakarta Sans'; font-style: normal; font-weight: 400; font-size: clamp(0.8889em, 0.8393em + 0.1156vw, 1em); line-height: clamp(1.3333em, 1.25em + 0.1736vw, 1.5em); color: #123627;">
+                    Durable and eco-friendly materials for packaging solutions. Durable and eco-friendly materials for packaging solutions. Durable and eco-friendly materials for packaging solutions.
+                </p>    
+            </article>
+            <article class="nested" style="flex: 100%; padding-left: clamp(1.5625rem, 0.713rem + 3.6246vw, 5.0625rem); padding-top: clamp(3.75rem, 2.8398rem + 3.8835vw, 7.5rem); padding-right: clamp(1.5625rem, 0.713rem + 3.6246vw, 5.0625rem);" >
+                <img src="assets/plastic-product-4.png" alt="plastic-product-1" style="width: 100%;"/>
+                <div style="font-family: 'Plus Jakarta Sans', 'IBM Plex Serif'; font-style: normal; font-weight: 500; font-size: clamp(1.625em, 2.6vw, 2em); line-height: clamp(2.375em, 5.0vw, 2.6em); letter-spacing: clamp(-0.03em, -0.025em, -0.02em); text-transform: capitalize; color: #123627;">
+                    Wood & Metal Substitutes
+                </div>
+                <p style="font-family: 'Plus Jakarta Sans'; font-style: normal; font-weight: 400; font-size: clamp(0.8889em, 0.8393em + 0.1156vw, 1em); line-height: clamp(1.3333em, 1.25em + 0.1736vw, 1.5em); color: #123627;">
+                    Durable and eco-friendly materials for packaging solutions. Durable and eco-friendly materials for packaging solutions. Durable and eco-friendly materials for packaging solutions.
+                </p>    
+            </article>
+        </aside>
+    </section>
 
 
     <div
