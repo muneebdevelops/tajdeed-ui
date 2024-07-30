@@ -60,10 +60,11 @@
                 font-size: 18px !important;
                 margin-bottom: 15px !important;
             }
+
             .product-container {
                 flex-flow: column wrap;
             }
-            
+
         }
     </style>
 </head>
@@ -77,9 +78,11 @@
     </script>
 
     <nav
-        style="display: flex; flex-direction: row; align-items: center; justify-content: space-between; width: 100%; height: 60px; padding: 18px 25px; position: relative; border-bottom: 1px solid rgba(255, 255, 255, 0.2); background-color: #ffffff;">
+        style="position: sticky !important; top: 0;  z-index: 1 !important; display: flex; flex-direction: row; align-items: center; justify-content: space-between; width: 100%; height: 60px; padding: 18px 25px; position: relative; border-bottom: 1px solid rgba(255, 255, 255, 0.2); background-color: #fff;">
         <div>
-            <img src="assets/tajdeed-green-logo.svg" alt="Logo" style="height: 24px;" />
+            <a href="index.html">
+                <img src="assets/tajdeed-green-logo.svg" alt="Logo" style="height: clamp(1.4em, 5vw, 1.8em);" />
+            </a>
         </div>
         <div onclick="toggleMenu()">
             <img src="assets/menu-clean.svg" alt="Menu Icon" style="height: 24px;" />
@@ -87,7 +90,7 @@
     </nav>
 
     <div id="menu"
-        style="display: none; flex-direction: column; width: 100%; max-width: 500px; height: 100vh; align-items: flex-start; justify-content: space-between; padding: 60px 33px; position: fixed; top: 0; right: 0; background-color: #d9d9d9; z-index: 1000;">
+        style="display: none; flex-direction: column; width: 100%; max-width: 500px; height: 100vh; align-items: flex-start; justify-content: space-between; padding: 60px 33px; position: fixed; top: 0; right: 0; background-color: #d9d9d9; z-index: 1001;">
         <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 60px; width: 100%;">
             <div
                 style="height: 48px; align-items: center; justify-content: flex-end; gap: 10px; display: flex; width: 100%;">
@@ -122,13 +125,24 @@
         </div>
     </div>
 
+
+    <div id="overlay"
+        style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); backdrop-filter: blur(5px); z-index: 1000;">
+    </div>
+
     <script>
         function toggleMenu() {
             var menu = document.getElementById('menu');
+            var overlay = document.getElementById('overlay');
+
             if (menu.style.display === 'none' || menu.style.display === '') {
                 menu.style.display = 'flex';
+                overlay.style.display = 'block';
+                document.body.style.overflow = 'hidden';
             } else {
                 menu.style.display = 'none';
+                overlay.style.display = 'none';
+                document.body.style.overflow = 'auto';
             }
         }
     </script>
@@ -185,12 +199,16 @@
                     <h3
                         style="margin-top: clamp(0.5rem, 5vw, 2rem); font-size: clamp(1.375rem, 1.3143rem + 0.2589vw, 1.625rem); line-height: clamp(1.875rem, 1.7536rem + 0.5178vw, 2.375rem); font-weight: 400;">
                         <p>
-                            We specialize in transforming post-consumer and post-industrial plastic scraps into clean, ready-to-use recycled plastics. Our commitment to sustainability and innovation drives us to deliver high-quality recycled materials for a variety of applications.
+                            We specialize in transforming post-consumer and post-industrial plastic scraps into clean,
+                            ready-to-use recycled plastics. Our commitment to sustainability and innovation drives us to
+                            deliver high-quality recycled materials for a variety of applications.
                         </p>
                     </h3>
                     <h6
                         style="margin-top: clamp(2rem, 2vw, 3rem); font-size: clamp(1rem, 0.9697rem + 0.1294vw, 1.125rem); line-height: clamp(1.5rem, 1.4697rem + 0.1294vw, 1.625rem); font-family: 'Plus Jakarta Sans';">
-                        Our state-of-the-art facilities ensure that these plastics are efficiently converted from scraps into valuable recycled products, meeting stringent quality standards and supporting a circular economy.
+                        Our state-of-the-art facilities ensure that these plastics are efficiently converted from scraps
+                        into valuable recycled products, meeting stringent quality standards and supporting a circular
+                        economy.
                     </h6>
                 </section>
             </div>
@@ -201,57 +219,73 @@
 
     <!-- <h1 style="width: 100px;">ADD OUR PRODUCTS</h1> -->
 
-     <section class="product-container" style="display: flex;">
-        <main class="product-left" style="flex: 1; background-color: white; padding-left: clamp(1.5625rem, 0.7282rem + 3.5599vw, 5rem); padding-top: clamp(6.25rem, 6.1111rem + 1.1111vw, 7.5rem); gap: 3.875rem;">
-            <div style=" font-family: 'IBM Plex Serif'; font-style: normal; font-weight: 500; font-size: clamp(2em, 4.15vw, 3.2em); line-height: clamp(2.375em, 5.0vw, 3.8em); letter-spacing: -0.02em; text-transform: capitalize; color: #123627; flex: none; order: 0; flex-grow: 0;">
+    <section class="product-container" style="display: flex;">
+        <main class="product-left"
+            style="flex: 1; background-color: white; padding-left: clamp(1.5625rem, 0.7282rem + 3.5599vw, 5rem); padding-top: clamp(6.25rem, 6.1111rem + 1.1111vw, 7.5rem); gap: 3.875rem;">
+            <div
+                style=" font-family: 'IBM Plex Serif'; font-style: normal; font-weight: 500; font-size: clamp(2em, 4.15vw, 3.2em); line-height: clamp(2.375em, 5.0vw, 3.8em); letter-spacing: -0.02em; text-transform: capitalize; color: #123627; flex: none; order: 0; flex-grow: 0;">
                 Our Products
             </div>
-            <div class="d-none d-md-block" style="font-family: 'Plus Jakarta Sans'; font-style: normal; font-weight: 500; font-size: clamp(1.375rem, 1.3143rem + 0.2589vw, 1.625rem); color: rgba(18, 54, 39, 0.5);">
-                1. Packaging<br> 
-                2. Fiber (Polyester)<br> 
+            <div class="d-none d-md-block"
+                style="font-family: 'Plus Jakarta Sans'; font-style: normal; font-weight: 500; font-size: clamp(1.375rem, 1.3143rem + 0.2589vw, 1.625rem); color: rgba(18, 54, 39, 0.5);">
+                1. Packaging<br>
+                2. Fiber (Polyester)<br>
                 3. Construction<br>
                 4. Wood & Metal Substitutes
             </div>
         </main>
-        <aside class="product-right" style="display: flex; flex-flow: row wrap; flex: 1; background-color: white; padding-top: clamp(6.25rem, 6.1111rem + 1.1111vw, 7.5rem); padding-bottom: clamp(3.75rem, 2.8398rem + 3.8835vw, 7.5rem); gap: clamp(2.625rem, 2.4861rem + 1.1111vw, 3.875rem);"> 
-            <article class="nested" style="flex: 100%; padding-left: clamp(1.5625rem, 0.713rem + 3.6246vw, 5.0625rem); padding-right: clamp(1.5625rem, 0.713rem + 3.6246vw, 5.0625rem);" >
-                <img src="assets/plastic-product-1.png" alt="plastic-product-1" style="width: 100%;"/>
-                <div style="font-family: 'Plus Jakarta Sans', 'IBM Plex Serif'; font-style: normal; font-weight: 500; font-size: clamp(1.625em, 2.6vw, 2em); line-height: clamp(2.375em, 5.0vw, 2.6em); letter-spacing: clamp(-0.03em, -0.025em, -0.02em); text-transform: capitalize; color: #123627;">
+        <aside class="product-right"
+            style="display: flex; flex-flow: row wrap; flex: 1; background-color: white; padding-top: clamp(6.25rem, 6.1111rem + 1.1111vw, 7.5rem); padding-bottom: clamp(3.75rem, 2.8398rem + 3.8835vw, 7.5rem); gap: clamp(2.625rem, 2.4861rem + 1.1111vw, 3.875rem);">
+            <article class="nested"
+                style="flex: 100%; padding-left: clamp(1.5625rem, 0.713rem + 3.6246vw, 5.0625rem); padding-right: clamp(1.5625rem, 0.713rem + 3.6246vw, 5.0625rem);">
+                <img src="assets/plastic-product-1.png" alt="plastic-product-1" style="width: 100%;" />
+                <div
+                    style="font-family: 'Plus Jakarta Sans', 'IBM Plex Serif'; font-style: normal; font-weight: 500; font-size: clamp(1.625em, 2.6vw, 2em); line-height: clamp(2.375em, 5.0vw, 2.6em); letter-spacing: clamp(-0.03em, -0.025em, -0.02em); text-transform: capitalize; color: #123627;">
                     Packaging
                 </div>
-                <p style="font-family: 'Plus Jakarta Sans'; font-style: normal; font-weight: 400; font-size: clamp(0.8889em, 0.8393em + 0.1156vw, 1em); line-height: clamp(1.3333em, 1.25em + 0.1736vw, 1.5em); color: #123627;">
+                <p
+                    style="font-family: 'Plus Jakarta Sans'; font-style: normal; font-weight: 400; font-size: clamp(0.8889em, 0.8393em + 0.1156vw, 1em); line-height: clamp(1.3333em, 1.25em + 0.1736vw, 1.5em); color: #123627;">
                     Durable and eco-friendly materials for packaging solutions.
-                </p>    
+                </p>
             </article>
-            <article class="nested" style="flex: 100%; padding-left: clamp(1.5625rem, 0.713rem + 3.6246vw, 5.0625rem); padding-right: clamp(1.5625rem, 0.713rem + 3.6246vw, 5.0625rem); padding-bottom: 0;" >
-                <img src="assets/plastic-product-2.png" alt="plastic-product-1" style="width: 100%;"/>
-                <div style="font-family: 'Plus Jakarta Sans', 'IBM Plex Serif'; font-style: normal; font-weight: 500; font-size: clamp(1.625em, 2.6vw, 2em); line-height: clamp(2.375em, 5.0vw, 2.6em); letter-spacing: clamp(-0.03em, -0.025em, -0.02em); text-transform: capitalize; color: #123627;">
+            <article class="nested"
+                style="flex: 100%; padding-left: clamp(1.5625rem, 0.713rem + 3.6246vw, 5.0625rem); padding-right: clamp(1.5625rem, 0.713rem + 3.6246vw, 5.0625rem); padding-bottom: 0;">
+                <img src="assets/plastic-product-2.png" alt="plastic-product-1" style="width: 100%;" />
+                <div
+                    style="font-family: 'Plus Jakarta Sans', 'IBM Plex Serif'; font-style: normal; font-weight: 500; font-size: clamp(1.625em, 2.6vw, 2em); line-height: clamp(2.375em, 5.0vw, 2.6em); letter-spacing: clamp(-0.03em, -0.025em, -0.02em); text-transform: capitalize; color: #123627;">
                     Fiber (Polyester)
                 </div>
-                <p style="font-family: 'Plus Jakarta Sans'; font-style: normal; font-weight: 400; font-size: clamp(0.8889em, 0.8393em + 0.1156vw, 1em); line-height: clamp(1.3333em, 1.25em + 0.1736vw, 1.5em); color: #123627;">
+                <p
+                    style="font-family: 'Plus Jakarta Sans'; font-style: normal; font-weight: 400; font-size: clamp(0.8889em, 0.8393em + 0.1156vw, 1em); line-height: clamp(1.3333em, 1.25em + 0.1736vw, 1.5em); color: #123627;">
                     High-quality polyester fiber for textiles and other products.
-                </p>    
+                </p>
             </article>
-            <article class="nested" style="flex: 100%; padding-left: clamp(1.5625rem, 0.713rem + 3.6246vw, 5.0625rem); padding-right: clamp(1.5625rem, 0.713rem + 3.6246vw, 5.0625rem);" >
-                <img src="assets/plastic-product-3.png" alt="plastic-product-1" style="width: 100%;"/>
-                <div style="font-family: 'Plus Jakarta Sans', 'IBM Plex Serif'; font-style: normal; font-weight: 500; font-size: clamp(1.625em, 2.6vw, 2em); line-height: clamp(2.375em, 5.0vw, 2.6em); letter-spacing: clamp(-0.03em, -0.025em, -0.02em); text-transform: capitalize; color: #123627;">
+            <article class="nested"
+                style="flex: 100%; padding-left: clamp(1.5625rem, 0.713rem + 3.6246vw, 5.0625rem); padding-right: clamp(1.5625rem, 0.713rem + 3.6246vw, 5.0625rem);">
+                <img src="assets/plastic-product-3.png" alt="plastic-product-1" style="width: 100%;" />
+                <div
+                    style="font-family: 'Plus Jakarta Sans', 'IBM Plex Serif'; font-style: normal; font-weight: 500; font-size: clamp(1.625em, 2.6vw, 2em); line-height: clamp(2.375em, 5.0vw, 2.6em); letter-spacing: clamp(-0.03em, -0.025em, -0.02em); text-transform: capitalize; color: #123627;">
                     Construction
                 </div>
-                <p style="font-family: 'Plus Jakarta Sans'; font-style: normal; font-weight: 400; font-size: clamp(0.8889em, 0.8393em + 0.1156vw, 1em); line-height: clamp(1.3333em, 1.25em + 0.1736vw, 1.5em); color: #123627;">
+                <p
+                    style="font-family: 'Plus Jakarta Sans'; font-style: normal; font-weight: 400; font-size: clamp(0.8889em, 0.8393em + 0.1156vw, 1em); line-height: clamp(1.3333em, 1.25em + 0.1736vw, 1.5em); color: #123627;">
                     Sustainable materials for construction projects, including pipes, panels, and insulation.
-                </p>    
+                </p>
             </article>
-            <article class="nested" style="flex: 100%; padding-left: clamp(1.5625rem, 0.713rem + 3.6246vw, 5.0625rem); padding-right: clamp(1.5625rem, 0.713rem + 3.6246vw, 5.0625rem);" >
-                <img src="assets/plastic-product-4.png" alt="plastic-product-1" style="width: 100%;"/>
-                <div style="font-family: 'Plus Jakarta Sans', 'IBM Plex Serif'; font-style: normal; font-weight: 500; font-size: clamp(1.625em, 2.6vw, 2em); line-height: clamp(2.375em, 5.0vw, 2.6em); letter-spacing: clamp(-0.03em, -0.025em, -0.02em); text-transform: capitalize; color: #123627;">
+            <article class="nested"
+                style="flex: 100%; padding-left: clamp(1.5625rem, 0.713rem + 3.6246vw, 5.0625rem); padding-right: clamp(1.5625rem, 0.713rem + 3.6246vw, 5.0625rem);">
+                <img src="assets/plastic-product-4.png" alt="plastic-product-1" style="width: 100%;" />
+                <div
+                    style="font-family: 'Plus Jakarta Sans', 'IBM Plex Serif'; font-style: normal; font-weight: 500; font-size: clamp(1.625em, 2.6vw, 2em); line-height: clamp(2.375em, 5.0vw, 2.6em); letter-spacing: clamp(-0.03em, -0.025em, -0.02em); text-transform: capitalize; color: #123627;">
                     Wood & Metal Substitutes
                 </div>
-                <p style="font-family: 'Plus Jakarta Sans'; font-style: normal; font-weight: 400; font-size: clamp(0.8889em, 0.8393em + 0.1156vw, 1em); line-height: clamp(1.3333em, 1.25em + 0.1736vw, 1.5em); color: #123627;">
+                <p
+                    style="font-family: 'Plus Jakarta Sans'; font-style: normal; font-weight: 400; font-size: clamp(0.8889em, 0.8393em + 0.1156vw, 1em); line-height: clamp(1.3333em, 1.25em + 0.1736vw, 1.5em); color: #123627;">
                     Innovative alternatives to traditional wood and metal, reducing resource depletion.
-                </p>    
+                </p>
             </article>
         </aside>
-    </section> 
+    </section>
 
 
     <div
