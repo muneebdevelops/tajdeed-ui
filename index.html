@@ -124,15 +124,24 @@
     </div>
   </div>
 
+
+  <div id="overlay"
+    style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); backdrop-filter: blur(5px); z-index: 1000;">
+  </div>
+
   <script>
     function toggleMenu() {
       var menu = document.getElementById('menu');
+      var overlay = document.getElementById('overlay');
 
       if (menu.style.display === 'none' || menu.style.display === '') {
         menu.style.display = 'flex';
-
+        overlay.style.display = 'block';
+        document.body.style.overflow = 'hidden';
       } else {
         menu.style.display = 'none';
+        overlay.style.display = 'none';
+        document.body.style.overflow = 'auto';
       }
     }
   </script>
@@ -418,7 +427,7 @@
           font-size: clamp(1rem, 0.8483rem + 0.6472vw, 1.625rem);
           font-family: 'Open Sans';
           ">
-              <div style="
+          <div style="
               padding-right: clamp(0rem, -2.8846rem + 12.3077vw, 12.5rem);
               display: flex;
               flex-direction: column;
@@ -428,7 +437,7 @@
               font-size: clamp(1rem, 0.8483rem + 0.6472vw, 1.625rem);
               font-family: 'Plus Jakarta Sans';
               ">
-              <div style="
+            <div style="
               display: flex;
               flex-direction: column;
               align-items: flex-start;
@@ -438,7 +447,7 @@
               gap: 30px;
               max-width: 100%;
             ">
-                <h2 class="order-1 tejdeed-txt" style="
+              <h2 class="order-1 tejdeed-txt" style="
               margin: 0;
               position: relative;
               font-size: clamp(1rem, 0.9306rem + 0.5556vw, 1.625rem);
@@ -448,13 +457,13 @@
               flex-shrink: 0;
               max-width: 100%;
               ">
-                  With the engineering and scientific expertise of its founders and with the technical expertise of its
-                  colleagues, Tejdeed ensures the high quality of products and services to its customers.
-                </h2>
-              </div>
+                With the engineering and scientific expertise of its founders and with the technical expertise of its
+                colleagues, Tejdeed ensures the high quality of products and services to its customers.
+              </h2>
             </div>
+          </div>
 
-            <div class="d-md-none" style="
+          <div class="d-md-none" style="
             height: clamp(18.75rem, 17.7013rem + 8.3893vw, 28.188rem);
             width: clamp(23rem, 22.4236rem + 4.6116vw, 28.188rem);
             display: flex;
@@ -472,7 +481,7 @@
                 max-height: 100%;
                 object-fit: cover;
                 " loading="lazy" alt="" src="assets/inside-factory-tejdeed-way-2.png" />
-            </div>
+          </div>
 
           <img class="order-2 tejdeed-img" style="
           align-self: stretch;
@@ -620,12 +629,12 @@
 
   <style>
     @media screen and (max-width:576px) {
-      .tejdeed-txt{
+      .tejdeed-txt {
         padding-left: 1.563rem;
         padding-right: 1.563rem;
         padding-top: 1.875rem;
       }
-      
+
     }
   </style>
 
