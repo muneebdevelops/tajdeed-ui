@@ -64,6 +64,18 @@
             .product-container {
                 flex-flow: column wrap;
             }
+            .email-buttons{
+                flex-direction: column;
+                width: inherit !important;
+            }
+            .contact-us-content{
+                align-items: start !important;
+                text-align: left;
+            }
+            .footer-copyright{
+                flex-flow: column wrap;
+                gap: 1vw !important;
+            }
         }
     </style>
 </head>
@@ -169,11 +181,8 @@
     <div class="container-fluid g-0 m-0" style="position: relative; z-index: auto;">
         <div class="row no-gutters g-0">
             <div class="col mx-0">
-                <div class="video-container" style="position: relative;">
-                    <video controls controlslist="nofullscreen" poster="assets/logs-biomass-img.png"
-                        style="height:clamp(500px, 40.69vw, 600px); object-fit: cover; width: 100%;">
-                        <source src="assets/tejdeed-fertilizers-vid.mp4" type="video/mp4">
-                    </video>
+                <div class="image-container" style="position: relative;">
+                    <img src="assets/logs-biomass-img.png" class="img-fluid" style="height:clamp(500px, 40.69vw, 600px); object-fit: cover; width: 100%;">
                 </div>
             </div>
         </div>
@@ -289,25 +298,37 @@
 
 
     <div
-        style="width: 100%; position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: clamp(7.5em, 6vw, 8.969em) clamp(0.938em, 1.5vw, 1.25em); box-sizing: border-box; background-image: url('assets/logs-biomass-img.png'); background-size: cover; background-repeat: no-repeat; background-position: top; line-height: normal; letter-spacing: normal;">
+        style="width: 100%; position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: clamp(7.5em, 6vw, 8.969em) clamp(0.938em, 1.5vw, 1.25em); box-sizing: border-box; background-image: url('assets/rectangle-313@2x.png'); background-size: cover; background-repeat: no-repeat; background-position: top; line-height: normal; letter-spacing: normal;">
         <section
             style="width: clamp(80%, 40rem, 61.625em); border-radius: 15px; background-color: #f7f7f7; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: clamp(2.5em, 4vw, 3.188em) clamp(1.25em, 1vw, 1.25em); gap: clamp(1em, 2vw, 1.875em); max-width: 100%; text-align: center; color: #123627; font-family: 'IBM Plex Serif';">
-            <div
+            <div class="contact-us-content"
                 style="width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: clamp(0.75em, 1.5vw, 0.938em); max-width: 100%;">
                 <h2
-                    style="margin: 0;  font-size: clamp(1.5em, 3vw, 2em); letter-spacing: -0.02em; line-height: clamp(1em, 2vw, 1.188em); text-transform: capitalize; font-weight: 500; font-family: inherit; display: inline-block;">
-                    Email Us</h2>
+                    style="margin: 0;  font-size: clamp(1.5em, 3vw, 2em); letter-spacing: -0.02em; line-height: clamp(1em, 2vw, 1.188em); text-transform: capitalize; font-weight: 500; font-family: inherit;">
+                    Contact Us</h2>
                 <div
                     style=" font-size: clamp(0.875em, 2vw, 1.125em); line-height: clamp(1.2em, 2.5vw, 1.444em); font-family: 'Plus Jakarta Sans'; display: inline-block; max-width: 100%;">
-                    For more information, please email us.<br> We are dedicated to providing the<br> highest quality
+                    For more information, please contact us via email<br class="d-none d-md-block"> or WhatsApp. We are dedicated to providing the<br class="d-none d-md-block"> highest quality
                     products locally.</div>
+
+                
+                <div class="email-buttons" style="display: flex; gap: 10px;">
+                    <button
+                    style="cursor: pointer; border: 0.5px solid #FFA500; padding: clamp(0.5em, 1.5vw, 0.75em) clamp(2em, 5vw, 3.688em); background-color: #FFA500; border-radius: 11px; white-space: nowrap;">
+                    <div
+                        style="font-size: clamp(1em, 2vw, 1.125em); text-transform: capitalize; font-weight: 500; font-family: 'Plus Jakarta Sans'; color: #f7f7f7; text-align: center; display: inline-block; min-width: 4em;">
+                        Email Us</div>
+                    </button>
+                    <button
+                    style="cursor: pointer; border: 0.5px solid #009e4c; padding: clamp(0.5em, 1.5vw, 0.75em) clamp(2em, 5vw, 3.688em); background-color: #009e4c; border-radius: 11px; white-space: nowrap;">
+                    <div
+                        style="font-size: clamp(1em, 2vw, 1.125em); text-transform: capitalize; font-weight: 500; font-family: 'Plus Jakarta Sans'; color: #f7f7f7; text-align: center; display: inline-block; min-width: 4em;">
+                        WhatsApp</div>
+                </button>
+                </div>    
+
             </div>
-            <button
-                style="cursor: pointer; border: 0.5px solid #f7f7f7; padding: clamp(0.5em, 1.5vw, 0.75em) clamp(2em, 5vw, 3.688em); background-color: #009e4c; border-radius: 11px; display: flex; flex-direction: row; align-items: center; justify-content: center; white-space: nowrap;">
-                <div
-                    style="font-size: clamp(1em, 2vw, 1.125em); text-transform: capitalize; font-weight: 500; font-family: 'Plus Jakarta Sans'; color: #f7f7f7; text-align: center; display: inline-block; min-width: 4em;">
-                    Email Us</div>
-            </button>
+
         </section>
     </div>
 
@@ -356,11 +377,12 @@
             </div>
         </div>
         <div class="row"
-            style="padding-top: 1vw;padding-bottom: 1vw; border-top: 0.5px solid rgba(255, 255, 255, 0.2); ">
+            style="padding-top: 32px;padding-bottom: 32px; border-top: 0.5px solid rgba(255, 255, 255, 0.2); ">
             <div class="col-md d-flex justify-content-start">
-                <div
-                    style="width: 100%; display: flex; flex-direction: column; align-items: left; text-align: left; color: #ffffff; font-size: clamp(0.75em, 1vw, 0.875em);">
+                <div class="footer-copyright"
+                    style="width: 100%; display: flex; align-items: left; text-align: left; color: #ffffff; font-size: clamp(0.75em, 1vw, 0.875em); gap: 64px;">
                     <p style="margin: 10px 0;">© Tajdeed 2024</p>
+                    <p style="margin-top: 10px;">Tejdeed Technologies: Renewing and reviving discarded materials to reduce costs and clean the environment. Join us in our mission.</p>
                 </div>
             </div>
         </div>
