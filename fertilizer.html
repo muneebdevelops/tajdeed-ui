@@ -85,6 +85,26 @@
                 max-width: 1200px !important;
             }            
         }
+        @media (max-width:1024px) {
+            #product-to-be-aligned {
+                justify-content: left !important;
+
+            }
+        }
+        @media (max-width: 430px) {
+            .desktop-layout {
+                display: none;
+            }
+        }
+
+        @media (max-width: 1024px) {
+            .button-container {
+                flex-direction: column !important;
+                align-items: center !important;
+            }
+        }
+
+
     </style>
 </head>
 
@@ -242,7 +262,7 @@
         </div>
     </div>
 
-    <div class="container-fluid d-none d-md-block" id="green-card">
+    <!-- <div class="container-fluid d-none d-md-block" id="green-card">
         <div class="row" data-aos="fade-up">
             <div class="col-md-6" style="background-color: #f7f7f7;">
                 <section style="padding-left: 2.8vw; padding-right: 2.8vw ; align-items: flex-start; margin: 0 auto;">
@@ -270,7 +290,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
 
     <div class="our-products-mobile d-md-none" style="display: flex; flex-direction: column; padding-left: 25px; padding-right: 25px; gap: 80px; padding-top: 80px; padding-bottom: 63px; background-color: #f7f7f7;">
@@ -322,6 +342,157 @@
             </div>
         </div>
     </div>
+
+
+
+        <!-- Web View --> 
+        <div class="desktop-layout"
+            style="width: 100%; position: relative; background-color: #f7f7f7; padding: 7.063em 4.125em; box-sizing: border-box; gap: 3.938em;">
+            <section
+                style="display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start; gap: 5em; text-align: left; color: #123627; font-family: 'Plus Jakarta Sans';">
+                <div
+                    style="align-self: stretch; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start; gap: 1.875em;">
+                    <h1
+                        style="margin: 0; position: relative; font-size: 2.625em; letter-spacing: -0.04em; line-height: 1.143em; text-transform: capitalize; font-weight: 500; font-family: 'IBM Plex Serif';">
+                        our products
+                    </h1>
+                    <div
+                        style="width: 31.222em; position: relative; font-size: clamp(1rem, 0.9167rem + 0.1736vw, 1.125rem); line-height: 1.444em; display: inline-block; max-width: 100%;">
+                        We provide topsoil, compost, fish-based nutrients, and customized fertilizers. Our innovative
+                        products enhance plant health, reduce costs, and protect the environment, serving agriculture,
+                        horticulture, and amenity sectors efficiently.
+                    </div>
+                    <div class="product-button"
+                        style="display: flex; flex-direction: row; align-items: flex-start; justify-content: flex-start; gap: 0.938em; max-width: 100%;">
+                        <button
+                            style="color:#F7F7F7; background-color:#009E4C !important; border-color:#009E4C !important; box-shadow:0 10px 10px rgba(0, 0, 0, 0.2) !important; border-radius: 7px; border: 1px solid #000; display: flex; flex-direction: row; align-items: center; justify-content: center; padding: 0.563em 1.813em; background-color: transparent;"
+                            onclick="showContent('compost')">
+                            <div
+                                style="position: relative; font-size: clamp(1rem, 0.9167rem + 0.1736vw, 1.125rem); line-height: 1.273em; font-weight: 500; display: inline-block; ">
+                                Compost</div>
+                        </button>
+                        <button
+                            style="border-radius: 7px; border: 1px solid #000; display: flex; flex-direction: row; align-items: center; justify-content: center; padding: 0.563em 1.813em; background-color: transparent;"
+                            onclick="showContent('fish')">
+                            <div
+                                style="position: relative; font-size: clamp(1rem, 0.9167rem + 0.1736vw, 1.125rem); line-height: 1.273em; font-weight: 500; display: inline-block; min-width: 5.182em;">
+                                Fish Based</div>
+                        </button>
+                        <button
+                            style="border-radius: 7px; border: 1px solid #000; display: flex; flex-direction: row; align-items: center; justify-content: center; padding: 0.563em 1.813em; background-color: transparent;"
+                            onclick="showContent('customized')">
+                            <div
+                                style="position: relative; font-size: clamp(1rem, 0.9167rem + 0.1736vw, 1.125rem); line-height: 1.273em; font-weight: 500; display: inline-block; min-width: 5.182em; ">
+                                Customized Fertilizers</div>
+                        </button>
+                    </div>
+                </div>
+                <div
+                    style="align-self: stretch; display: flex; flex-direction: row; flex-wrap: wrap; align-items: flex-start; justify-content: space-between; max-width: 100%; gap: 1.25em;">
+                    <div id="content" data-aos="fade-up"
+                        style="width: 35.125em; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start; gap: 1.875em; min-width: 35.125em; max-width: 100%;">
+                        <!-- Initial content for Fish Based -->
+                        <h1
+                            style="margin: 0; align-self: stretch; position: relative; font-size: 3em; letter-spacing: -0.04em; line-height: 1em; text-transform: capitalize; font-weight: 500; font-family: 'IBM Plex Serif';">
+                            Compost</h1>
+                        <div
+                            style="align-self: stretch; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start; padding: 0em 0em 1.813em; gap: 1.875em;">
+                            <div
+                                style="align-self: stretch; position: relative; font-size: 1.375em; line-height: 1.273em; font-weight: 500;">
+                                Our premium compost enriches soil and enhances plant health, ensuring lush, thriving gardens and vibrant growth for all your horticultural needs.</div>
+                            <div style="align-self: stretch; position: relative; font-size: 1.125em; line-height: 1.444em;">
+                                Experience superior results with our top-quality compost. It improves soil structure, promotes robust plant growth, and supports sustainable gardening practices for healthier, more resilient plants.
+                                <br>
+                                <br>
+                                Contact Tejdeed Organic Fertilizers to learn more about our process and discover how your farm can benefit.
+                            </div>
+                        </div>
+                    </div>
+                    <div id="product-to-be-aligned"
+                        style=" flex: 1 1 38.875rem; max-width: 100%; display: flex; align-items: center; justify-content: right;">
+                        <img id="product-image" 
+                            style="display:flex ; max-width: 100%; max-height: 100%; object-fit: contain;" loading="lazy"
+                            alt="compost" src="assets/compost.png" />
+                    </div>
+                </div>
+
+                <div style="width: 100%; box-sizing: border-box; border-width: 0.5px; background-color: #ffffff; border-radius: 11px; padding: 45px 30px;">
+                    <div style="display: flex; flex-direction: row; flex-wrap: wrap; gap: 20px; justify-content: center;" class="button-container">
+                        <div style="display: flex; flex-direction: column; flex: 1 1 33%;">
+                            <p style="width: 30em; font-family: 'Plus Jakarta Sans'; font-style: normal; font-weight: 400; font-size: 18px; line-height: 26px; text-align: left; color: #000000; margin: 0;">
+                                Have any questions? Get in touch with the Fielder team to identify the right product for you.
+                            </p>
+                        </div>
+                        <div style="display: flex; flex-direction: column; align-items: center; max-width: 192px;">
+                            <button onclick="openEmail()" style="width: 192px; height: 50px; display: flex; justify-content: center; align-items: center; text-align: center; border-radius: 11px; border-width: 0.5px; border-style: solid; border-color: #FFA500; background-color: #FFA500; color: #f7f7f7; padding: 12px 0; font-family: 'Plus Jakarta Sans'; font-style: normal; font-weight: 500; font-size: 18px; line-height: 23px; text-transform: capitalize;">
+                                Email Us
+                            </button>
+                        </div>
+                        <div style="display: flex; flex-direction: column; align-items: center; max-width: 192px;">
+                            <button onclick="openWhatsapp()" style="width: 192px; height: 50px; display: flex; justify-content: center; align-items: center; text-align: center; padding: 12px 0; background-color: #009e4c; border-width: 0.5px; border-radius: 11px; border-style: solid; border-color: #009e4c; color: #f7f7f7; font-family: 'Plus Jakarta Sans'; font-style: normal; font-weight: 500; font-size: 18px; line-height: 23px; text-transform: capitalize;">
+                                WhatsApp
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+        </div>
+
+
+        <script>
+            function showContent(contentType) {
+                const contentDiv = document.getElementById('content');
+                const image = document.getElementById('product-image');
+                let content = '';
+                let imageSrc = '';
+
+                switch (contentType) {
+                    case 'compost':
+                        content = '<h1 data-aos="fade-up" style="margin: 0; align-self: stretch; position: relative; font-size: 3em; letter-spacing: -0.04em; line-height: 1em; text-transform: capitalize; font-weight: 500; font-family: \'IBM Plex Serif\';">Compost</h1><div data-aos="fade-up" style="align-self: stretch; border-bottom: 0.5px solid #123627; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start; padding: 0em 0em 1.813em; gap: 1.875em;"><div data-aos="fade-up" style="align-self: stretch; position: relative; font-size: 1.375em; line-height: 1.273em; font-weight: 500;">Our premium compost enriches soil and enhances plant health, ensuring lush, thriving gardens and vibrant growth for all your horticultural needs.</div><div data-aos="fade-up" style="align-self: stretch; position: relative; font-size: 1.125em; line-height: 1.444em;">Experience superior results with our top-quality compost. It improves soil structure, promotes robust plant growth, and supports sustainable gardening practices for healthier, more resilient plants.<br><br>Contact Tejdeed Organic Fertilizers to learn more about our process and discover how your farm can benefit.</div></div>';
+                        imageSrc = 'assets/compost.png';
+                        break;
+                    case 'fish':
+                        content = '<h1 data-aos="fade-up" style="margin: 0; align-self: stretch; position: relative; font-size: 3em; letter-spacing: -0.04em; line-height: 1em; text-transform: capitalize; font-weight: 500; font-family: \'IBM Plex Serif\';">Fish Based</h1><div data-aos="fade-up" style="align-self: stretch; border-bottom: 0.5px solid #123627; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start; padding: 0em 0em 1.813em; gap: 1.875em;"><div data-aos="fade-up" style="align-self: stretch; position: relative; font-size: 1.375em; line-height: 1.273em; font-weight: 500;">Fish fertilizers are rich in essential nutrients, promoting robust plant growth and health. They are eco-friendly and easy to use.</div><div data-aos="fade-up" style="align-self: stretch; position: relative; font-size: 1.125em; line-height: 1.444em;">Enhancing soil health, fish fertilizers improve structure and fertility, supporting beneficial microorganisms. They boost root development, resulting in healthier, more resilient crops and higher yields.</div></div><div data-aos="fade-up" style="align-self: stretch; border-bottom: 0.5px solid #123627; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start; padding: 0em 0em 1.813em; gap: 0.938em;"><div data-aos="fade-up" style="align-self: stretch; position: relative; font-size: 1.375em; line-height: 1.273em; text-transform: capitalize; font-weight: 500;">Our Fish Based Products</div><div style="align-self: stretch; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start; font-family: \'IBM Plex Serif\';"><div style="align-self: stretch; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start; gap: 0.938em;"><div style="align-self: stretch; position: relative; font-size: 2em; letter-spacing: -0.02em; line-height: 1.188em; text-transform: capitalize; font-weight: 500;">Fish N\'Bloom (liquid)</div><h2 style="margin: 0; align-self: stretch; position: relative; font-size: 2em; letter-spacing: -0.02em; line-height: 1.188em; text-transform: capitalize; font-weight: 500; font-family: inherit;">Ecofish (pellets)</h2><h2 style="margin: 0; align-self: stretch; position: relative; font-size: 2em; letter-spacing: -0.02em; line-height: 1.188em; text-transform: capitalize; font-weight: 500; font-family: inherit;">Nutrifish (powder)</h2></div></div></div>';
+                        imageSrc = 'assets/fish-based.png';
+                        break;
+                    case 'customized':
+                        content = '<h1 data-aos="fade-up" style="margin: 0; align-self: stretch; position: relative; font-size: 3em; letter-spacing: -0.04em; line-height: 1em; text-transform: capitalize; font-weight: 500; font-family: \'IBM Plex Serif\';">Customized Fertilizers</h1><div data-aos="fade-up" style="align-self: stretch; border-bottom: 0.5px solid #123627; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start; padding: 0em 0em 1.813em; gap: 1.875em;"><div data-aos="fade-up" style="align-self: stretch; position: relative; font-size: 1.375em; line-height: 1.273em; font-weight: 500;">Are you looking for a fertilizer specifically tailored to your farm and the crops you plan to grow?</div><div data-aos="fade-up" style="align-self: stretch; position: relative; font-size: 1.125em; line-height: 1.444em;">At Tejdeed, our soil scientists and technical experts create customized fertilizers designed to meet the unique needs of your soil. We analyze the specific characteristics of your soil and formulate batches of organic fertilizers that will enrich it, helping you achieve optimal crop yields for the next one to two years.<br><br>Contact Tejdeed Organic Fertilizers to learn more about our process and discover how your farm can benefit.</div></div>';
+                        imageSrc = 'assets/customize-fertilizer.png';
+                        break;
+                }
+
+                contentDiv.innerHTML = content;
+                image.src = imageSrc;
+            
+                // button stuff
+                removeActiveStyles();
+                const buttons = document.querySelectorAll('.product-button button');
+                buttons.forEach(button => {
+                    if (button.getAttribute('onclick').includes(contentType)) {
+                        button.style.backgroundColor = '#009E4C';
+                        button.style.color = '#F7F7F7';
+                        button.style.borderColor = '#009E4C';
+                        button.style.boxShadow = '0 10px 10px rgba(0, 0, 0, 0.2)';
+                        button.style.transition = 'box-shadow 0.2s ease';
+                    }
+                });
+            }
+
+            function removeActiveStyles() {
+            const buttons = document.querySelectorAll('.product-button button');
+            buttons.forEach(button => {
+                button.style.backgroundColor = 'transparent';
+                button.style.color = '#000';
+                button.style.borderColor = '#000';
+                button.style.boxShadow = '0';
+                button.style.boxShadow = 'none';
+                button.style.transition = 'none';
+            });
+    }
+        </script>
+
+
 
     <div class="container-fluid g-0 m-0"
         style=" position: relative; background-color: #fff;color: #123627; font-family: 'IBM Plex Serif';padding: 6vw 0px; text-align: left;">
@@ -1041,7 +1212,7 @@
 
 
     <div class="container-fluid"
-        style="display: flex; flex-direction: column; align-items: left; padding: 32px 8vw; background-color: #25734a;">
+        style="display: flex; flex-direction: column; align-items: left; padding: 32px 8vw; background-color: #009E4C;">
         <div class="row" style="padding-top: 3vw;padding-bottom: 3vw;">
             <div class="col-md d-flex justify-content-start">
                 <div style="display: flex; justify-content: left;">
