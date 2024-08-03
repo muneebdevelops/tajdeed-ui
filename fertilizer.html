@@ -184,7 +184,7 @@
     </div>
 
     <div id="form-overlay"
-        style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); backdrop-filter: blur(10px); z-index: 999;">
+        style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); backdrop-filter: blur(10px); z-index: 999; transition: opacity 0.3s ease, visibility 0.3s ease; ">
         <div onclick="closeForm()" style="position: fixed; top: 10px; right: 20px; padding: 10px;"><img src="assets/close-menu.png" style=" width: 25px; height: 25px; cursor: pointer;"></div>
 
         <div style=" display: flex; justify-content: center; align-items: center; width: inherit;">
@@ -228,18 +228,10 @@
     </div>
 
     <div class="toast-container">
-        <div id="successToast" class="toast align-items-center text-bg-success border-0" role="alert" aria-live="assertive" aria-atomic="true">
+        <div id="successToast" class="toast align-items-center text-bg-success border-0" role="alert" aria-live="assertive" aria-atomic="true" style=" position: fixed; top: 94px; left: 10px; z-index: 999;" >
             <div class="d-flex">
                 <div class="toast-body">
-                    Data saved successfully!
-                </div>
-                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
-            </div>
-        </div>
-        <div id="errorToast" class="toast align-items-center text-bg-danger border-0" role="alert" aria-live="assertive" aria-atomic="true">
-            <div class="d-flex">
-                <div class="toast-body">
-                    Please fill out all fields.
+                    Message Sent Successfully!
                 </div>
                 <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
             </div>
@@ -290,6 +282,7 @@
                 event.preventDefault();
             });
 
+
             var form = document.getElementById('form-overlay');
             const name = document.getElementById('name').value;
             const email = document.getElementById('email').value;
@@ -298,24 +291,30 @@
          
 
             if (name && email && phone && message) {
-                sendEmail(name, email, phone, message);
+                //sendEmail(name, email, phone, message);
                 // localStorage.setItem('contactFormData', JSON.stringify({
                 //     name: name,
                 //     email: email,
                 //     phone: phone,
                 //     message: message
                 // }));
+        
+                const successToast = new bootstrap.Toast(document.getElementById('successToast'));
+                successToast.show();
+                setTimeout(() => {
+                    closeForm();
+                }, 1000);
+                setTimeout(() => {
+                    successToast.hide();
+                }, 2000);
+                
 
-                // const successToast = new bootstrap.Toast(document.getElementById('successToast'));
-                // successToast.show();
-                closeForm();
-                document.getElementById('contactForm').reset();
                 
 
             }else {
                 console.log("FORM DATA NOT VALID!")
-                // const errorToast = new bootstrap.Toast(document.getElementById('errorToast'));
-                errorToast.show();
+                // errorToast = new bootstrap.Toast(document.getElementById('errorToast'));
+                // errorToast.show();
                 document.getElementById('contactForm').reset();
             }
 
@@ -331,6 +330,7 @@
             var form = document.getElementById('form-overlay');
             form.style.display = 'none';
             document.body.style.overflow = 'auto';
+            document.getElementById('contactForm').reset();
         }
 
     </script>
