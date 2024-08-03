@@ -7,7 +7,7 @@
     <title>Tejdeed Technologies</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="assets/Tejdeed Fav@4x-8.png" type="image/png">
+    <link rel="icon" href="assets/Tejdeed-Fav@4x-8.png" type="image/png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
@@ -23,6 +23,10 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
 
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+
 
     <style>
         .alternate-component {
@@ -184,32 +188,39 @@
         <div onclick="closeForm()" style="position: fixed; top: 10px; right: 20px; padding: 10px;"><img src="assets/close-menu.png" style=" width: 25px; height: 25px; cursor: pointer;"></div>
 
         <div style="display: flex; justify-content: center; align-items: center; width: inherit;">
-        <div style=" box-sizing: border-box; padding: 25px; border-width: 0.5px; border-radius: 6px; border-style: solid; border-color: #f7f7f7; background-color: #f7f7f7;">
+        <div style="width: clamp(22.688rem, 8.9778rem + 58.4969vw, 61.625rem); box-sizing: border-box; padding: 25px; border-width: 0.5px; border-radius: 6px; border-style: solid; border-color: #009E4C; background-color: #009E4C;">
             
             <form id="contactForm">
                 <div class="mb-3">
-                    <label for="name" class="form-label">Name</label>
-                    <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+                    <label for="name" style="font-weight: 500; color: white;" class="form-label">Company Name / Your Name</label>
+                    <input type="text" style="background-color: #f7f7f7;" class="form-control" id="name" placeholder="Enter your name" required>
                 </div>
                 
                 <div class="mb-3">
-                    <label for="email" class="form-label">Email Address</label>
-                    <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+                    <label for="email"  style="font-weight: 500; color: white;" class="form-label">Email Address</label>
+                    <input type="email" style="background-color: #f7f7f7;" class="form-control" id="email" placeholder="Enter your email" required>
                 </div>
                 
                 <div class="mb-3">
-                    <label for="phone" class="form-label">Phone Number</label>
+                    <label for="phone"  style="font-weight: 500; color: white;" class="form-label">Phone Number</label>
                     <div class="input-group">
-                        <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number" required>
+                        <select id="countryCode" style="background-color: #f7f7f7; border: 1px solid #ccc;">
+                            <option value="+971">+971 (UAE)</option>
+                            <option value="+1">+1 (US)</option>
+                            <option value="+44">+44 (UK)</option>
+                            <option value="+91">+91 (IN)</option>
+                            <!-- Add more country codes as needed -->
+                        </select>
+                        <input type="tel" style="background-color: #f7f7f7;" class="form-control" id="phone" placeholder="Enter your phone number" required>
                     </div>
                 </div>
             
                 <div class="mb-3">
-                    <label for="message" class="form-label">Message</label>
-                    <textarea class="form-control" id="message" rows="4" placeholder="Enter your message" required></textarea>
+                    <label for="message"  style="font-weight: 500; color: white;" class="form-label">Message</label>
+                    <textarea class="form-control" style="background-color: #f7f7f7;" id="message" rows="4" placeholder="Enter your message" required></textarea>
                 </div>
                 
-                <button onclick="save()" type="submit" class="btn btn-primary">Submit</button>
+                <button onclick="save()" type="submit" class="btn btn-primary" style="background-color: #FFA500; border-color: #FFA500; color: #F7F7F7;">Submit</button>
             </form>
 
         </div>
@@ -239,6 +250,7 @@
     
 
     <script>
+        
         function toggleMenu() {
             var menu = document.getElementById('menu');
             var overlay = document.getElementById('overlay');
@@ -254,34 +266,55 @@
             }
         }
 
+        function sendEmail(name, email, phone, message) {
+            var templateParams = {
+                to_name: 'Tajdeed Technologies',
+                from_name: name,
+                name: name,
+                email: email,
+                phone: phone,
+                message: message
+            };
+
+            emailjs.send('service_cejx207', 'template_hklcdg9', templateParams)
+                .then(function(response) {
+                    console.log('SUCCESS!', response.status, response.text);
+                }, function(error) {
+                    console.log('FAILED...', error);
+                });
+        }
+
         function save(){
+            emailjs.init("yYLUh01lJ3UJi0sLT");
             document.getElementById('contactForm').addEventListener('submit', function(event) {
                 event.preventDefault();
             });
 
             var form = document.getElementById('form-overlay');
-
             const name = document.getElementById('name').value;
             const email = document.getElementById('email').value;
             const phone = document.getElementById('phone').value;
             const message = document.getElementById('message').value;
+         
 
             if (name && email && phone && message) {
-                localStorage.setItem('contactFormData', JSON.stringify({
-                    name: name,
-                    email: email,
-                    phone: phone,
-                    message: message
-                }));
+                sendEmail(name, email, phone, message);
+                // localStorage.setItem('contactFormData', JSON.stringify({
+                //     name: name,
+                //     email: email,
+                //     phone: phone,
+                //     message: message
+                // }));
 
-                const successToast = new bootstrap.Toast(document.getElementById('successToast'));
-                successToast.show();
-                form.style.display='none';
+                // const successToast = new bootstrap.Toast(document.getElementById('successToast'));
+                // successToast.show();
+                closeForm();
                 document.getElementById('contactForm').reset();
                 
 
             }else {
-                const errorToast = new bootstrap.Toast(document.getElementById('errorToast'));
+                console.log("FORM DATA NOT VALID!")
+                // const errorToast = new bootstrap.Toast(document.getElementById('errorToast'));
                 errorToast.show();
                 document.getElementById('contactForm').reset();
             }
@@ -498,7 +531,7 @@
                     style="align-self: stretch; display: flex; flex-direction: row; flex-wrap: wrap; align-items: flex-start; justify-content: space-between; max-width: 100%; gap: 1.25em;">
                     <div id="content" data-aos="fade-up"
                         style="width: 35.125em; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start; gap: 1.875em; min-width: 35.125em; max-width: 100%;">
-                        <!-- Initial content for Fish Based -->
+                        <!-- Initial content for Compost -->
                         <h1
                             style="margin: 0; align-self: stretch; position: relative; font-size: 3em; letter-spacing: -0.04em; line-height: 1em; text-transform: capitalize; font-weight: 500; font-family: 'IBM Plex Serif';">
                             Compost</h1>
@@ -928,7 +961,7 @@
             <div id="dial"
                 style="position: absolute; top: 50%; left: 50%; width: 70%; height: 70%; transform: translate(-50%, -50%) rotate(0deg); border-radius: 50%; transition: transform 0.5s ease-in-out;">
                 <div class="icon-container"
-                    style="position: absolute; top: 5%; left: 50%; transform: translate(-50%, -50%) rotate(0deg);">
+                    style="background-color: #f5cd61 !important; border-radius:50% !important; padding:5px !important; position: absolute; top: 5%; left: 50%; transform: translate(-50%, -50%) rotate(0deg);">
                     <img src="assets/truck.svg" alt="Icon 1" style="width: 30px; height: 30px;">
                 </div>
                 <div class="icon-container"
@@ -964,10 +997,14 @@
             { number: 1, description: "Tejedec Waste Bins distributed to restaurants and food processors." },
             { number: 2, description: "Food waste collected and transported to the processing facility." },
             { number: 3, description: "Waste processed and converted into valuable products." },
+            { number: 4, description: "Products distributed to customers and partners." },
+            { number: 1, description: "Tejedec Waste Bins distributed to restaurants and food processors." },
+            { number: 2, description: "Food waste collected and transported to the processing facility." },
+            { number: 3, description: "Waste processed and converted into valuable products." },
             { number: 4, description: "Products distributed to customers and partners." }
         ];
 
-        function rotateDial(direction) {
+        function rotateDial(direction) { //1 -1
             currentStep = (currentStep + direction + steps.length) % steps.length;
             const dial = document.getElementById('dial');
             const angle = currentStep * -90; // 360 degrees / 5 steps = 72 degrees per step
@@ -983,8 +1020,8 @@
             document.getElementById('step-description').innerText = steps[currentStep].description;
 
             // Highlight the current step icon
-            document.querySelectorAll('.icon-container img').forEach((img, index) => {
-                if (index === currentStep) {
+            document.querySelectorAll('.icon-container img').forEach((img, e) => {
+                if (e === currentStep) {
                     img.parentElement.style.backgroundColor = '#f5cd61';
                     img.parentElement.style.borderRadius = '50%';
                     img.parentElement.style.padding = '5px';
@@ -1007,7 +1044,7 @@
         </header>
         <div style="display: flex; justify-content: center;">
         <img style="align-self: stretch; position: relative; max-width: 100%;  max-height: 100%; object-fit: cover; margin-top: 1em;"
-            alt="" src="assets/animation-mobile-veiw.png" />
+            alt="" src="assets/animation-mobile-view.jpg" />
         </div>
         <section
             style="align-self: stretch; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start; max-width: 100%; text-align: left; color: #fff; font-family: 'Plus Jakarta Sans'; margin-top: 1em;">
@@ -1015,7 +1052,7 @@
                 style="align-self: stretch; border-top: 0.5px solid #fff; border-bottom: 0.5px solid #fff; box-sizing: border-box; display: flex; flex-direction: row; align-items: center; justify-content: center; padding: 1.188em 0em; max-width: 100%;">
                 <div
                     style="flex: 1; position: relative; font-size: 1em; line-height: 1.5em; display: inline-block; max-width: 100%;">
-                    <ol style="margin: 0; font-family: inherit; font-size: inherit; padding-left: false;">
+                    <ol style="list-style:none;  margin: 0; font-family: inherit; font-size: inherit; padding-left: false;">
                         <li>We distribute food waste bins to restaurants & hotel, restaurant, supermarket, or food
                             processing facility.</li>
                     </ol>
@@ -1025,7 +1062,7 @@
                 style="align-self: stretch; border-bottom: 0.5px solid #fff; box-sizing: border-box; display: flex; flex-direction: row; align-items: center; justify-content: center; padding: 1.25em 0em 1.188em; max-width: 100%;">
                 <div
                     style="flex: 1; position: relative; font-size: 1em; line-height: 1.5em; display: inline-block; max-width: 100%;">
-                    <ol style="margin: 0; font-family: inherit; font-size: inherit; padding-left: false;">
+                    <ol style="list-style:none;  margin: 0; font-family: inherit; font-size: inherit; padding-left: false;">
                         <li>We distribute food waste bins to restaurants & hotel, restaurant, supermarket, or food
                             processing facility.</li>
                     </ol>
@@ -1035,7 +1072,7 @@
                 style="align-self: stretch; border-bottom: 0.5px solid #fff; box-sizing: border-box; display: flex; flex-direction: row; align-items: center; justify-content: center; padding: 1.25em 0em 1.188em; max-width: 100%;">
                 <div
                     style="flex: 1; position: relative; font-size: 1em; line-height: 1.5em; display: inline-block; max-width: 100%;">
-                    <ol style="margin: 0; font-family: inherit; font-size: inherit; padding-left: false;">
+                    <ol style="list-style:none;  margin: 0; font-family: inherit; font-size: inherit; padding-left: false;">
                         <li>We distribute food waste bins to restaurants & hotel, restaurant, supermarket, or food
                             processing facility.</li>
                     </ol>
@@ -1045,7 +1082,7 @@
                 style="align-self: stretch; border-bottom: 0.5px solid #fff; box-sizing: border-box; display: flex; flex-direction: row; align-items: center; justify-content: center; padding: 1.25em 0em 1.188em; max-width: 100%;">
                 <div
                     style="flex: 1; position: relative; font-size: 1em; line-height: 1.5em; display: inline-block; max-width: 100%;">
-                    <ol style="margin: 0; font-family: inherit; font-size: inherit; padding-left: false;">
+                    <ol style="list-style:none; margin: 0; font-family: inherit; font-size: inherit; padding-left: false;">
                         <li>We distribute food waste bins to restaurants & hotel, restaurant, supermarket, or food
                             processing facility.</li>
                     </ol>
@@ -1055,7 +1092,7 @@
                 style="align-self: stretch; border-bottom: 0.5px solid #fff; box-sizing: border-box; display: flex; flex-direction: row; align-items: center; justify-content: center; padding: 1.25em 0em 1.188em; max-width: 100%;">
                 <div
                     style="flex: 1; position: relative; font-size: 1em; line-height: 1.5em; display: inline-block; max-width: 100%;">
-                    <ol style="margin: 0; font-family: inherit; font-size: inherit; padding-left: false;">
+                    <ol style="list-style:none;  margin: 0; font-family: inherit; font-size: inherit; padding-left: false;">
                         <li>We distribute food waste bins to restaurants & hotel, restaurant, supermarket, or food
                             processing facility.</li>
                     </ol>
