@@ -179,6 +179,65 @@
         style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); backdrop-filter: blur(5px); z-index: 1000;">
     </div>
 
+    <div id="form-overlay"
+        style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); backdrop-filter: blur(10px); z-index: 999;">
+        <div onclick="closeForm()" style="position: fixed; top: 10px; right: 20px; padding: 10px;"><img src="assets/close-menu.png" style=" width: 25px; height: 25px; cursor: pointer;"></div>
+
+        <div style="display: flex; justify-content: center; align-items: center; width: inherit;">
+        <div style=" box-sizing: border-box; padding: 25px; border-width: 0.5px; border-radius: 6px; border-style: solid; border-color: #f7f7f7; background-color: #f7f7f7;">
+            
+            <form id="contactForm">
+                <div class="mb-3">
+                    <label for="name" class="form-label">Name</label>
+                    <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+                </div>
+                
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email Address</label>
+                    <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+                </div>
+                
+                <div class="mb-3">
+                    <label for="phone" class="form-label">Phone Number</label>
+                    <div class="input-group">
+                        <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number" required>
+                    </div>
+                </div>
+            
+                <div class="mb-3">
+                    <label for="message" class="form-label">Message</label>
+                    <textarea class="form-control" id="message" rows="4" placeholder="Enter your message" required></textarea>
+                </div>
+                
+                <button onclick="save()" type="submit" class="btn btn-primary">Submit</button>
+            </form>
+
+        </div>
+        </div>
+    </div>
+
+    <div class="toast-container">
+        <div id="successToast" class="toast align-items-center text-bg-success border-0" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="d-flex">
+                <div class="toast-body">
+                    Data saved successfully!
+                </div>
+                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+        </div>
+        <div id="errorToast" class="toast align-items-center text-bg-danger border-0" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="d-flex">
+                <div class="toast-body">
+                    Please fill out all fields.
+                </div>
+                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+        </div>
+    </div>
+
+
+    
+
     <script>
         function toggleMenu() {
             var menu = document.getElementById('menu');
@@ -194,6 +253,53 @@
                 document.body.style.overflow = 'auto';
             }
         }
+
+        function save(){
+            document.getElementById('contactForm').addEventListener('submit', function(event) {
+                event.preventDefault();
+            });
+
+            var form = document.getElementById('form-overlay');
+
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const message = document.getElementById('message').value;
+
+            if (name && email && phone && message) {
+                localStorage.setItem('contactFormData', JSON.stringify({
+                    name: name,
+                    email: email,
+                    phone: phone,
+                    message: message
+                }));
+
+                const successToast = new bootstrap.Toast(document.getElementById('successToast'));
+                successToast.show();
+                form.style.display='none';
+                document.getElementById('contactForm').reset();
+                
+
+            }else {
+                const errorToast = new bootstrap.Toast(document.getElementById('errorToast'));
+                errorToast.show();
+                document.getElementById('contactForm').reset();
+            }
+
+        }
+
+        function openForm(){
+            var form = document.getElementById('form-overlay');
+            form.style.display ='flex';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeForm(){
+            var form = document.getElementById('form-overlay');
+            form.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
     </script>
 
 
@@ -1078,7 +1184,7 @@
                                     high-quality organic fertilizers, promoting environmentally friendly
                                     practices and supporting the local farming community.
                                 </div>
-                                <button style="
+                                <button onclick="openForm()" style="
                     cursor: pointer;
                     border: none;
                     padding: 13.5px 30px;
