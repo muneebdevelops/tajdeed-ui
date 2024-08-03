@@ -83,6 +83,20 @@
                 max-width: 1200px !important;
             }            
         }
+        @media screen and (max-width: 1024px) {
+            #image-column, #text-column {
+                width: 100%;
+                padding: 10px; /* Adjust padding as needed */
+            }
+
+            #image-column {
+                order: 1 !important;
+            }
+
+            #text-column {
+                order: 2 !important;
+            }
+        }   
     </style>
 </head>
 
@@ -206,7 +220,7 @@
     </div>
 
 
-    <div class=" container-fluid" id="mid-section"
+    <!-- <div class=" container-fluid" id="mid-section"
         style="background-color: white; padding: 7vw; max-width: 100%; max-height: auto;">
         <div class="row" data-aos="fade-up" style="margin: 0;">
             <div class="col-md-6 order-md-2 d-flex justify-content-center align-items-center"
@@ -223,6 +237,34 @@
                 <section data-aos="fade-up" style="width: 100%; height: auto;">
                     <h3
                         style="margin-top: clamp(0.5rem, 5vw, 2rem); font-size: clamp(1.375rem, 1.3143rem + 0.2589vw, 1.625rem); line-height: clamp(1.875rem, 1.7536rem + 0.5178vw, 2.375rem); font-weight: 400;">
+                        <p>
+                            We specialize in transforming post-consumer and post-industrial plastic scraps into clean,
+                            ready-to-use recycled plastics. Our commitment to sustainability and innovation drives us to
+                            deliver high-quality recycled materials for a variety of applications.
+                        </p>
+                    </h3>
+                    <h6
+                        style="margin-top: clamp(2rem, 2vw, 3rem); font-size: clamp(1rem, 0.9697rem + 0.1294vw, 1.125rem); line-height: clamp(1.5rem, 1.4697rem + 0.1294vw, 1.625rem); font-family: 'Plus Jakarta Sans';">
+                        Our state-of-the-art facilities ensure that these plastics are efficiently converted from scraps
+                        into valuable recycled products, meeting stringent quality standards and supporting a circular
+                        economy.
+                    </h6>
+                </section>
+            </div>
+        </div>
+    </div> -->
+
+
+    <div class="container-fluid" id="mid-section" style="background-color: white; padding: 7vw; max-width: 100%; max-height: auto;">
+        <div class="row" data-aos="fade-up" style="margin: 0;">
+            <div class="col-md-6 order-md-2 d-flex align-items-center" id="image-column" style="padding: clamp(25px, 5vw, 180px); display: flex; flex-wrap: wrap; text-align: left; color: #123627; font-family: 'Plus Jakarta Sans'; box-sizing: border-box;">
+                <div style="height: 100%; position: relative; width: 100%;">
+                    <img style="width: 100%; min-width: 16.5rem; object-fit: fill;" loading="lazy" alt="" src="assets/tejdeed-way-diagram.webp" />
+                </div>
+            </div>
+            <div class="col-md-6 order-md-1 d-flex align-items-center" id="text-column" style="padding: clamp(25px, 5vw, 180px); display: flex; flex-wrap: wrap; text-align: left; color: #123627; font-family: 'Plus Jakarta Sans'; box-sizing: border-box;">
+                <section data-aos="fade-up" style="width: 100%; height: auto;">
+                    <h3 style="margin-top: clamp(0.5rem, 5vw, 2rem); font-size: clamp(1.375rem, 1.3143rem + 0.2589vw, 1.625rem); line-height: clamp(1.875rem, 1.7536rem + 0.5178vw, 2.375rem); font-weight: 400;">
                         <p>
                             We specialize in transforming post-consumer and post-industrial plastic scraps into clean,
                             ready-to-use recycled plastics. Our commitment to sustainability and innovation drives us to
