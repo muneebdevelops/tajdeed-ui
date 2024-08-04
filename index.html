@@ -249,57 +249,60 @@
   </div>
 
   <script>
-    // Function to update button styles
-    function updateButtonStyles() {
-      document.querySelectorAll('.hover-card').forEach(card => {
-        const button = card.querySelector('.hover-button');
-        const text = card.querySelector('h1').textContent;
+    // Function to update button styles based on card text
+    function updateButtonStyles(card) {
+      const button = card.querySelector('.hover-button');
+      const text = card.querySelector('h1').textContent;
   
-        card.addEventListener('mouseenter', function() {
-          card.style.filter = 'brightness(1.3)';
-          
-          if (text.includes('Fertilizers')){
-            button.style.backgroundColor = '#009E4C';
-            button.style.borderColor = '#009E4C';
-            button.querySelector('a').style.color = '#F7F7F7';
-          }
-          if (text.includes('Plastic')){
-            button.style.backgroundColor = '#006F9E';
-            button.style.borderColor = '#006F9E';
-            button.querySelector('a').style.color = '#F7F7F7';
-          }
-          if (text.includes('Biomass')){
-            button.style.backgroundColor = '#ff6347';
-            button.style.borderColor = '#ff6347';
-            button.querySelector('a').style.color = '#F7F7F7';
-          }
-          if (text.includes('Gas')){
-            button.style.backgroundColor = '#8A2BE2';
-            button.style.borderColor = '#8A2BE2';
-            button.querySelector('a').style.color = '#F7F7F7';
-          }
-        });
-  
-        card.addEventListener('mouseleave', function() {
-          card.style.filter = 'brightness(0.9)';
-          button.style.backgroundColor = 'transparent';
-          button.style.borderColor = '#F7F7F7';
-          button.querySelector('a').style.color = '#F7F7F7';
-        });
-      });
+      if (text.includes('Fertilizers')) {
+        button.style.backgroundColor = '#009E4C';
+        button.style.borderColor = '#009E4C';
+        button.querySelector('a').style.color = '#F7F7F7';
+      } else if (text.includes('Plastic')) {
+        button.style.backgroundColor = '#006F9E';
+        button.style.borderColor = '#006F9E';
+        button.querySelector('a').style.color = '#F7F7F7';
+      } else if (text.includes('Biomass')) {
+        button.style.backgroundColor = '#ff6347';
+        button.style.borderColor = '#ff6347';
+        button.querySelector('a').style.color = '#F7F7F7';
+      } else if (text.includes('Gas')) {
+        button.style.backgroundColor = '#8A2BE2';
+        button.style.borderColor = '#8A2BE2';
+        button.querySelector('a').style.color = '#F7F7F7';
+      }
     }
   
-    // Initial call to update styles based on screen width
-    updateButtonStyles();
+    document.querySelectorAll('.hover-card').forEach(card => {
+      const button = card.querySelector('.hover-button');
   
-    // Update styles when window is resized
-    window.addEventListener('resize', function() {
-      if (window.innerWidth <= 768) {
-        updateButtonStyles(); // Update styles for mobile view
-      }
+      // Handle mouse events
+      card.addEventListener('mouseenter', function() {
+        card.style.filter = 'brightness(1.3)';
+        updateButtonStyles(card);
+      });
+  
+      card.addEventListener('mouseleave', function() {
+        card.style.filter = 'brightness(0.9)';
+        button.style.backgroundColor = 'transparent';
+        button.style.borderColor = '#F7F7F7';
+        button.querySelector('a').style.color = '#F7F7F7';
+      });
+  
+      // Handle touch events
+      card.addEventListener('touchstart', function() {
+        card.style.filter = 'brightness(1.3)';
+        updateButtonStyles(card);
+      });
+  
+      card.addEventListener('touchend', function() {
+        card.style.filter = 'brightness(0.9)';
+        button.style.backgroundColor = 'transparent';
+        button.style.borderColor = '#F7F7F7';
+        button.querySelector('a').style.color = '#F7F7F7';
+      });
     });
   </script>
-
 
   <!-- MISSION todo: maybe add some padding-->
   <div class=" container-fluid" id="mid-section"
