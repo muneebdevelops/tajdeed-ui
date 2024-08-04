@@ -249,51 +249,55 @@
   </div>
 
   <script>
-    document.querySelectorAll('.hover-card').forEach(card => {
-      const button = card.querySelector('.hover-button');
-      const text = card.querySelector('h1').textContent;
-
-      card.onmouseover = function () {
-        card.style.filter = 'brightness(1.3)';
-        
-        if (text.includes('Fertilizers')){
-          button.style.backgroundColor = '#009E4C';
-          button.style.borderColor = '#009E4C';
+    // Function to update button styles
+    function updateButtonStyles() {
+      document.querySelectorAll('.hover-card').forEach(card => {
+        const button = card.querySelector('.hover-button');
+        const text = card.querySelector('h1').textContent;
+  
+        card.addEventListener('mouseenter', function() {
+          card.style.filter = 'brightness(1.3)';
+          
+          if (text.includes('Fertilizers')){
+            button.style.backgroundColor = '#009E4C';
+            button.style.borderColor = '#009E4C';
+            button.querySelector('a').style.color = '#F7F7F7';
+          }
+          if (text.includes('Plastic')){
+            button.style.backgroundColor = '#006F9E';
+            button.style.borderColor = '#006F9E';
+            button.querySelector('a').style.color = '#F7F7F7';
+          }
+          if (text.includes('Biomass')){
+            button.style.backgroundColor = '#ff6347';
+            button.style.borderColor = '#ff6347';
+            button.querySelector('a').style.color = '#F7F7F7';
+          }
+          if (text.includes('Gas')){
+            button.style.backgroundColor = '#8A2BE2';
+            button.style.borderColor = '#8A2BE2';
+            button.querySelector('a').style.color = '#F7F7F7';
+          }
+        });
+  
+        card.addEventListener('mouseleave', function() {
+          card.style.filter = 'brightness(0.9)';
+          button.style.backgroundColor = 'transparent';
+          button.style.borderColor = '#F7F7F7';
           button.querySelector('a').style.color = '#F7F7F7';
-        }
-        if (text.includes('Plastic')){
-          button.style.backgroundColor = '#006F9E';
-          button.style.borderColor = '#006F9E';
-          button.querySelector('a').style.color = '#F7F7F7';
-        }
-        if (text.includes('Biomass')){
-          button.style.backgroundColor = '#ff6347';
-          button.style.borderColor = '#ff6347';
-          button.querySelector('a').style.color = '#F7F7F7';
-        }
-        if (text.includes('Gas')){
-          button.style.backgroundColor = '#8A2BE2';
-          button.style.borderColor = '#8A2BE2';
-          button.querySelector('a').style.color = '#F7F7F7';
-        }
-        
-      };
-
-      card.onmouseout = function () {
-        card.style.filter = 'brightness(0.9)';
-        button.style.backgroundColor = 'transparent';
-        button.style.borderColor = '#F7F7F7';
-        button.querySelector('a').style.color = '#F7F7F7';
-      };
-    });
-
-    if (window.innerWidth <= 768) {
-      document.querySelectorAll('.hover-button').forEach(button => {
-        button.style.backgroundColor = '#009E4C';
-        button.style.borderColor = '#009E4C';
-        button.querySelector('a').style.color = '#F7F7F7';
+        });
       });
     }
+  
+    // Initial call to update styles based on screen width
+    updateButtonStyles();
+  
+    // Update styles when window is resized
+    window.addEventListener('resize', function() {
+      if (window.innerWidth <= 768) {
+        updateButtonStyles(); // Update styles for mobile view
+      }
+    });
   </script>
 
 
