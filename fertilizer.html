@@ -131,7 +131,7 @@
     </script>
 
     <nav
-        style="position: sticky !important; top: 0;  z-index: 1 !important; display: flex; flex-direction: row; align-items: center; justify-content: space-between; width: 100%; height: 84px; padding: 18px 25px; position: relative; border-bottom: 1px solid rgba(255, 255, 255, 0.2); background-color: #fff;">
+        style="position: sticky !important; top: 0;  z-index: 888 !important; display: flex; flex-direction: row; align-items: center; justify-content: space-between; width: 100%; height: 84px; padding: 18px 25px; position: relative; border-bottom: 1px solid rgba(255, 255, 255, 0.2); background-color: #fff;">
         <div>
             <a href="index.html">
                 <img src="assets/Tejdeed-Fertilizers@4x-8.png" alt="Logo" style="height: clamp(1.9em, 5vw, 2.3em);" />
@@ -1071,27 +1071,27 @@
             Our Process
         </h1>
         <div style="position: relative; width: 100%; max-width: 680px; height: 680px; margin: auto;">
-            <img src="assets/ellipse-3.svg"
+            <img src="assets/animation/an-outter-circle.svg"
                 style="position: absolute; width: 100%; height: 100%; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 1;">
-            <img src="assets/ellipse-2.svg"
-                style="position: absolute; width: 70%; height: 70%; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 2;">
+            <img src="assets/animation/an-inner-circle.svg"
+                style="position: absolute; width: 60%; height: 60%; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 2;">
 
             <div id="dial"
                 style="position: absolute; top: 50%; left: 50%; width: 70%; height: 70%; transform: translate(-50%, -50%) rotate(0deg); border-radius: 50%; transition: transform 0.5s ease-in-out;">
                 <div class="icon-container" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0;">
-                    <img src="assets/truck.svg" alt="Icon 1" style="background-color: #f5cd61 !important; padding:5px !important; border-radius: 50%; position: absolute; width: 3.1em; height: 3.1em; top: 0; left: 50%; transform: translate(-50%, -150%);">
+                    <img src="assets/animation/an-icon-3.svg" alt="Icon 1" style="background-color: #25734B !important; padding:7px !important; border-radius: 50%; position: absolute; width: 3.1em; height: 3.1em; top: 0; left: 50%; transform: translate(-50%, -80%);">
                 </div>
                 <div class="icon-container" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; transform: rotate(72deg);">
-                    <img src="assets/trash-bin.svg" alt="Icon 2" style="padding:5px !important; border-radius: 50%; position: absolute; width: 3.1em; height: 3.1em; top: 0; left: 50%; transform: translate(-50%, -150%) rotate(0deg);">
+                    <img src="assets/animation/an-icon-2.svg" alt="Icon 2" style="padding:7px !important; border-radius: 50%; position: absolute; width: 3.1em; height: 3.1em; top: 0; left: 50%; transform: translate(-50%, -80%) rotate(0deg);">
                 </div>
                 <div class="icon-container" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; transform: rotate(144deg);">
-                    <img src="assets/tajdeed-animation-icon.svg" alt="Icon 3" style="padding:5px !important; border-radius: 50%; position: absolute; width: 3.1em; height: 3.1em; top: 0; left: 50%; transform: translate(-50%, -150%) rotate(0deg);">
+                    <img src="assets/animation/an-icon-1.svg" alt="Icon 3" style="padding:7px !important; border-radius: 50%; position: absolute; width: 3.1em; height: 3.1em; top: 0; left: 50%; transform: translate(-50%, -80%) rotate(0deg);">
                 </div>
                 <div class="icon-container" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; transform: rotate(216deg);">
-                    <img src="assets/soil.svg" alt="Icon 4" style="padding:5px !important; border-radius: 50%; position: absolute; width: 3.1em; height: 3.1em; top: 0; left: 50%; transform: translate(-50%, -150%) rotate(0deg);">
+                    <img src="assets/animation/an-icon-5.svg" alt="Icon 4" style="padding:7px !important; border-radius: 50%; position: absolute; width: 3.1em; height: 3.1em; top: 0; left: 50%; transform: translate(-50%, -80%) rotate(0deg);">
                 </div>
                 <div class="icon-container" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; transform: rotate(288deg);">
-                    <img src="assets/carrot.svg" alt="Icon 5" style="padding:5px !important; border-radius: 50%; position: absolute; width: 3.1em; height: 3.1em; top: 0; left: 50%; transform: translate(-50%, -150%) rotate(0deg);">
+                    <img src="assets/animation/an-icon-4.svg" alt="Icon 5" style="padding:7px !important; border-radius: 50%; position: absolute; width: 3.1em; height: 3.1em; top: 0; left: 50%; transform: translate(-50%, -80%) rotate(0deg); z-index: 777;">
                 </div>
                 
             </div>
@@ -1099,7 +1099,7 @@
                 style="position: absolute; top: 50%; left: 50%; width: 60%; transform: translate(-50%, -50%); text-align: center; z-index: 4;">
                 <h2 style="margin: 0; font-size: 18px; color: white;">Step <span id="step-number">1</span></h2>
                 <p id="step-description" style=" font-size: 22px; color: rgb(255, 255, 255); padding-left: 5px; padding-right: 5px;">
-                    Tejedec Waste Bins distributed to restaurants and food processors.
+                    Tejedec Waste Bins are distributed to restaurants and food processors.
                 </p>
             </div>
             <button id="prev" onclick="rotateDial(-1)"
@@ -1112,11 +1112,11 @@
     <script>
         let currentStep = 0;
         const steps = [
-            { number: 1, description: "Tejedec Waste Bins distributed to restaurants and food processors." },
-            { number: 2, description: "Food waste collected and transported to the processing facility." },
-            { number: 3, description: "Waste processed and converted into valuable products." },
-            { number: 4, description: "Products distributed to customers and partners." },
-            { number: 5, description: "Products distributed to customers and partners." }
+            { number: 1, description: "Tejedec Waste Bins are distributed to restaurants and food processors." },
+            { number: 2, description: "Dedicated trucks collect food waste from various locations promptly." },
+            { number: 3, description: "Waste is processed and converted into valuable, useful products." },
+            { number: 4, description: "Organic fertilizer is produced from the processed waste materials." },
+            { number: 5, description: "Vegetables are grown using the high-quality organic fertilizer produced." }
         ];
 
         function rotateDial(direction) { //1 -1
@@ -1133,7 +1133,7 @@
                 const icon = iconContainer.querySelector('img');
                 // console.log("index is" +index);
                 if (index === currentStep) {
-                    icon.style.backgroundColor = '#f5cd61';
+                    icon.style.backgroundColor = '#25734B';
                     icon.borderRadius = '50%';
                 } else {
                     icon.style.backgroundColor = 'transparent';
@@ -1241,14 +1241,7 @@
                 </div>
 
             </div>
-            <!-- <div class="col-md d-flex justify-content-start justify-content-md-end p-3 p-md-0">
-
-                
-                
-                
-
-
-            </div> -->
+         
         </div>
         <div data-aos="fade-up" class=" row no-gutters g-0 m-0">
             <div id="join-us-img-left-width" class="col-md d-flex justify-content-start" style="margin-top: 31rem;">
