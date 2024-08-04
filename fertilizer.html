@@ -983,7 +983,7 @@
 
 
 
-    <div class="animation-container"
+    <!-- <div class="animation-container"
         style="position: relative; width: auto; height: auto; background: #00a651; padding: 50px 0;">
         <h1
             style="margin-left: 40px; width: 224px; height: 48px; font-family: 'Askan'; font-style: normal; font-weight: 500; font-size: 42px; line-height: 48px; text-transform: capitalize; color: white;">
@@ -991,10 +991,6 @@
         <div style="position: relative; width: 100%; max-width: 760px; height: 760px; margin: auto;">
             <img src="assets/ellipse-3.svg"
                 style="position: absolute; width: 100%; height: 100%; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 1;">
-            <!-- <div style="position: relative; width: 135px; height: 19px; left: 100%; top: 30%; transform: translate(-50%, -50%) rotate(0deg); font-family: 'Inter'; font-style: normal; font-weight: 400; font-size: 16px; line-height: 19px; text-align: left; letter-spacing: -0.01em; text-transform: uppercase; color: #FFFFFF;">Consumamtion</div>
-        <div style="position: relative; width: 135px; height: 19px;  top: 30%; transform: translate(-50%, -50%) rotate(0deg); font-family: 'Inter'; font-style: normal; font-weight: 400; font-size: 16px; line-height: 19px; text-align: left; letter-spacing: -0.01em; text-transform: uppercase; color: #FFFFFF;">PRODUCTION</div>
-        <div style="position: relative; width: 135px; height: 19px; left: 100%; top: 70%; transform: translate(-50%, -50%) rotate(0deg); font-family: 'Inter'; font-style: normal; font-weight: 400; font-size: 16px; line-height: 19px; text-align: right; letter-spacing: -0.01em; text-transform: uppercase; color: #FFFFFF;">Collection</div>
-        <div style="position: relative; width: 135px; height: 19px;  top: 70%; transform: translate(-50%, -50%) rotate(0deg); font-family: 'Inter'; font-style: normal; font-weight: 400; font-size: 16px; line-height: 19px; text-align: left; letter-spacing: -0.01em; text-transform: uppercase; color: #FFFFFF;">PROCESSING</div> -->
             <img src="assets/ellipse-2.svg"
                 style="position: absolute; width: 70%; height: 70%; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 2;">
 
@@ -1065,6 +1061,86 @@
                     img.parentElement.style.backgroundColor = 'transparent';
                     img.parentElement.style.padding = '0';
                 }
+            });
+        }
+    </script> -->
+
+    <div class="animation-container"
+        style="position: relative; width: auto; height: auto; background: #00a651; padding: 50px 0;">
+        <h1 style="margin-left: 40px; width: 224px; height: 48px; font-family: 'Askan'; font-style: normal; font-weight: 500; font-size: 42px; line-height: 48px; text-transform: capitalize; color: white;">
+            Our Process
+        </h1>
+        <div style="position: relative; width: 100%; max-width: 760px; height: 760px; margin: auto;">
+            <img src="assets/ellipse-3.svg"
+                style="position: absolute; width: 100%; height: 100%; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 1;">
+            <img src="assets/ellipse-2.svg"
+                style="position: absolute; width: 70%; height: 70%; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 2;">
+
+            <div id="dial"
+                style="position: absolute; top: 50%; left: 50%; width: 70%; height: 70%; transform: translate(-50%, -50%) rotate(0deg); border-radius: 50%; transition: transform 0.5s ease-in-out;">
+                <div class="icon-container" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0;">
+                    <img src="assets/truck.svg" alt="Icon 1" style="background-color: #f5cd61 !important; padding:5px !important; border-radius: 50%; position: absolute; width: 3.1em; height: 3.1em; top: 0; left: 50%; transform: translate(-50%, -150%);">
+                </div>
+                <div class="icon-container" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; transform: rotate(72deg);">
+                    <img src="assets/trash-bin.svg" alt="Icon 2" style="padding:5px !important; border-radius: 50%; position: absolute; width: 3.1em; height: 3.1em; top: 0; left: 50%; transform: translate(-50%, -150%) rotate(0deg);">
+                </div>
+                <div class="icon-container" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; transform: rotate(144deg);">
+                    <img src="assets/tajdeed-animation-icon.svg" alt="Icon 3" style="padding:5px !important; border-radius: 50%; position: absolute; width: 3.1em; height: 3.1em; top: 0; left: 50%; transform: translate(-50%, -150%) rotate(0deg);">
+                </div>
+                <div class="icon-container" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; transform: rotate(216deg);">
+                    <img src="assets/soil.svg" alt="Icon 4" style="padding:5px !important; border-radius: 50%; position: absolute; width: 3.1em; height: 3.1em; top: 0; left: 50%; transform: translate(-50%, -150%) rotate(0deg);">
+                </div>
+                <div class="icon-container" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; transform: rotate(288deg);">
+                    <img src="assets/carrot.svg" alt="Icon 5" style="padding:5px !important; border-radius: 50%; position: absolute; width: 3.1em; height: 3.1em; top: 0; left: 50%; transform: translate(-50%, -150%) rotate(0deg);">
+                </div>
+                
+            </div>
+            <div id="description"
+                style="position: absolute; top: 50%; left: 50%; width: 60%; transform: translate(-50%, -50%); text-align: center; z-index: 4;">
+                <h2 style="margin: 0; font-size: 18px; color: white;">Step <span id="step-number">1</span></h2>
+                <p id="step-description" style=" font-size: 22px; color: rgb(255, 255, 255); padding-left: 5px; padding-right: 5px;">
+                    Tejedec Waste Bins distributed to restaurants and food processors.
+                </p>
+            </div>
+            <button id="prev" onclick="rotateDial(-1)"
+                style="position: absolute; top: 50%; left: -100px; transform: translateY(-50%); background: transparent; border: 2px solid white; border-radius: 50%; width: 50px; height: 50px; color: white; cursor: pointer; z-index: 5;">&larr;</button>
+            <button id="next" onclick="rotateDial(1)"
+                style="position: absolute; top: 50%; right: -100px; transform: translateY(-50%); background: transparent; border: 2px solid white; border-radius: 50%; width: 50px; height: 50px; color: white; cursor: pointer; z-index: 5;">&rarr;</button>
+        </div>
+    </div>
+
+    <script>
+        let currentStep = 0;
+        const steps = [
+            { number: 1, description: "Tejedec Waste Bins distributed to restaurants and food processors." },
+            { number: 2, description: "Food waste collected and transported to the processing facility." },
+            { number: 3, description: "Waste processed and converted into valuable products." },
+            { number: 4, description: "Products distributed to customers and partners." },
+            { number: 5, description: "Products distributed to customers and partners." }
+        ];
+
+        function rotateDial(direction) { //1 -1
+            currentStep = (currentStep + direction + steps.length) % steps.length;
+            // console.log("current step calculated is "+currentStep);
+            const dial = document.getElementById('dial');
+            const angle = currentStep * -72; // 360 degrees / 5 steps = 72 degrees per step
+            dial.style.transform = `translate(-50%, -50%) rotate(${angle}deg)`;
+            document.getElementById('step-number').innerText = steps[currentStep].number;
+            document.getElementById('step-description').innerText = steps[currentStep].description;
+
+            // Highlight the current step icon
+            document.querySelectorAll('.icon-container').forEach((iconContainer, index) => {
+                const icon = iconContainer.querySelector('img');
+                // console.log("index is" +index);
+                if (index === currentStep) {
+                    icon.style.backgroundColor = '#f5cd61';
+                    icon.borderRadius = '50%';
+                } else {
+                    icon.style.backgroundColor = 'transparent';
+                    // icon.style.padding = '0';
+                }
+                // Adjust rotation of the icons
+                // icon.style.transform = `translate(-50%, -150%) rotate(${-angle + index * 72}deg)`;
             });
         }
     </script>
