@@ -413,7 +413,7 @@
             });
 
             var selectedBusiness = document.querySelectorAll('input[name="business-type"]');
-            var selectedWaste = document.querySelectorAll('input["waste-type"]');
+            var selectedWaste = document.querySelectorAll('input[name="waste-type"]');
 
             let business = 'No option selected';
             
@@ -440,25 +440,15 @@
          
 
             if (name && email && phone && message) {
-                //sendEmail(name, email, phone, message, business, waste);
-                // localStorage.setItem('contactFormData', JSON.stringify({
-                //     name: name,
-                //     email: email,
-                //     phone: phone,
-                //     message: message
-                // }));
-
+                
                 if (!isNumber(phone)) {
                     const phoneC = document.getElementById('phone')
                     phoneC.classList.add('is-invalid');
-                    
-
                     errorToast = new bootstrap.Toast(document.getElementById('errorToast'));
                     errorToast.show();
                     setTimeout(() => {
                         errorToast.hide();
                     }, 2000);
-                    
                     isFormValid = false;
 
                 }else{
@@ -491,6 +481,7 @@
                 const successToast = new bootstrap.Toast(document.getElementById('successToast'));
                 
                 if (isFormValid === true){
+                    sendEmail(name, email, phone, message, business, waste);
                     successToast.show();
                     setTimeout(() => {
                         closeForm();
@@ -499,11 +490,6 @@
                         successToast.hide();
                     }, 1500);
                 };
-
-                
-                
-
-                
 
             }else {
                 console.log("FORM DATA NOT VALID!");
