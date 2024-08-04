@@ -214,6 +214,113 @@
                         <input type="tel" style="background-color: #f7f7f7;" class="form-control" id="phone" placeholder="Enter your phone number" required>
                     </div>
                 </div>
+
+                <div class="container" style="margin-top: 30px; margin-bottom: 20px;" >
+                    <div class="row" style="border: 0.5px solid lightgrey; background-color: #f7f7f7; padding: 0.5rem; border-radius: 5px; ">
+                        <!-- Column 1 -->
+                         <div class="row">
+                            <div class="col-md-3">
+                                <label style="font-weight: 500; color: #123627;" class="form-label">Business Type</label>
+                                
+                            </div>
+                            <div class="col-md-3">
+                                <div class="radio-container">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="business-type" id="food-processor" value="Food Processor" style="border-radius: 0 !important;">
+                                        <label class="form-check-label" for="food-processor">
+                                            Food Processor
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="business-type" id="restaurant" value="Restaurant" style="border-radius: 0 !important;">
+                                        <label class="form-check-label" for="restaurant">
+                                            Restaurant
+                                        </label>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        <!-- Column 2 -->
+                            <div class="col-md-3">
+                                <div class="radio-container">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="business-type" id="hotel" value="Hotel" style="border-radius: 0 !important;" >
+                                        <label class="form-check-label" for="hotel">
+                                            Hotel
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="business-type" id="supermarket" value="supermarket" style="border-radius: 0 !important;" >
+                                        <label class="form-check-label" for="supermarket">
+                                            supermarket
+                                        </label>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        <!-- Column 3 -->
+                            <div class="col-md-3">
+                                <div class="radio-container">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="business-type" id="catering" value="Catering" style="border-radius: 0 !important;" >
+                                        <label class="form-check-label" for="catering">
+                                            Catering
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="business-type" id="other" value="Other" style="border-radius: 0 !important;" >
+                                        <label class="form-check-label" for="other">
+                                            Other
+                                        </label>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row no-gutters mt-0" style="padding-top: 20px;">
+                            <div class="col-md-3">
+                                <label style=" padding: 0 !important ; font-weight: 500; color: #123627;" class="form-label">Waste Type</label>
+                                
+                            </div>
+                            <div class="col-md-3">
+                                <div class="radio-container">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="waste-type" id="uncooked-food" value="Uncooked Food" style="border-radius: 0 !important;">
+                                        <label class="form-check-label" for="uncooked-food">
+                                            Uncooked Food
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        <!-- Column 2 -->
+                            <div class="col-md-3">
+                                <div class="radio-container">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="waste-type" id="cooked-items" value="Cooked Food" style="border-radius: 0 !important;" >
+                                        <label class="form-check-label" for="cooked-items">
+                                            Cooked Items
+                                        </label>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        <!-- Column 3 -->
+                            <div class="col-md-3">
+                                <div class="radio-container">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="waste-type" id="expired-food-items" value="Expired Food Items" style="border-radius: 0 !important;" >
+                                        <label class="form-check-label" for="expired-food-items">
+                                            Expired Food Items
+                                        </label>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+    
+                        </div>
+                    </div>
+                </div>
+            
             
                 <div class="mb-3">
                     <label for="message"  style="font-weight: 500; color: #123627;" class="form-label">Message</label>
@@ -279,13 +386,15 @@
             }
         }
 
-        function sendEmail(name, email, phone, message) {
+        function sendEmail(name, email, phone, message, business, waste) {
             var templateParams = {
                 to_name: 'Tajdeed Technologies',
                 from_name: name,
                 name: name,
                 email: email,
                 phone: phone,
+                business: business,
+                waste: waste,
                 message: message
             };
 
@@ -303,6 +412,25 @@
                 event.preventDefault();
             });
 
+            var selectedBusiness = document.querySelectorAll('input[name="business-type"]');
+            var selectedWaste = document.querySelectorAll('input["waste-type"]');
+
+            let business = 'No option selected';
+            
+            selectedBusiness.forEach((selectedBusiness) => {
+                if (selectedBusiness.checked) {
+                    business = selectedBusiness.value;
+                }
+            });
+
+            let waste = 'No option selected';
+
+            selectedWaste.forEach((selectedWaste) => {
+                if (selectedWaste.checked) {
+                    waste = selectedWaste.value;
+                }
+            });
+
 
             var form = document.getElementById('form-overlay');
             const name = document.getElementById('name').value;
@@ -312,7 +440,7 @@
          
 
             if (name && email && phone && message) {
-                //sendEmail(name, email, phone, message);
+                //sendEmail(name, email, phone, message, business, waste);
                 // localStorage.setItem('contactFormData', JSON.stringify({
                 //     name: name,
                 //     email: email,
