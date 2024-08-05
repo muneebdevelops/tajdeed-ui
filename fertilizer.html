@@ -363,6 +363,13 @@
 
     <script>
 
+        const overlay = document.getElementById('overlay');
+        overlay.addEventListener('click', (event) =>{
+            if (event.target === overlay){
+                toggleMenu();
+            }
+        } );
+
         function isNumber(value) {
             return !isNaN(value) && isFinite(value);
         }
@@ -751,7 +758,7 @@
 
                 switch (contentType) {
                     case 'compost':
-                        content = '<h1 data-aos="fade-up" style="margin: 0; align-self: stretch; position: relative; font-size: 3em; letter-spacing: -0.04em; line-height: 1em; text-transform: capitalize; font-weight: 500; font-family: \'IBM Plex Serif\';">Compost</h1><div data-aos="fade-up" style="align-self: stretch; border-bottom: 0.5px solid #123627; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start; padding: 0em 0em 1.813em; gap: 1.875em;"><div data-aos="fade-up" style="align-self: stretch; position: relative; font-size: 1.375em; line-height: 1.273em; font-weight: 500;">Our premium compost enriches soil and enhances plant health, ensuring lush, thriving gardens and vibrant growth for all your horticultural needs.</div><div data-aos="fade-up" style="align-self: stretch; position: relative; font-size: 1.125em; line-height: 1.444em;">Experience superior results with our top-quality compost. It improves soil structure, promotes robust plant growth, and supports sustainable gardening practices for healthier, more resilient plants.<br><br>Contact Tejdeed Organic Fertilizers to learn more about our process and discover how your farm can benefit.</div></div>';
+                        content = '<h1 data-aos="fade-up" style="margin: 0; align-self: stretch; position: relative; font-size: 3em; letter-spacing: -0.04em; line-height: 1em; text-transform: capitalize; font-weight: 500; font-family: \'IBM Plex Serif\';">Compost</h1><div data-aos="fade-up" style="align-self: stretch; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start; padding: 0em 0em 1.813em; gap: 1.875em;"><div data-aos="fade-up" style="align-self: stretch; position: relative; font-size: 1.375em; line-height: 1.273em; font-weight: 500;">Our premium compost enriches soil and enhances plant health, ensuring lush, thriving gardens and vibrant growth for all your horticultural needs.</div><div data-aos="fade-up" style="align-self: stretch; position: relative; font-size: 1.125em; line-height: 1.444em;">Experience superior results with our top-quality compost. It improves soil structure, promotes robust plant growth, and supports sustainable gardening practices for healthier, more resilient plants.<br><br>Contact Tejdeed Organic Fertilizers to learn more about our process and discover how your farm can benefit.</div></div>';
                         imageSrc = 'compost.png';
                         break;
                     case 'fish':
@@ -759,7 +766,7 @@
                         imageSrc = 'fish-based.png';
                         break;
                     case 'customized':
-                        content = '<h1 data-aos="fade-up" style="margin: 0; align-self: stretch; position: relative; font-size: 3em; letter-spacing: -0.04em; line-height: 1em; text-transform: capitalize; font-weight: 500; font-family: \'IBM Plex Serif\';">Customized Fertilizers</h1><div data-aos="fade-up" style="align-self: stretch; border-bottom: 0.5px solid #123627; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start; padding: 0em 0em 1.813em; gap: 1.875em;"><div data-aos="fade-up" style="align-self: stretch; position: relative; font-size: 1.375em; line-height: 1.273em; font-weight: 500;">Are you looking for a fertilizer specifically tailored to your farm and the crops you plan to grow?</div><div data-aos="fade-up" style="align-self: stretch; position: relative; font-size: 1.125em; line-height: 1.444em;">At Tejdeed, our soil scientists and technical experts create customized fertilizers designed to meet the unique needs of your soil. We analyze the specific characteristics of your soil and formulate batches of organic fertilizers that will enrich it, helping you achieve optimal crop yields for the next one to two years.<br><br>Contact Tejdeed Organic Fertilizers to learn more about our process and discover how your farm can benefit.</div></div>';
+                        content = '<h1 data-aos="fade-up" style="margin: 0; align-self: stretch; position: relative; font-size: 3em; letter-spacing: -0.04em; line-height: 1em; text-transform: capitalize; font-weight: 500; font-family: \'IBM Plex Serif\';">Customized Fertilizers</h1><div data-aos="fade-up" style="align-self: stretch; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start; padding: 0em 0em 1.813em; gap: 1.875em;"><div data-aos="fade-up" style="align-self: stretch; position: relative; font-size: 1.375em; line-height: 1.273em; font-weight: 500;">Are you looking for a fertilizer specifically tailored to your farm and the crops you plan to grow?</div><div data-aos="fade-up" style="align-self: stretch; position: relative; font-size: 1.125em; line-height: 1.444em;">At Tejdeed, our soil scientists and technical experts create customized fertilizers designed to meet the unique needs of your soil. We analyze the specific characteristics of your soil and formulate batches of organic fertilizers that will enrich it, helping you achieve optimal crop yields for the next one to two years.<br><br>Contact Tejdeed Organic Fertilizers to learn more about our process and discover how your farm can benefit.</div></div>';
                         imageSrc = 'customize-fertilizer.png';
                         break;
                 }
