@@ -393,21 +393,56 @@
             radio.addEventListener('click', toggleRadioBusiness);
         });
 
-        // let checkedRadioWaste = null
+        let radioWaste1=null
+        let radioWaste2=null
+        let radioWaste3=null
 
-        // function toggleRadioWaste(event){
-        //     let checkedRadio = event.target;
+        function toggleRadio(event) {
+            const clickedRadio = event.target;
+            var value = clickedRadio.value;
             
-        //     if (checkedRadioWaste === checkedRadio){
-        //         checkedRadio.checked = false;
-        //         checkedRadioWaste = null
-        //     }
+            switch(value){
+                case "Cooked Food":
+                    if (radioWaste1 == clickedRadio){
+                        clickedRadio.checked = false;
+                        radioWaste1 = null
+                    }else{
+                        radioWaste1 = clickedRadio;
+                        clickedRadio.checked = true;
+                    
+                    }
+                    break;
 
-        // }
+                case "Uncooked Food":
+                    if (radioWaste2 == clickedRadio){
+                        clickedRadio.checked = false;
+                        radioWaste2 = null
+                    }else{
+                        radioWaste2 = clickedRadio;
+                        clickedRadio.checked = true;
+                        
+                    }
+                    break;
+                    
+                case "Expired Food Items":
+                    if (radioWaste3 == clickedRadio){
+                        clickedRadio.checked = false;
+                        radioWaste3 = null
+                    }else{
+                        radioWaste3 = clickedRadio;
+                        clickedRadio.checked = true;
+                        
+                    };
+                    break;
+            };
 
-        // document.querySelectorAll('.waste-checkbox').forEach(radio => {
-        //     radio.addEventListener('click',toggleRadioWaste);
-        // });
+
+        };
+
+        // Attach event listeners to all radio buttons
+        document.querySelectorAll('.waste-checkbox').forEach(radio => {
+            radio.addEventListener('click', toggleRadio);
+        });
 
 
 
