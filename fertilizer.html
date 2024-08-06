@@ -144,22 +144,21 @@
     </nav>
 
     <div id="menu"
-        style="display: none; flex-direction: column; width: 100%; max-width: 500px; height: 100vh; align-items: flex-start; justify-content: space-between; padding: 60px 33px; position: fixed; top: 0; right: 0; background-color: #d9d9d9; z-index: 1001;">
+        style="display: none; flex-direction: column; width: 100%; max-width: 400px; height: 100svh; align-items: flex-start; justify-content: flex-start; padding: 60px 33px; position: fixed; top: 0; right: 0; background-color: #f7f7f7; z-index: 1001; overflow-y: scroll; transition: transform 0.5s ease; transform: translateX(100%);">
         <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 60px; width: 100%;">
-            <div
-                style="height: 48px; align-items: center; justify-content: flex-end; gap: 10px; display: flex; width: 100%;">
+            <div style="height: 48px; align-items: center; justify-content: flex-end; gap: 10px; display: flex; width: 100%;">
                 <div style="width: 48px; height: 48px; position: relative;" onclick="toggleMenu()">
                     <div style="position: relative; height: 48px; border-radius: 24px;">
-                        <img src="close-menu.png"
-                            style="position: absolute; width: 17px; height: 17px; top: 15px; left: 15px;" />
-                        <div
+                        <img src="close-cross.svg"
+                            style="position: absolute; width: 27px; height: 27px; top: 15px; left: 15px;" />
+                        <!-- <div
                             style="position: absolute; width: 48px; height: 48px; top: 0; left: 0; border-radius: 24px; border: 1.55px solid #123627;">
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
             <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 4px; width: 100%;">
-                <a href="index.html" onmouseover="this.style.color='#f7f7f7'" onmouseout="this.style.color='#123627'"
+                <a href="index.html" onmouseover="this.style.color='grey'" onmouseout="this.style.color='#123627'"
                     style="font-family: 'IBM Plex Serif-Medium', Helvetica; font-weight: 500; color: #123627; font-size: 42px; letter-spacing: -0.92px; line-height: 56px; text-decoration: none;">Home</a>
                 <a href="fertilizer.html" onmouseover="this.style.color='#009e4c'"
                     onmouseout="this.style.color='#123627'"
@@ -171,12 +170,18 @@
                 <a href="biomass.html" onmouseover="this.style.color='#ff6347'" onmouseout="this.style.color='#123627'"
                     style="font-family: 'IBM Plex Serif-Medium', Helvetica; font-weight: 500; color: #123627; font-size: 42px; letter-spacing: -0.92px; line-height: 56px; text-decoration: none;">Biomass</a>
             </div>
-        </div>
-        <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 6px; width: 100%;">
-            <div
-                style="font-family: 'IBM Plex Serif-Medium', Helvetica; font-weight: 500; color: #123627; font-size: 18px; letter-spacing: -0.4px; line-height: 34px;">
-                +971 50 841 5960<br />info@tejdeed.com</div>
-        </div>
+            </div>
+            <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 6px; width: 100%; margin-top: auto;">
+                <div
+                    style="font-family: 'IBM Plex Serif-Medium', Helvetica; font-weight: 500; color: #123627; font-size: 18px; letter-spacing: -0.4px; line-height: 34px;">
+                    <!-- +971 50 841 5960<br />info@tejdeed.com -->
+                    <img onclick="openEmail()" src="email-icon.svg" alt="Email" style=" background-color: #006F9E; border-radius: 20px;" />
+                    <span onclick="openEmail()" style="font-family: 'IBM Plex Serif-Medium';">info@tejdeed.com</span><br>
+                    <img src="phone-icon.svg" alt="Phone" style=" background-color: #006F9E; border-radius: 20px;" />
+                    <a href="tel:+971508415960" style="font-family: 'IBM Plex Serif-Medium'; text-decoration: none;">+971 50 841 5960</a>
+            
+                </div>
+            </div>
     </div>
 
 
@@ -186,9 +191,9 @@
 
     <div id="form-overlay"
         style="display: none; overflow-y: scroll ; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); backdrop-filter: blur(10px); z-index: 999; transition: opacity 0.6s ease, visibility 0.6s ease-out; ">
-        <div onclick="closeForm()" style="position: fixed; top: 10px; right: 20px; padding: 10px;"><img src="close-menu.png" style=" width: 25px; height: 25px; cursor: pointer;"></div>
+        <div onclick="closeForm()" style="position: fixed; top: 10px; right: 20px; padding: 10px;"><img src="close-cross.svg" style=" width: 25px; height: 25px; cursor: pointer;"></div>
 
-        <div style=" display: flex; justify-content: center; align-items: center; width: inherit;">
+        <div style=" display: flex; justify-content: center; align-items: center; width: inherit; height: 100svh;">
         <div style="width: clamp(22.688rem, 8.9778rem + 58.4969vw, 61.625rem); box-sizing: border-box; padding: 25px; border-width: 0.5px; border-radius: 6px; border-style: solid; border-color: #ffffff; background-color: #ffffff;">
             
             <form id="contactForm">
@@ -385,11 +390,19 @@
 
             if (menu.style.display === 'none' || menu.style.display === '') {
                 menu.style.display = 'flex';
-                overlay.style.display = 'block';
+                setTimeout(() => {
+                    menu.style.transform = 'translateX(0)';
+                    overlay.style.display = 'block';
+                    overlay.style.opacity = '1';
+                }, 10); // Small delay to ensure the transform transition is applied
                 document.body.style.overflow = 'hidden';
             } else {
-                menu.style.display = 'none';
-                overlay.style.display = 'none';
+                menu.style.transform = 'translateX(100%)';
+                overlay.style.opacity = '0';
+                setTimeout(() => {
+                    menu.style.display = 'none';
+                    overlay.style.display = 'none';
+                }, 300); // Match the transition duration
                 document.body.style.overflow = 'auto';
             }
         }
