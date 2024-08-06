@@ -163,11 +163,11 @@
                     style="font-family: 'IBM Plex Serif-Medium', Helvetica; font-weight: 500; color: #123627; font-size: 42px; letter-spacing: -0.92px; line-height: 56px; text-decoration: none;">Home</a>
                 <a href="fertilizer.html" onmouseover="this.style.color='#009e4c'"
                     onmouseout="this.style.color='#123627'"
-                    style="font-family: 'IBM Plex Serif-Medium', Helvetica; font-weight: 500; color: #123627; font-size: 42px; letter-spacing: -0.92px; line-height: 56px; text-decoration: none;">Fertilizer</a>
+                    style="font-family: 'IBM Plex Serif-Medium', Helvetica; font-weight: 500; color: #123627; font-size: 42px; letter-spacing: -0.92px; line-height: 56px; text-decoration: none;">Fertilizers</a>
                 <a href="plastic.html" onmouseover="this.style.color='#006F9E'" onmouseout="this.style.color='#123627'"
                     style="font-family: 'IBM Plex Serif-Medium', Helvetica; font-weight: 500; color: #123627; font-size: 42px; letter-spacing: -0.92px; line-height: 56px; text-decoration: none;">Plastics</a>
                 <a href="gas.html" onmouseover="this.style.color='#8A2BE2'" onmouseout="this.style.color='#123627'"
-                    style="font-family: 'IBM Plex Serif-Medium', Helvetica; font-weight: 500; color: #123627; font-size: 42px; letter-spacing: -0.92px; line-height: 56px; text-decoration: none;">Gas</a>
+                    style="font-family: 'IBM Plex Serif-Medium', Helvetica; font-weight: 500; color: #123627; font-size: 42px; letter-spacing: -0.92px; line-height: 56px; text-decoration: none;">Gases</a>
                 <a href="biomass.html" onmouseover="this.style.color='#ff6347'" onmouseout="this.style.color='#123627'"
                     style="font-family: 'IBM Plex Serif-Medium', Helvetica; font-weight: 500; color: #123627; font-size: 42px; letter-spacing: -0.92px; line-height: 56px; text-decoration: none;">Biomass</a>
             </div>
@@ -185,10 +185,10 @@
     </div>
 
     <div id="form-overlay"
-        style="display: none; overflow-y: scroll; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); backdrop-filter: blur(10px); z-index: 999; transition: opacity 0.6s ease, visibility 0.6s ease-out; ">
+        style="display: none; overflow-y: scroll ; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); backdrop-filter: blur(10px); z-index: 999; transition: opacity 0.6s ease, visibility 0.6s ease-out; ">
         <div onclick="closeForm()" style="position: fixed; top: 10px; right: 20px; padding: 10px;"><img src="close-menu.png" style=" width: 25px; height: 25px; cursor: pointer;"></div>
 
-        <div style=" display: flex; justify-content: center; align-items: center; width: inherit; height: max-content;">
+        <div style=" display: flex; justify-content: center; align-items: center; width: inherit;">
         <div style="width: clamp(22.688rem, 8.9778rem + 58.4969vw, 61.625rem); box-sizing: border-box; padding: 25px; border-width: 0.5px; border-radius: 6px; border-style: solid; border-color: #ffffff; background-color: #ffffff;">
             
             <form id="contactForm">
@@ -253,7 +253,7 @@
                                     <div class="form-check">
                                         <input class="form-check-input" type="radio" name="business-type" id="supermarket" value="supermarket" style="border-radius: 0 !important;" >
                                         <label class="form-check-label" for="supermarket">
-                                            supermarket
+                                            Supermarket
                                         </label>
                                     </div>
                                     
@@ -286,7 +286,7 @@
                             <div class="col-md-3">
                                 <div class="radio-container">
                                     <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="waste-type" id="uncooked-food" value="Uncooked Food" style="border-radius: 0 !important;">
+                                        <input class="form-check-input waste-checkbox" type="radio" name="waste-type-1" id="uncooked-food" value="Uncooked Food" style="border-radius: 0 !important;">
                                         <label class="form-check-label" for="uncooked-food">
                                             Uncooked Food
                                         </label>
@@ -297,9 +297,9 @@
                             <div class="col-md-3">
                                 <div class="radio-container">
                                     <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="waste-type" id="cooked-items" value="Cooked Food" style="border-radius: 0 !important;" >
+                                        <input class="form-check-input waste-checkbox" type="radio" name="waste-type-2" id="cooked-items" value="Cooked Food" style="border-radius: 0 !important;" >
                                         <label class="form-check-label" for="cooked-items">
-                                            Cooked Items
+                                            Cooked Food
                                         </label>
                                     </div>
                                     
@@ -309,7 +309,7 @@
                             <div class="col-md-3">
                                 <div class="radio-container">
                                     <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="waste-type" id="expired-food-items" value="Expired Food Items" style="border-radius: 0 !important;" >
+                                        <input class="form-check-input waste-checkbox" type="radio" name="waste-type-3" id="expired-food-items" value="Expired Food Items" style="border-radius: 0 !important;" >
                                         <label class="form-check-label" for="expired-food-items">
                                             Expired Food Items
                                         </label>
@@ -414,82 +414,101 @@
                 });
         }
 
-        function save(){
+        function save() {
             emailjs.init("yYLUh01lJ3UJi0sLT");
+
+        
             document.getElementById('contactForm').addEventListener('submit', function(event) {
                 event.preventDefault();
             });
 
             var selectedBusiness = document.querySelectorAll('input[name="business-type"]');
-            var selectedWaste = document.querySelectorAll('input[name="waste-type"]');
-
             let business = 'No option selected';
-            
+
             selectedBusiness.forEach((selectedBusiness) => {
                 if (selectedBusiness.checked) {
                     business = selectedBusiness.value;
                 }
             });
 
-            let waste = 'No option selected';
+            let waste = '';
+            var wasteArr = [];
+            var selectedWastes = document.querySelectorAll('.waste-checkbox:checked');
 
-            selectedWaste.forEach((selectedWaste) => {
-                if (selectedWaste.checked) {
-                    waste = selectedWaste.value;
-                }
-            });
+            if (selectedWastes.length === 0) {
+                waste = 'No Option Selected';
+            } else {
+                selectedWastes.forEach((selectedWaste) => {
+                    wasteArr.push(selectedWaste.value);
+                });
+                waste = wasteArr.map(item => `${item}`).join(', ');
+            }
 
+            const successToast = new bootstrap.Toast(document.getElementById('successToast'));
+            const errorToast = new bootstrap.Toast(document.getElementById('errorToast'));
 
             var form = document.getElementById('form-overlay');
             const name = document.getElementById('name').value;
             const email = document.getElementById('email').value;
             const phone = document.getElementById('phone').value;
             const message = document.getElementById('message').value;
-         
 
-            if (name && email && phone && message) {
-                
+            isFormValid = true;
+
+            
+            if (!name || !email || !phone || !message) {
+
+                console.log("FORM DATA NOT VALID!");
+                errorToast.show();
+                const msgText = document.getElementById('errorToast-body');
+                msgText.innerText = 'Form Fields Missing';
+                setTimeout(() => {
+                    errorToast.hide();
+                }, 2000);
+                isFormValid = false;
+
+            } else {
+
                 if (!isNumber(phone)) {
-                    const phoneC = document.getElementById('phone')
+
+                    const phoneC = document.getElementById('phone');
                     phoneC.classList.add('is-invalid');
-                    errorToast = new bootstrap.Toast(document.getElementById('errorToast'));
                     errorToast.show();
+                    const errorText = document.getElementById('errorToast-body');
+                    errorText.innerText = 'Invalid Phone Number';
                     setTimeout(() => {
                         errorToast.hide();
                     }, 2000);
                     isFormValid = false;
 
-                }else{
+                } else {
+
                     const phoneC = document.getElementById('phone');
                     phoneC.classList.remove('is-invalid');
-                    isFormValid = true;
                 }
 
-                if (!isValidName(name)){
+                
+                if (!isValidName(name)) {
+
                     var nameC = document.getElementById('name');
                     nameC.classList.add('is-invalid');
-
-
-                    errorToast = new bootstrap.Toast(document.getElementById('errorToast'));
-                    var errorText = document.getElementById('errorToast-body')
-                    errorText.innerText = "Invalid Name"
                     errorToast.show();
+                    var errorText = document.getElementById('errorToast-body');
+                    errorText.innerText = 'Invalid Name';
                     setTimeout(() => {
                         errorToast.hide();
                     }, 2000);
-                    
                     isFormValid = false;
 
-                }else{
+                } else {
+
                     const nameC = document.getElementById('name');
                     nameC.classList.remove('is-invalid');
-                    isFormValid = true;
                 }
-        
-                const successToast = new bootstrap.Toast(document.getElementById('successToast'));
+
                 
-                if (isFormValid === true){
-                    sendEmail(name, email, phone, message, business, waste);
+                if (isFormValid) {
+
                     successToast.show();
                     setTimeout(() => {
                         closeForm();
@@ -497,19 +516,15 @@
                     setTimeout(() => {
                         successToast.hide();
                     }, 1500);
-                };
 
-            }else {
-                console.log("FORM DATA NOT VALID!");
-                errorToast = new bootstrap.Toast(document.getElementById('errorToast'));
-                msgText = document.getElementById('errorToast-body');
-                msgText.innerText = 'Form Fields Missing';
-                errorToast.show();
-
-
+    
+                    // sendEmail(name, email, phone, message, business, waste);
+                }
             }
 
+            return isFormValid; // Ensure the function reflects the form validity status
         }
+
 
         function openForm(){
             var form = document.getElementById('form-overlay');
@@ -1189,22 +1204,22 @@
     <div class="alternate-component"
         style="width: 100%; position: relative; background-color: #009e4c; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; padding: 3.75em 1.563em; box-sizing: border-box; gap: 3.75em; line-height: normal; letter-spacing: normal;">
         <header
-            style="align-self: stretch; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start; padding: 0em 1.25em 0em 0em; text-align: left; color: #fff; font-family: 'IBM Plex Serif';">
+            style=" flex: 1; align-self: stretch; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start; padding: 0em 1.25em 0em 0em; text-align: left; color: #fff; font-family: 'IBM Plex Serif';">
             <a
                 style="text-decoration: none; position: relative; font-size: 2em; letter-spacing: -0.02em; line-height: 1.188em; text-transform: capitalize; font-weight: 500; color: inherit; white-space: nowrap;">Our
                 Process</a>
         </header>
-        <div style="display: flex; justify-content: center;">
-        <img style="align-self: stretch; position: relative; width: 400px; height: 400px; max-width: 100%;  max-height: 100%; object-fit: cover; margin-top: 1em;"
+        <div style=" flex: 1; display: flex; justify-content: center; padding: 0; margin: 0;">
+        <img style="align-self: stretch; width: 100%; height: 100%;  object-fit:contain; margin-top: 1em;"
             alt="" src="animation-mobile-view.jpg" />
         </div>
         <section
-            style="align-self: stretch; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start; max-width: 100%; text-align: left; color: #fff; font-family: 'Plus Jakarta Sans'; margin-top: 1em;">
+            style=" flex: 1; align-self: stretch; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start; max-width: 100%; text-align: left; color: #fff; font-family: 'Plus Jakarta Sans'; margin-top: 1em;">
             <div
-                style="align-self: stretch; border-top: 0.5px solid #fff; border-bottom: 0.5px solid #fff; box-sizing: border-box; display: flex; flex-direction: row; align-items: center; justify-content: center; padding: 1.188em 0em; max-width: 100%;">
+                style="align-self: stretch; border-top: 0.5px solid #fff; border-bottom: 0.1px solid #F7F7F7; box-sizing: border-box; display: flex; flex-direction: row; align-items: center; justify-content: center; padding: 1.188em 0em; max-width: 100%;">
                 <div
                     style="flex: 1; position: relative; font-size: 1em; line-height: 1.5em; display: inline-block; max-width: 100%;">
-                    <ol style="list-style:none; text-wrap:pretty; margin: 0; font-family: inherit; font-size: inherit; padding-left: false;">
+                    <ol style="list-style:none; text-wrap:pretty; margin: 0; font-family: inherit; font-size: inherit; padding: 0;">
                         <li>1. Tejdeed waste bins are distributed to restaurants and food processors.
                         </li>
                     </ol>
@@ -1214,7 +1229,7 @@
                 style="align-self: stretch; border-bottom: 0.5px solid #fff; box-sizing: border-box; display: flex; flex-direction: row; align-items: center; justify-content: center; padding: 1.25em 0em 1.188em; max-width: 100%;">
                 <div
                     style="flex: 1; position: relative; font-size: 1em; line-height: 1.5em; display: inline-block; max-width: 100%;">
-                    <ol style="list-style:none; text-wrap:pretty; margin: 0; font-family: inherit; font-size: inherit; padding-left: false;">
+                    <ol style="list-style:none; text-wrap:pretty; margin: 0; font-family: inherit; font-size: inherit; padding:0">
                         <li>2. Dedicated trucks collect food waste from various locations promptly.
                         </li>
                     </ol>
@@ -1224,7 +1239,7 @@
                 style="align-self: stretch; border-bottom: 0.5px solid #fff; box-sizing: border-box; display: flex; flex-direction: row; align-items: center; justify-content: center; padding: 1.25em 0em 1.188em; max-width: 100%;">
                 <div
                     style="flex: 1; position: relative; font-size: 1em; line-height: 1.5em; display: inline-block; max-width: 100%;">
-                    <ol style="list-style:none; text-wrap:pretty; margin: 0; font-family: inherit; font-size: inherit; padding-left: false;">
+                    <ol style="list-style:none; text-wrap:pretty; margin: 0; font-family: inherit; font-size: inherit; padding:0;">
                         <li>3. Waste is processed and converted into valuable, useful products.
                         </li>
                     </ol>
@@ -1234,7 +1249,7 @@
                 style="align-self: stretch; border-bottom: 0.5px solid #fff; box-sizing: border-box; display: flex; flex-direction: row; align-items: center; justify-content: center; padding: 1.25em 0em 1.188em; max-width: 100%;">
                 <div
                     style="flex: 1; position: relative; font-size: 1em; line-height: 1.5em; display: inline-block; max-width: 100%;">
-                    <ol style="list-style:none; text-wrap:pretty; margin: 0; font-family: inherit; font-size: inherit; padding-left: false;">
+                    <ol style="list-style:none; text-wrap:pretty; margin: 0; font-family: inherit; font-size: inherit; padding:0;">
                         <li>4. Organic fertilizer is produced from the processed waste materials.
                         </li>
                     </ol>
@@ -1244,7 +1259,7 @@
                 style="align-self: stretch; border-bottom: 0.5px solid #fff; box-sizing: border-box; display: flex; flex-direction: row; align-items: center; justify-content: center; padding: 1.25em 0em 1.188em; max-width: 100%;">
                 <div
                     style="flex: 1; position: relative; font-size: 1em; line-height: 1.5em; display: inline-block; max-width: 100%;">
-                    <ol style="list-style:none; text-wrap:pretty;  margin: 0; font-family: inherit; font-size: inherit; padding-left: false;">
+                    <ol style="list-style:none; text-wrap:pretty;  margin: 0; font-family: inherit; font-size: inherit; padding:0;">
                         <li>5. Vegetables are grown using the high-quality organic fertilizer produced.</li>
                     </ol>
                 </div>
