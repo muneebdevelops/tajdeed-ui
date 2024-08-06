@@ -144,7 +144,7 @@
     </nav>
 
     <div id="menu"
-        style="display: none; flex-direction: column; width: 100%; max-width: 400px; height: 100svh; align-items: flex-start; justify-content: flex-start; padding: 60px 33px; position: fixed; top: 0; right: 0; background-color: #f7f7f7; z-index: 1001; overflow-y: scroll; transition: transform 0.5s ease; transform: translateX(100%);">
+        style="display: none; flex-direction: column; width: 100%; max-width: 400px; height: 100svh; height: 100vh; align-items: flex-start; justify-content: flex-start; padding: 60px 33px; position: fixed; top: 0; right: 0; background-color: #f7f7f7; z-index: 1001; overflow-y: scroll; transition: transform 0.5s ease; transform: translateX(100%);">
         <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 60px; width: 100%;">
             <div style="height: 48px; align-items: center; justify-content: flex-end; gap: 10px; display: flex; width: 100%;">
                 <div style="width: 48px; height: 48px; position: relative;" onclick="toggleMenu()">
@@ -173,7 +173,7 @@
             </div>
             <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 6px; width: 100%; margin-top: auto;">
                 <div
-                    style="font-family: 'IBM Plex Serif-Medium', Helvetica; font-weight: 500; color: #123627; font-size: 18px; letter-spacing: -0.4px; line-height: 34px;">
+                    style="font-family: 'IBM Plex Serif-Medium', Helvetica; font-weight: 500; color: #123627; font-size: 18px; letter-spacing: -0.4px; line-height: 34px; cursor: pointer;">
                     <!-- +971 50 841 5960<br />info@tejdeed.com -->
                     <img onclick="openEmail()" src="email-icon.svg" alt="Email" style=" background-color: #006F9E; border-radius: 20px;" />
                     <span onclick="openEmail()" style="font-family: 'IBM Plex Serif-Medium';">info@tejdeed.com</span><br>
@@ -367,6 +367,49 @@
     
 
     <script>
+
+        let checkedRadioBusiness = null;
+
+        function toggleRadioBusiness(event) {
+            const clickedRadio = event.target;
+
+            if (checkedRadioBusiness === clickedRadio) {
+                // Uncheck the previously checked radio button
+                clickedRadio.checked = false;
+                checkedRadioBusiness = null;
+            } else {
+                // Uncheck all radio buttons in the same group
+                document.querySelectorAll('input[name="business-type"]').forEach(radio => {
+                    radio.checked = false;
+                });
+
+                // Check the clicked radio button
+                clickedRadio.checked = true;
+                checkedRadioBusiness = clickedRadio;
+            }
+        }
+
+        document.querySelectorAll('input[name="business-type"]').forEach(radio => {
+            radio.addEventListener('click', toggleRadioBusiness);
+        });
+
+        // let checkedRadioWaste = null
+
+        // function toggleRadioWaste(event){
+        //     let checkedRadio = event.target;
+            
+        //     if (checkedRadioWaste === checkedRadio){
+        //         checkedRadio.checked = false;
+        //         checkedRadioWaste = null
+        //     }
+
+        // }
+
+        // document.querySelectorAll('.waste-checkbox').forEach(radio => {
+        //     radio.addEventListener('click',toggleRadioWaste);
+        // });
+
+
 
         const overlay = document.getElementById('overlay');
         overlay.addEventListener('click', (event) =>{
