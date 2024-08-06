@@ -97,7 +97,8 @@
             #text-column {
                 order: 2 !important;
             }
-        }   
+        }
+           
     </style>
 </head>
 
@@ -117,84 +118,94 @@
         }
     </script>
 
-    <nav
-        style="position: sticky !important; top: 0;  z-index: 1 !important; display: flex; flex-direction: row; align-items: center; justify-content: space-between; width: 100%; height: 84px; padding: 18px 25px; position: relative; border-bottom: 1px solid rgba(255, 255, 255, 0.2); background-color: #fff;">
-        <div>
-            <a href="index.html">
-                <img src="Tejdeed-Plastics@4x-8.png" alt="Logo" style="height:clamp(1.9em, 5vw, 2.3em)" />
-            </a>
-        </div>
-        <div onclick="toggleMenu()">
-            <img src="menu-clean.svg" alt="Menu Icon" style="height: 24px;" />
-        </div>
-    </nav>
+<nav
+style="position: sticky !important; top: 0; z-index: 1 !important; display: flex; flex-direction: row; align-items: center; justify-content: space-between; width: 100%; height: 84px; padding: 18px 25px; position: relative; border-bottom: 1px solid rgba(255, 255, 255, 0.2); background-color: #fff;">
+<div>
+    <a href="index.html">
+        <img src="Tejdeed-Plastics@4x-8.png" alt="Logo" style="height:clamp(1.9em, 5vw, 2.3em)" />
+    </a>
+</div>
+<div onclick="toggleMenu()">
+    <img src="menu-clean.svg" alt="Menu Icon" style="height: 24px;" />
+</div>
+</nav>
 
-    <div id="menu"
-        style="display: none; flex-direction: column; width: 100%; max-width: 500px; height: 100vh; align-items: flex-start; justify-content: space-between; padding: 60px 33px; position: fixed; top: 0; right: 0; background-color: #d9d9d9; z-index: 1001;">
-        <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 60px; width: 100%;">
-            <div
-                style="height: 48px; align-items: center; justify-content: flex-end; gap: 10px; display: flex; width: 100%;">
-                <div style="width: 48px; height: 48px; position: relative;" onclick="toggleMenu()">
-                    <div style="position: relative; height: 48px; border-radius: 24px;">
-                        <img src="close-menu.png"
-                            style="position: absolute; width: 17px; height: 17px; top: 15px; left: 15px;" />
-                        <div
-                            style="position: absolute; width: 48px; height: 48px; top: 0; left: 0; border-radius: 24px; border: 1.55px solid #123627;">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 4px; width: 100%;">
-                <a href="index.html" onmouseover="this.style.color='#F7F7F7'" onmouseout="this.style.color='#123627'"
-                    style="font-family: 'IBM Plex Serif-Medium', Helvetica; font-weight: 500; color: #123627; font-size: 42px; letter-spacing: -0.92px; line-height: 56px; text-decoration: none;">Home</a>
-                <a href="fertilizer.html" onmouseover="this.style.color='#009e4c'"
-                    onmouseout="this.style.color='#123627'"
-                    style="font-family: 'IBM Plex Serif-Medium', Helvetica; font-weight: 500; color: #123627; font-size: 42px; letter-spacing: -0.92px; line-height: 56px; text-decoration: none;">Fertilizers</a>
-                <a href="plastic.html" onmouseover="this.style.color='#006F9E'" onmouseout="this.style.color='#123627'"
-                    style="font-family: 'IBM Plex Serif-Medium', Helvetica; font-weight: 500; color: #123627; font-size: 42px; letter-spacing: -0.92px; line-height: 56px; text-decoration: none;">Plastics</a>
-                <a href="gas.html" onmouseover="this.style.color='#8A2BE2'" onmouseout="this.style.color='#123627'"
-                    style="font-family: 'IBM Plex Serif-Medium', Helvetica; font-weight: 500; color: #123627; font-size: 42px; letter-spacing: -0.92px; line-height: 56px; text-decoration: none;">Gases</a>
-                <a href="biomass.html" onmouseover="this.style.color='#ff6347'" onmouseout="this.style.color='#123627'"
-                    style="font-family: 'IBM Plex Serif-Medium', Helvetica; font-weight: 500; color: #123627; font-size: 42px; letter-spacing: -0.92px; line-height: 56px; text-decoration: none;">Biomass</a>
+<div id="menu"
+style="display: none; flex-direction: column; width: 100%; max-width: 400px; height: auto; min-height: 100vh; align-items: flex-start; justify-content: flex-start; padding: 60px 33px; position: fixed; top: 0; right: 0; background-color: #f7f7f7; z-index: 1001; overflow-y: auto; transition: transform 0.5s ease; transform: translateX(100%);">
+<div style="display: flex; flex-direction: column; align-items: flex-start; gap: 60px; width: 100%;">
+    <div style="height: 48px; align-items: center; justify-content: flex-end; gap: 10px; display: flex; width: 100%;">
+        <div style="width: 48px; height: 48px; position: relative;" onclick="toggleMenu()">
+            <div style="position: relative; height: 48px; border-radius: 24px;">
+                <img src="close-cross.svg"
+                    style="position: absolute; width: 27px; height: 27px; top: 15px; left: 15px;" />
+                <!-- <div
+                    style="position: absolute; width: 48px; height: 48px; top: 0; left: 0; border-radius: 24px; border: 1.55px solid #123627;">
+                </div> -->
             </div>
         </div>
-        <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 6px; width: 100%;">
-            <div
-                style="font-family: 'IBM Plex Serif-Medium', Helvetica; font-weight: 500; color: #123627; font-size: 18px; letter-spacing: -0.4px; line-height: 34px;">
-                +971 50 841 5960<br />info@tejdeed.com</div>
+    </div>
+    <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 4px; width: 100%;">
+        <a href="index.html" onmouseover="this.style.color='grey'" onmouseout="this.style.color='#123627'"
+            style="font-family: 'IBM Plex Serif-Medium', Helvetica; font-weight: 500; color: #123627; font-size: 42px; letter-spacing: -0.92px; line-height: 56px; text-decoration: none;">Home</a>
+        <a href="fertilizer.html" onmouseover="this.style.color='#009e4c'"
+            onmouseout="this.style.color='#123627'"
+            style="font-family: 'IBM Plex Serif-Medium', Helvetica; font-weight: 500; color: #123627; font-size: 42px; letter-spacing: -0.92px; line-height: 56px; text-decoration: none;">Fertilizers</a>
+        <a href="plastic.html" onmouseover="this.style.color='#006F9E'" onmouseout="this.style.color='#123627'"
+            style="font-family: 'IBM Plex Serif-Medium', Helvetica; font-weight: 500; color: #123627; font-size: 42px; letter-spacing: -0.92px; line-height: 56px; text-decoration: none;">Plastics</a>
+        <a href="gas.html" onmouseover="this.style.color='#8A2BE2'" onmouseout="this.style.color='#123627'"
+            style="font-family: 'IBM Plex Serif-Medium', Helvetica; font-weight: 500; color: #123627; font-size: 42px; letter-spacing: -0.92px; line-height: 56px; text-decoration: none;">Gases</a>
+        <a href="biomass.html" onmouseover="this.style.color='#ff6347'" onmouseout="this.style.color='#123627'"
+            style="font-family: 'IBM Plex Serif-Medium', Helvetica; font-weight: 500; color: #123627; font-size: 42px; letter-spacing: -0.92px; line-height: 56px; text-decoration: none;">Biomass</a>
+    </div>
+    </div>
+    <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 6px; width: 100%; margin-top: auto;">
+        <div
+            style="font-family: 'IBM Plex Serif-Medium', Helvetica; font-weight: 500; color: #123627; font-size: 18px; letter-spacing: -0.4px; line-height: 34px;">
+            <!-- +971 50 841 5960<br />info@tejdeed.com -->
+            <img onclick="openEmail()" src="email-icon.svg" alt="Email" style=" background-color: #006F9E; border-radius: 20px;" />
+            <span onclick="openEmail()" style="font-family: 'IBM Plex Serif-Medium';">info@tejdeed.com</span><br>
+            <img src="phone-icon.svg" alt="Phone" style=" background-color: #006F9E; border-radius: 20px;" />
+            <a href="tel:+971508415960" style="font-family: 'IBM Plex Serif-Medium'; text-decoration: none;">+971 50 841 5960</a>
+    
         </div>
     </div>
+</div>
 
+<div id="overlay"
+style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); backdrop-filter: blur(5px); z-index: 1000; opacity: 0; transition: opacity 0.3s ease;">
+</div>
 
-    <div id="overlay"
-        style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); backdrop-filter: blur(5px); z-index: 1000;">
-    </div>
+<script>
+const overlay = document.getElementById('overlay');
+overlay.addEventListener('click', (event) => {
+    if (event.target === overlay) {
+        toggleMenu();
+    }
+});
 
-    <script>
+function toggleMenu() {
+    var menu = document.getElementById('menu');
+    var overlay = document.getElementById('overlay');
 
-        const overlay = document.getElementById('overlay');
-        overlay.addEventListener('click', (event) =>{
-            if (event.target === overlay){
-                toggleMenu();
-            }
-        } );
-
-
-        function toggleMenu() {
-            var menu = document.getElementById('menu');
-            var overlay = document.getElementById('overlay');
-
-            if (menu.style.display === 'none' || menu.style.display === '') {
-                menu.style.display = 'flex';
-                overlay.style.display = 'block';
-                document.body.style.overflow = 'hidden';
-            } else {
-                menu.style.display = 'none';
-                overlay.style.display = 'none';
-                document.body.style.overflow = 'auto';
-            }
-        }
-    </script>
+    if (menu.style.display === 'none' || menu.style.display === '') {
+        menu.style.display = 'flex';
+        setTimeout(() => {
+            menu.style.transform = 'translateX(0)';
+            overlay.style.display = 'block';
+            overlay.style.opacity = '1';
+        }, 10); // Small delay to ensure the transform transition is applied
+        document.body.style.overflow = 'hidden';
+    } else {
+        menu.style.transform = 'translateX(100%)';
+        overlay.style.opacity = '0';
+        setTimeout(() => {
+            menu.style.display = 'none';
+            overlay.style.display = 'none';
+        }, 300); // Match the transition duration
+        document.body.style.overflow = 'auto';
+    }
+}
+</script>
 
 
     <div data-aos="fade-up"
