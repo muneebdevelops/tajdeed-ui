@@ -68,30 +68,36 @@
         padding-top: 0.6em !important;
         padding-bottom: 0.6em !important;
       }
-      .email-buttons{
+
+      .email-buttons {
         flex-direction: column;
         width: inherit !important;
       }
-      .contact-us-content{
+
+      .contact-us-content {
         align-items: start !important;
         text-align: left;
       }
-      .footer-copyright{
+
+      .footer-copyright {
         flex-flow: column wrap;
         gap: 1vw !important;
       }
-      #tejdeed-way-right{
+
+      #tejdeed-way-right {
         width: clamp(22.688rem, 19.5561rem + 25.0551vw, 50.875rem) !important;
       }
     }
+
     @media screen and (min-width:1200px) {
-            .contact-us-box{
-                max-width: 1200px !important;
-            }
-            .tejdeed-main-text{
-              max-width: 1200px !important;
-            }            
-        }
+      .contact-us-box {
+        max-width: 1200px !important;
+      }
+
+      .tejdeed-main-text {
+        max-width: 1200px !important;
+      }
+    }
   </style>
 </head>
 
@@ -126,39 +132,41 @@
   </nav>
 
   <div id="menu"
-            style="display: none; flex-direction: column; width: 100%; max-width: 400px; height: 100vh; align-items: flex-start; justify-content: flex-start; padding: 33px 33px; position: fixed; top: 0; right: 0; background-color: #f7f7f7; z-index: 1001; overflow-y: auto; transition: transform 0.5s ease; transform: translateX(100%);">
-            <div style="display: flex; flex-direction: column; align-items: flex-start; width: 100%; height: 100%;">
-                <div style="height: 48px; align-items: center; justify-content: flex-end; gap: 10px; display: flex; width: 100%;">
-                    <div style="width: 48px; height: 48px; position: relative;" onclick="toggleMenu()">
-                        <div style="position: relative; height: 48px; border-radius: 24px;">
-                            <img src="close-cross.svg"
-                                style="position: absolute; width: 27px; height: 27px; top: 15px; left: 15px;" />
-                        </div>
-                    </div>
-                </div>
-                <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 4px; width: 100%; flex: 1 1 auto;">
-                    <a href="index.html" onmouseover="this.style.color='grey'" onmouseout="this.style.color='#123627'"
-                        style="font-family: 'IBM Plex Serif-Medium', Helvetica; font-weight: 500; color: #123627; font-size: 42px; letter-spacing: -0.92px; line-height: 56px; text-decoration: none;">Home</a>
-                    <a href="fertilizer.html" onmouseover="this.style.color='#009e4c'" onmouseout="this.style.color='#123627'"
-                        style="font-family: 'IBM Plex Serif-Medium', Helvetica; font-weight: 500; color: #123627; font-size: 42px; letter-spacing: -0.92px; line-height: 56px; text-decoration: none;">Fertilizers</a>
-                    <a href="plastic.html" onmouseover="this.style.color='#006F9E'" onmouseout="this.style.color='#123627'"
-                        style="font-family: 'IBM Plex Serif-Medium', Helvetica; font-weight: 500; color: #123627; font-size: 42px; letter-spacing: -0.92px; line-height: 56px; text-decoration: none;">Plastics</a>
-                    <a href="gas.html" onmouseover="this.style.color='#8A2BE2'" onmouseout="this.style.color='#123627'"
-                        style="font-family: 'IBM Plex Serif-Medium', Helvetica; font-weight: 500; color: #123627; font-size: 42px; letter-spacing: -0.92px; line-height: 56px; text-decoration: none;">Gases</a>
-                    <a href="biomass.html" onmouseover="this.style.color='#ff6347'" onmouseout="this.style.color='#123627'"
-                        style="font-family: 'IBM Plex Serif-Medium', Helvetica; font-weight: 500; color: #123627; font-size: 42px; letter-spacing: -0.92px; line-height: 56px; text-decoration: none;">Biomass</a>
-                </div>
-                <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 6px; width: 100%; flex: 1 1 auto;">
-                    <div
-                        style=" font-family: 'IBM Plex Serif-Medium', Helvetica; font-weight: 500; color: #123627; font-size: 18px; letter-spacing: -0.4px; line-height: 34px; cursor: pointer;">
-                        <img onclick="openEmail()" src="email-icon-black.svg" alt="Email" />
-                        <span onclick="openEmail()" style="font-family: 'IBM Plex Serif-Medium';">info@tejdeed.com</span><br>
-                        <img src="phone-icon-black.svg" alt="Phone" />
-                        <a href="tel:+971561012803" style="font-family: 'IBM Plex Serif-Medium'; text-decoration: none; color: inherit;">+971 56 101 2803</a>
-                    </div>
-                </div>
-            </div>
+    style="display: none; flex-direction: column; width: 100%; max-width: 400px; height: 100vh; align-items: flex-start; justify-content: flex-start; padding: 33px 33px; position: fixed; top: 0; right: 0; background-color: #f7f7f7; z-index: 1001; overflow-y: auto; transition: transform 0.5s ease; transform: translateX(100%);">
+    <div style="display: flex; flex-direction: column; align-items: flex-start; width: 100%; height: 100%;">
+      <div style="height: 48px; align-items: center; justify-content: flex-end; gap: 10px; display: flex; width: 100%;">
+        <div style="width: 48px; height: 48px; position: relative;" onclick="toggleMenu()">
+          <div style="position: relative; height: 48px; border-radius: 24px;">
+            <img src="close-cross.svg" style="position: absolute; width: 27px; height: 27px; top: 15px; left: 15px;" />
+          </div>
         </div>
+      </div>
+      <div
+        style="display: flex; flex-direction: column; align-items: flex-start; gap: 4px; width: 100%; flex: 1 1 auto;">
+        <a href="index.html" onmouseover="this.style.color='grey'" onmouseout="this.style.color='#123627'"
+          style="font-family: 'IBM Plex Serif-Medium', Helvetica; font-weight: 500; color: #123627; font-size: 42px; letter-spacing: -0.92px; line-height: 56px; text-decoration: none;">Home</a>
+        <a href="fertilizer.html" onmouseover="this.style.color='#009e4c'" onmouseout="this.style.color='#123627'"
+          style="font-family: 'IBM Plex Serif-Medium', Helvetica; font-weight: 500; color: #123627; font-size: 42px; letter-spacing: -0.92px; line-height: 56px; text-decoration: none;">Fertilizers</a>
+        <a href="plastic.html" onmouseover="this.style.color='#006F9E'" onmouseout="this.style.color='#123627'"
+          style="font-family: 'IBM Plex Serif-Medium', Helvetica; font-weight: 500; color: #123627; font-size: 42px; letter-spacing: -0.92px; line-height: 56px; text-decoration: none;">Plastics</a>
+        <a href="gas.html" onmouseover="this.style.color='#8A2BE2'" onmouseout="this.style.color='#123627'"
+          style="font-family: 'IBM Plex Serif-Medium', Helvetica; font-weight: 500; color: #123627; font-size: 42px; letter-spacing: -0.92px; line-height: 56px; text-decoration: none;">Gases</a>
+        <a href="biomass.html" onmouseover="this.style.color='#ff6347'" onmouseout="this.style.color='#123627'"
+          style="font-family: 'IBM Plex Serif-Medium', Helvetica; font-weight: 500; color: #123627; font-size: 42px; letter-spacing: -0.92px; line-height: 56px; text-decoration: none;">Biomass</a>
+      </div>
+      <div
+        style="display: flex; flex-direction: column; align-items: flex-start; gap: 6px; width: 100%; flex: 1 1 auto;">
+        <div
+          style=" font-family: 'IBM Plex Serif-Medium', Helvetica; font-weight: 500; color: #123627; font-size: 18px; letter-spacing: -0.4px; line-height: 34px; cursor: pointer;">
+          <img onclick="openEmail()" src="email-icon-black.svg" alt="Email" />
+          <span onclick="openEmail()" style="font-family: 'IBM Plex Serif-Medium';">info@tejdeed.com</span><br>
+          <img src="phone-icon-black.svg" alt="Phone" />
+          <a href="tel:+971561012803"
+            style="font-family: 'IBM Plex Serif-Medium'; text-decoration: none; color: inherit;">+971 56 101 2803</a>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <div id="overlay"
     style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); backdrop-filter: blur(5px); z-index: 1000;">
@@ -167,35 +175,35 @@
   <script>
 
     const overlay = document.getElementById('overlay');
-    overlay.addEventListener('click', (event) =>{
-      if (event.target === overlay){
+    overlay.addEventListener('click', (event) => {
+      if (event.target === overlay) {
         toggleMenu();
       }
-    } );
+    });
 
     function toggleMenu() {
-          var menu = document.getElementById('menu');
-          var overlay = document.getElementById('overlay');
+      var menu = document.getElementById('menu');
+      var overlay = document.getElementById('overlay');
 
-          if (menu.style.display === 'none' || menu.style.display === '') {
-              menu.style.display = 'flex';
-              setTimeout(() => {
-                  menu.style.transform = 'translateX(0)';
-                  overlay.style.display = 'block';
-                  overlay.style.opacity = '1';
-              }, 10); // Small delay to ensure the transform transition is applied
-              document.body.style.overflow = 'hidden';
-          } else {
-              menu.style.transform = 'translateX(100%)';
-              overlay.style.opacity = '0';
-              setTimeout(() => {
-                  menu.style.display = 'none';
-                  overlay.style.display = 'none';
-              }, 300); // Match the transition duration
-              document.body.style.overflow = 'auto';
-          }
-        }
-    
+      if (menu.style.display === 'none' || menu.style.display === '') {
+        menu.style.display = 'flex';
+        setTimeout(() => {
+          menu.style.transform = 'translateX(0)';
+          overlay.style.display = 'block';
+          overlay.style.opacity = '1';
+        }, 10); // Small delay to ensure the transform transition is applied
+        document.body.style.overflow = 'hidden';
+      } else {
+        menu.style.transform = 'translateX(100%)';
+        overlay.style.opacity = '0';
+        setTimeout(() => {
+          menu.style.display = 'none';
+          overlay.style.display = 'none';
+        }, 300); // Match the transition duration
+        document.body.style.overflow = 'auto';
+      }
+    }
+
   </script>
 
 
@@ -274,7 +282,7 @@
     function updateButtonStyles(card) {
       const button = card.querySelector('.hover-button');
       const text = card.querySelector('h1').textContent;
-  
+
       if (text.includes('Fertilizers')) {
         button.style.backgroundColor = '#009E4C';
         button.style.borderColor = '#009E4C';
@@ -293,30 +301,30 @@
         button.querySelector('a').style.color = '#F7F7F7';
       }
     }
-  
+
     document.querySelectorAll('.hover-card').forEach(card => {
       const button = card.querySelector('.hover-button');
-  
+
       // Handle mouse events
-      card.addEventListener('mouseenter', function() {
+      card.addEventListener('mouseenter', function () {
         card.style.filter = 'brightness(1.3)';
         updateButtonStyles(card);
       });
-  
-      card.addEventListener('mouseleave', function() {
+
+      card.addEventListener('mouseleave', function () {
         card.style.filter = 'brightness(0.9)';
         button.style.backgroundColor = 'transparent';
         button.style.borderColor = '#F7F7F7';
         button.querySelector('a').style.color = '#F7F7F7';
       });
-  
+
       // Handle touch events
-      card.addEventListener('touchstart', function() {
+      card.addEventListener('touchstart', function () {
         card.style.filter = 'brightness(1.3)';
         updateButtonStyles(card);
       });
-  
-      card.addEventListener('touchend', function() {
+
+      card.addEventListener('touchend', function () {
         card.style.filter = 'brightness(0.9)';
         button.style.backgroundColor = 'transparent';
         button.style.borderColor = '#F7F7F7';
@@ -335,7 +343,7 @@
           style="width: 100%; height: auto; padding: clamp(5.625rem, -2.6188rem + 17.8404vw, 10.1875rem) clamp(1.5625rem, -2.6188rem + 17.8404vw, 14.4375rem);">
           <h3
             style="margin-top: clamp(1rem, 2vw, 2rem); font-size: clamp(1.375rem, 1.1626rem + 0.9061vw, 2.25rem); line-height: clamp(1.875rem, 1.5109rem + 1.5534vw, 3.375rem); font-weight: 400;">
-            <p class="tejdeed-main-text" >To 'Tejdeed' is to renew and to revive.
+            <p class="tejdeed-main-text">To 'Tejdeed' is to renew and to revive.
               <br><br>
               Our mission is to renew and revive discarded materials into new products that will help our customers
               reduce cost and clean the environment.
@@ -343,7 +351,8 @@
           </h3>
           <h6
             style=" margin-top: clamp(2rem, 2vw, 3rem); font-size: clamp(1rem, 0.9697rem + 0.1294vw, 1.125rem); line-height: clamp(1.5rem, 1.4697rem + 0.1294vw, 1.625rem); font-family: 'Plus Jakarta Sans';">
-            The environment is under stress and it is asking for our help.<br> Tejdeed Technologies is proud to be one of
+            The environment is under stress and it is asking for our help.<br> Tejdeed Technologies is proud to be one
+            of
             the concerned entities<br> who has decided to be part of the solution to this global crisis.
           </h6>
         </section>
@@ -409,10 +418,11 @@
         </div>
 
       </div>
-     
+
     </div>
     <div data-aos="fade-up" class=" row no-gutters g-0 m-0">
-      <div id="tejdeed-way-left" class="d-none d-md-block col-md d-flex justify-content-start" style="padding-top: 20vw;">
+      <div id="tejdeed-way-left" class="d-none d-md-block col-md d-flex justify-content-start"
+        style="padding-top: 20vw;">
         <div style="
           height: clamp(18.75rem, 17.7013rem + 8.3893vw, 28.188rem);
           width: 32vw;
@@ -556,7 +566,8 @@
                   display: inline-block;
                   max-width: 100%;
                 ">
-                  We are committed to renew the way the waste and scrap is seen by society in general and by our customers in particular. A Tejdeed is required.
+                  We are committed to renew the way the waste and scrap is seen by society in general and by our
+                  customers in particular. A Tejdeed is required.
                 </div>
               </div>
               <div style="
@@ -659,38 +670,39 @@
 
 
   <div
-  style="width: 100%; position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: clamp(7.5em, 6vw, 8.969em) clamp(0.938em, 1.5vw, 1.25em); box-sizing: border-box; background-image: url('email-back-img.jpg'); background-size: cover; background-repeat: no-repeat; background-position: top; line-height: normal; letter-spacing: normal;">
-  <section class="contact-us-box"
+    style="width: 100%; position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: clamp(7.5em, 6vw, 8.969em) clamp(0.938em, 1.5vw, 1.25em); box-sizing: border-box; background-image: url('email-back-img.jpg'); background-size: cover; background-repeat: no-repeat; background-position: top; line-height: normal; letter-spacing: normal;">
+    <section class="contact-us-box"
       style="width: clamp(80%, 40rem, 61.625em); border-radius: 15px; background-color: #f7f7f7; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: clamp(2.5em, 4vw, 3.188em) clamp(1.25em, 1vw, 1.25em); gap: clamp(1em, 2vw, 1.875em); max-width: 100%; text-align: center; color: #123627; font-family: 'IBM Plex Serif';">
       <div class="contact-us-content"
-          style="width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: clamp(0.75em, 1.5vw, 0.938em); max-width: 100%;">
-          <h2
-              style="margin: 0;  font-size: clamp(1.5em, 3vw, 2em); letter-spacing: -0.02em; line-height: clamp(1em, 2vw, 1.188em); text-transform: capitalize; font-weight: 500; font-family: inherit;">
-              Contact Us</h2>
-          <div
-              style=" font-size: clamp(0.875em, 2vw, 1.125em); line-height: clamp(1.2em, 2.5vw, 1.444em); font-family: 'Plus Jakarta Sans'; display: inline-block; max-width: 100%;">
-              For more information, please contact us via email<br class="d-none d-md-block"> or WhatsApp. We are dedicated to providing the<br class="d-none d-md-block"> highest quality
-              products locally.</div>
+        style="width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: clamp(0.75em, 1.5vw, 0.938em); max-width: 100%;">
+        <h2
+          style="margin: 0;  font-size: clamp(1.5em, 3vw, 2em); letter-spacing: -0.02em; line-height: clamp(1em, 2vw, 1.188em); text-transform: capitalize; font-weight: 500; font-family: inherit;">
+          Contact Us</h2>
+        <div
+          style=" font-size: clamp(0.875em, 2vw, 1.125em); line-height: clamp(1.2em, 2.5vw, 1.444em); font-family: 'Plus Jakarta Sans'; display: inline-block; max-width: 100%;">
+          For more information, please contact us via email<br class="d-none d-md-block"> or WhatsApp. We are dedicated
+          to providing the<br class="d-none d-md-block"> highest quality
+          products locally.</div>
 
-          
-          <div class="email-buttons" style="display: flex; gap: 10px;">
-              <button onclick="openEmail()"
-              style="cursor: pointer; border: 0.5px solid #25734a; padding: clamp(0.5em, 1.5vw, 0.75em) clamp(2em, 5vw, 3.688em); background-color: #25734a; border-radius: 11px; white-space: nowrap;">
-              <div
-                  style="font-size: clamp(1em, 2vw, 1.125em); text-transform: capitalize; font-weight: 500; font-family: 'Plus Jakarta Sans'; color: #f7f7f7; text-align: center; display: inline-block; min-width: 4em;">
-                  Email Us</div>
-              </button>
-              <button onclick="openWhatsapp()"
-              style="cursor: pointer; border: 0.5px solid #009e4c; padding: clamp(0.5em, 1.5vw, 0.75em) clamp(2em, 5vw, 3.688em); background-color: #009e4c; border-radius: 11px; white-space: nowrap;">
-              <div
-                  style="font-size: clamp(1em, 2vw, 1.125em); text-transform: capitalize; font-weight: 500; font-family: 'Plus Jakarta Sans'; color: #f7f7f7; text-align: center; display: inline-block; min-width: 4em;">
-                  WhatsApp</div>
+
+        <div class="email-buttons" style="display: flex; gap: 10px;">
+          <button onclick="openEmail()"
+            style="cursor: pointer; border: 0.5px solid #25734a; padding: clamp(0.5em, 1.5vw, 0.75em) clamp(2em, 5vw, 3.688em); background-color: #25734a; border-radius: 11px; white-space: nowrap;">
+            <div
+              style="font-size: clamp(1em, 2vw, 1.125em); text-transform: capitalize; font-weight: 500; font-family: 'Plus Jakarta Sans'; color: #f7f7f7; text-align: center; display: inline-block; min-width: 4em;">
+              Email Us</div>
           </button>
-          </div>    
+          <button onclick="openWhatsapp()"
+            style="cursor: pointer; border: 0.5px solid #009e4c; padding: clamp(0.5em, 1.5vw, 0.75em) clamp(2em, 5vw, 3.688em); background-color: #009e4c; border-radius: 11px; white-space: nowrap;">
+            <div
+              style="font-size: clamp(1em, 2vw, 1.125em); text-transform: capitalize; font-weight: 500; font-family: 'Plus Jakarta Sans'; color: #f7f7f7; text-align: center; display: inline-block; min-width: 4em;">
+              WhatsApp</div>
+          </button>
+        </div>
 
       </div>
 
-  </section>
+    </section>
   </div>
 
 
@@ -714,7 +726,8 @@
         </div>
       </div>
     </div>
-    <div class="row mb-5 mb-md-0" style="padding-top: 3vw;padding-bottom: 3vw; border-top: 0.5px solid rgba(255, 255, 255, 0.2); ">
+    <div class="row mb-5 mb-md-0"
+      style="padding-top: 3vw;padding-bottom: 3vw; border-top: 0.5px solid rgba(255, 255, 255, 0.2); ">
       <div class="col-md d-flex justify-content-start mt-3 mt-md-0">
         <div
           style="font-size: clamp(1.5em, 2vw, 2.625em); color: #ffffff; font-family: 'IBM Plex Sans', sans-serif; font-weight: 500;">
@@ -729,19 +742,21 @@
         <div class="px-1 mt-2 mt-md-0 mb-2 mb-md-0"
           style="display: flex; align-items: center; gap: 12px; font-size: clamp(0.875em, 1.2vw, 1em); padding-bottom: 5px;">
           <img src="phone-icon.svg" alt="Phone" style="width: 1.5em; height: 1.5em;" />
-          <a href="tel:+971561012803" style="font-family: 'Plus Jakarta Sans'; font-weight: 500; color: #ffffff; text-decoration: none;">+971 56 101 2803</a>
+          <a href="tel:+971561012803"
+            style="font-family: 'Plus Jakarta Sans'; font-weight: 500; color: #ffffff; text-decoration: none;">+971 56
+            101 2803</a>
         </div>
       </div>
     </div>
-    <div class="row"
-            style="padding-top: 32px;padding-bottom: 32px; border-top: 0.5px solid rgba(255, 255, 255, 0.2); ">
-            <div class="col-md d-flex justify-content-start">
-                <div class="footer-copyright"
-                    style="width: 100%; display: flex; align-items: left; text-align: left; color: #ffffff; font-size: clamp(0.75em, 1vw, 0.875em); gap: 4.76vw;">
-                    <p style="margin: 10px 0;">© Tajdeed 2024</p>
-                    <p style="margin-top: 10px;">Tejdeed Technologies: Renewing and reviving discarded materials to reduce costs and clean the environment. Join us in our mission.</p>
-                </div>
-            </div>
+    <div class="row" style="padding-top: 32px;padding-bottom: 32px; border-top: 0.5px solid rgba(255, 255, 255, 0.2); ">
+      <div class="col-md d-flex justify-content-start">
+        <div class="footer-copyright"
+          style="width: 100%; display: flex; align-items: left; text-align: left; color: #ffffff; font-size: clamp(0.75em, 1vw, 0.875em); gap: 4.76vw;">
+          <p style="margin: 10px 0;">© Tajdeed 2024</p>
+          <p style="margin-top: 10px;">Tejdeed Technologies: Renewing and reviving discarded materials to reduce costs
+            and clean the environment. Join us in our mission.</p>
+        </div>
+      </div>
     </div>
   </div>
 

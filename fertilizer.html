@@ -24,9 +24,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
 
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-    <script type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-</script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
 
 
     <style>
@@ -65,42 +64,49 @@
                 font-size: 18px !important;
                 margin-bottom: 15px !important;
             }
-            .email-buttons{
+
+            .email-buttons {
                 flex-direction: column;
                 width: inherit !important;
             }
-            .contact-us-content{
+
+            .contact-us-content {
                 align-items: start !important;
                 text-align: left;
             }
-            .footer-copyright{
+
+            .footer-copyright {
                 flex-flow: column wrap;
                 gap: 1vw !important;
             }
-            
-            #our-mission-right-width{
+
+            #our-mission-right-width {
                 width: clamp(22.688rem, 19.5561rem + 25.0551vw, 50.875rem) !important;
             }
-            #join-us-right-width{
+
+            #join-us-right-width {
                 width: clamp(22.688rem, 19.5561rem + 25.0551vw, 50.875rem) !important;
             }
         }
+
         @media screen and (min-width:1200px) {
-            .contact-us-box{
+            .contact-us-box {
                 max-width: 1200px !important;
-            }            
+            }
         }
+
         @media (max-width:1024px) {
             #product-to-be-aligned {
                 justify-content: left !important;
 
             }
         }
+
         @media (min-width: 768px) {
             .desktop-layout {
                 display: none;
             }
-            
+
         }
 
         @media (max-width: 1024px) {
@@ -109,8 +115,6 @@
                 align-items: center !important;
             }
         }
-
-
     </style>
 </head>
 
@@ -144,39 +148,46 @@
     </nav>
 
     <div id="menu"
-            style="display: none; flex-direction: column; width: 100%; max-width: 400px; height: 100vh; align-items: flex-start; justify-content: flex-start; padding: 33px 33px; position: fixed; top: 0; right: 0; background-color: #f7f7f7; z-index: 1001; overflow-y: auto; transition: transform 0.5s ease; transform: translateX(100%);">
-            <div style="display: flex; flex-direction: column; align-items: flex-start; width: 100%; height: 100%;">
-                <div style="height: 48px; align-items: center; justify-content: flex-end; gap: 10px; display: flex; width: 100%;">
-                    <div style="width: 48px; height: 48px; position: relative;" onclick="toggleMenu()">
-                        <div style="position: relative; height: 48px; border-radius: 24px;">
-                            <img src="close-cross.svg"
-                                style="position: absolute; width: 27px; height: 27px; top: 15px; left: 15px;" />
-                        </div>
-                    </div>
-                </div>
-                <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 4px; width: 100%; flex: 1 1 auto;">
-                    <a href="index.html" onmouseover="this.style.color='grey'" onmouseout="this.style.color='#123627'"
-                        style="font-family: 'IBM Plex Serif-Medium', Helvetica; font-weight: 500; color: #123627; font-size: 42px; letter-spacing: -0.92px; line-height: 56px; text-decoration: none;">Home</a>
-                    <a href="fertilizer.html" onmouseover="this.style.color='#009e4c'" onmouseout="this.style.color='#123627'"
-                        style="font-family: 'IBM Plex Serif-Medium', Helvetica; font-weight: 500; color: #123627; font-size: 42px; letter-spacing: -0.92px; line-height: 56px; text-decoration: none;">Fertilizers</a>
-                    <a href="plastic.html" onmouseover="this.style.color='#006F9E'" onmouseout="this.style.color='#123627'"
-                        style="font-family: 'IBM Plex Serif-Medium', Helvetica; font-weight: 500; color: #123627; font-size: 42px; letter-spacing: -0.92px; line-height: 56px; text-decoration: none;">Plastics</a>
-                    <a href="gas.html" onmouseover="this.style.color='#8A2BE2'" onmouseout="this.style.color='#123627'"
-                        style="font-family: 'IBM Plex Serif-Medium', Helvetica; font-weight: 500; color: #123627; font-size: 42px; letter-spacing: -0.92px; line-height: 56px; text-decoration: none;">Gases</a>
-                    <a href="biomass.html" onmouseover="this.style.color='#ff6347'" onmouseout="this.style.color='#123627'"
-                        style="font-family: 'IBM Plex Serif-Medium', Helvetica; font-weight: 500; color: #123627; font-size: 42px; letter-spacing: -0.92px; line-height: 56px; text-decoration: none;">Biomass</a>
-                </div>
-                <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 6px; width: 100%; flex: 1 1 auto;">
-                    <div
-                        style=" font-family: 'IBM Plex Serif-Medium', Helvetica; font-weight: 500; color: #123627; font-size: 18px; letter-spacing: -0.4px; line-height: 34px; cursor: pointer;">
-                        <img onclick="openEmail()" src="email-icon-black.svg" alt="Email" />
-                        <span onclick="openEmail()" style="font-family: 'IBM Plex Serif-Medium';">info@tejdeed.com</span><br>
-                        <img src="phone-icon-black.svg" alt="Phone" />
-                        <a href="tel:+971561012803" style="font-family: 'IBM Plex Serif-Medium'; text-decoration: none; color: inherit;">+971 56 101 2803</a>
+        style="display: none; flex-direction: column; width: 100%; max-width: 400px; height: 100vh; align-items: flex-start; justify-content: flex-start; padding: 33px 33px; position: fixed; top: 0; right: 0; background-color: #f7f7f7; z-index: 1001; overflow-y: auto; transition: transform 0.5s ease; transform: translateX(100%);">
+        <div style="display: flex; flex-direction: column; align-items: flex-start; width: 100%; height: 100%;">
+            <div
+                style="height: 48px; align-items: center; justify-content: flex-end; gap: 10px; display: flex; width: 100%;">
+                <div style="width: 48px; height: 48px; position: relative;" onclick="toggleMenu()">
+                    <div style="position: relative; height: 48px; border-radius: 24px;">
+                        <img src="close-cross.svg"
+                            style="position: absolute; width: 27px; height: 27px; top: 15px; left: 15px;" />
                     </div>
                 </div>
             </div>
+            <div
+                style="display: flex; flex-direction: column; align-items: flex-start; gap: 4px; width: 100%; flex: 1 1 auto;">
+                <a href="index.html" onmouseover="this.style.color='grey'" onmouseout="this.style.color='#123627'"
+                    style="font-family: 'IBM Plex Serif-Medium', Helvetica; font-weight: 500; color: #123627; font-size: 42px; letter-spacing: -0.92px; line-height: 56px; text-decoration: none;">Home</a>
+                <a href="fertilizer.html" onmouseover="this.style.color='#009e4c'"
+                    onmouseout="this.style.color='#123627'"
+                    style="font-family: 'IBM Plex Serif-Medium', Helvetica; font-weight: 500; color: #123627; font-size: 42px; letter-spacing: -0.92px; line-height: 56px; text-decoration: none;">Fertilizers</a>
+                <a href="plastic.html" onmouseover="this.style.color='#006F9E'" onmouseout="this.style.color='#123627'"
+                    style="font-family: 'IBM Plex Serif-Medium', Helvetica; font-weight: 500; color: #123627; font-size: 42px; letter-spacing: -0.92px; line-height: 56px; text-decoration: none;">Plastics</a>
+                <a href="gas.html" onmouseover="this.style.color='#8A2BE2'" onmouseout="this.style.color='#123627'"
+                    style="font-family: 'IBM Plex Serif-Medium', Helvetica; font-weight: 500; color: #123627; font-size: 42px; letter-spacing: -0.92px; line-height: 56px; text-decoration: none;">Gases</a>
+                <a href="biomass.html" onmouseover="this.style.color='#ff6347'" onmouseout="this.style.color='#123627'"
+                    style="font-family: 'IBM Plex Serif-Medium', Helvetica; font-weight: 500; color: #123627; font-size: 42px; letter-spacing: -0.92px; line-height: 56px; text-decoration: none;">Biomass</a>
+            </div>
+            <div
+                style="display: flex; flex-direction: column; align-items: flex-start; gap: 6px; width: 100%; flex: 1 1 auto;">
+                <div
+                    style=" font-family: 'IBM Plex Serif-Medium', Helvetica; font-weight: 500; color: #123627; font-size: 18px; letter-spacing: -0.4px; line-height: 34px; cursor: pointer;">
+                    <img onclick="openEmail()" src="email-icon-black.svg" alt="Email" />
+                    <span onclick="openEmail()"
+                        style="font-family: 'IBM Plex Serif-Medium';">info@tejdeed.com</span><br>
+                    <img src="phone-icon-black.svg" alt="Phone" />
+                    <a href="tel:+971561012803"
+                        style="font-family: 'IBM Plex Serif-Medium'; text-decoration: none; color: inherit;">+971 56 101
+                        2803</a>
+                </div>
+            </div>
         </div>
+    </div>
 
 
     <div id="overlay"
@@ -185,170 +196,203 @@
 
     <div id="form-overlay"
         style="display: none; overflow-y: scroll ; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); backdrop-filter: blur(10px); z-index: 999; transition: opacity 0.6s ease, visibility 0.6s ease-out; ">
-        <div onclick="closeForm()" style="position: fixed; top: 10px; right: 20px; padding: 10px;"><img src="close-menu.png" style=" width: 25px; height: 25px; cursor: pointer;"></div>
+        <div onclick="closeForm()" style="position: fixed; top: 10px; right: 20px; padding: 10px;"><img
+                src="close-menu.png" style=" width: 25px; height: 25px; cursor: pointer;"></div>
 
-        <div style=" display: flex; justify-content: center; align-items: center; width: inherit; height:max-content; padding-top: 55px; padding-bottom: 55px;">
-        <div style="width: clamp(22.688rem, 8.9778rem + 58.4969vw, 61.625rem); box-sizing: border-box; padding: 25px; border-width: 0.5px; border-radius: 6px; border-style: solid; border-color: #ffffff; background-color: #ffffff;">
-            
-            <form id="contactForm">
-                <div class="mb-3">
-                    <label for="name" style="font-weight: 500; color: #123627;" class="form-label">Company Name / Your Name</label>
-                    <input type="text" style="background-color: #f7f7f7;" class="form-control" id="name" placeholder="Enter your name" required>
-                </div>
-                
-                <div class="mb-3">
-                    <label for="email"  style="font-weight: 500; color: #123627;" class="form-label">Email Address</label>
-                    <input type="email" style="background-color: #f7f7f7;" class="form-control" id="email" placeholder="Enter your email" required>
-                </div>
-                
-                <div class="mb-3">
-                    <label for="phone"  style="font-weight: 500; color: #123627;" class="form-label">Phone Number</label>
-                    <div class="input-group">
-                        <select id="countryCode" style="background-color: #f7f7f7; border: 1px solid #ccc;">
-                            <option value="+971">+971 (UAE)</option>
-                            <option value="+1">+1 (US)</option>
-                            <option value="+44">+44 (UK)</option>
-                            <option value="+91">+91 (IN)</option>
-                            <!-- Add more country codes as needed -->
-                        </select>
-                        <input type="tel" style="background-color: #f7f7f7;" class="form-control" id="phone" placeholder="Enter your phone number" required>
+        <div
+            style=" display: flex; justify-content: center; align-items: center; width: inherit; height:max-content; padding-top: 55px; padding-bottom: 55px;">
+            <div
+                style="width: clamp(22.688rem, 8.9778rem + 58.4969vw, 61.625rem); box-sizing: border-box; padding: 25px; border-width: 0.5px; border-radius: 6px; border-style: solid; border-color: #ffffff; background-color: #ffffff;">
+
+                <form id="contactForm">
+                    <div class="mb-3">
+                        <label for="name" style="font-weight: 500; color: #123627;" class="form-label">Company Name /
+                            Your Name</label>
+                        <input type="text" style="background-color: #f7f7f7;" class="form-control" id="name"
+                            placeholder="Enter your name" required>
                     </div>
-                </div>
 
-                <div class="container" style="margin-top: 30px; margin-bottom: 20px;" >
-                    <div class="row" style="border: 0.5px solid lightgrey; background-color: #f7f7f7; padding: 0.5rem; border-radius: 5px; ">
-                        <!-- Column 1 -->
-                         <div class="row">
-                            <div class="col-md-3">
-                                <label style="font-weight: 500; color: #123627;" class="form-label">Business Type</label>
-                                
-                            </div>
-                            <div class="col-md-3">
-                                <div class="radio-container">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="business-type" id="food-processor" value="Food Processor" style="border-radius: 0 !important;">
-                                        <label class="form-check-label" for="food-processor">
-                                            Food Processor
-                                        </label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="business-type" id="restaurant" value="Restaurant" style="border-radius: 0 !important;">
-                                        <label class="form-check-label" for="restaurant">
-                                            Restaurant
-                                        </label>
-                                    </div>
-                                    
-                                </div>
-                            </div>
-                        <!-- Column 2 -->
-                            <div class="col-md-3">
-                                <div class="radio-container">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="business-type" id="hotel" value="Hotel" style="border-radius: 0 !important;" >
-                                        <label class="form-check-label" for="hotel">
-                                            Hotel
-                                        </label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="business-type" id="supermarket" value="supermarket" style="border-radius: 0 !important;" >
-                                        <label class="form-check-label" for="supermarket">
-                                            Supermarket
-                                        </label>
-                                    </div>
-                                    
-                                </div>
-                            </div>
-                        <!-- Column 3 -->
-                            <div class="col-md-3">
-                                <div class="radio-container">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="business-type" id="catering" value="Catering" style="border-radius: 0 !important;" >
-                                        <label class="form-check-label" for="catering">
-                                            Catering
-                                        </label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="business-type" id="other" value="Other" style="border-radius: 0 !important;" >
-                                        <label class="form-check-label" for="other">
-                                            Other
-                                        </label>
-                                    </div>
-                                    
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row no-gutters mt-0" style="padding-top: 20px;">
-                            <div class="col-md-3">
-                                <label style=" padding: 0 !important ; font-weight: 500; color: #123627;" class="form-label">Waste Type</label>
-                                
-                            </div>
-                            <div class="col-md-3">
-                                <div class="radio-container">
-                                    <div class="form-check">
-                                        <input class="form-check-input waste-checkbox" type="radio" name="waste-type-1" id="uncooked-food" value="Uncooked Food" style="border-radius: 0 !important;">
-                                        <label class="form-check-label" for="uncooked-food">
-                                            Uncooked Food
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
-                        <!-- Column 2 -->
-                            <div class="col-md-3">
-                                <div class="radio-container">
-                                    <div class="form-check">
-                                        <input class="form-check-input waste-checkbox" type="radio" name="waste-type-2" id="cooked-items" value="Cooked Food" style="border-radius: 0 !important;" >
-                                        <label class="form-check-label" for="cooked-items">
-                                            Cooked Food
-                                        </label>
-                                    </div>
-                                    
-                                </div>
-                            </div>
-                        <!-- Column 3 -->
-                            <div class="col-md-3">
-                                <div class="radio-container">
-                                    <div class="form-check">
-                                        <input class="form-check-input waste-checkbox" type="radio" name="waste-type-3" id="expired-food-items" value="Expired Food Items" style="border-radius: 0 !important;" >
-                                        <label class="form-check-label" for="expired-food-items">
-                                            Expired Food Items
-                                        </label>
-                                    </div>
-                                    
-                                </div>
-                            </div>
-    
+                    <div class="mb-3">
+                        <label for="email" style="font-weight: 500; color: #123627;" class="form-label">Email
+                            Address</label>
+                        <input type="email" style="background-color: #f7f7f7;" class="form-control" id="email"
+                            placeholder="Enter your email" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="phone" style="font-weight: 500; color: #123627;" class="form-label">Phone
+                            Number</label>
+                        <div class="input-group">
+                            <select id="countryCode" style="background-color: #f7f7f7; border: 1px solid #ccc;">
+                                <option value="+971">+971 (UAE)</option>
+                                <option value="+1">+1 (US)</option>
+                                <option value="+44">+44 (UK)</option>
+                                <option value="+91">+91 (IN)</option>
+                                <!-- Add more country codes as needed -->
+                            </select>
+                            <input type="tel" style="background-color: #f7f7f7;" class="form-control" id="phone"
+                                placeholder="Enter your phone number" required>
                         </div>
                     </div>
-                </div>
-            
-            
-                <div class="mb-3">
-                    <label for="message"  style="font-weight: 500; color: #123627;" class="form-label">Message</label>
-                    <textarea class="form-control" style="background-color: #f7f7f7;" id="message" rows="4" placeholder="Enter your message" required></textarea>
-                </div>
-                
-                <button onclick="save()" type="submit" class="btn btn-primary" style="background-color: #FFA500; border-color: #FFA500; color: #F7F7F7;">Submit</button>
-            </form>
 
-        </div>
+                    <div class="container" style="margin-top: 30px; margin-bottom: 20px;">
+                        <div class="row"
+                            style="border: 0.5px solid lightgrey; background-color: #f7f7f7; padding: 0.5rem; border-radius: 5px; ">
+                            <!-- Column 1 -->
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <label style="font-weight: 500; color: #123627;" class="form-label">Business
+                                        Type</label>
+
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="radio-container">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="business-type"
+                                                id="food-processor" value="Food Processor"
+                                                style="border-radius: 0 !important;">
+                                            <label class="form-check-label" for="food-processor">
+                                                Food Processor
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="business-type"
+                                                id="restaurant" value="Restaurant" style="border-radius: 0 !important;">
+                                            <label class="form-check-label" for="restaurant">
+                                                Restaurant
+                                            </label>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <!-- Column 2 -->
+                                <div class="col-md-3">
+                                    <div class="radio-container">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="business-type" id="hotel"
+                                                value="Hotel" style="border-radius: 0 !important;">
+                                            <label class="form-check-label" for="hotel">
+                                                Hotel
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="business-type"
+                                                id="supermarket" value="supermarket"
+                                                style="border-radius: 0 !important;">
+                                            <label class="form-check-label" for="supermarket">
+                                                Supermarket
+                                            </label>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <!-- Column 3 -->
+                                <div class="col-md-3">
+                                    <div class="radio-container">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="business-type"
+                                                id="catering" value="Catering" style="border-radius: 0 !important;">
+                                            <label class="form-check-label" for="catering">
+                                                Catering
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="business-type" id="other"
+                                                value="Other" style="border-radius: 0 !important;">
+                                            <label class="form-check-label" for="other">
+                                                Other
+                                            </label>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row no-gutters mt-0" style="padding-top: 20px;">
+                                <div class="col-md-3">
+                                    <label style=" padding: 0 !important ; font-weight: 500; color: #123627;"
+                                        class="form-label">Waste Type</label>
+
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="radio-container">
+                                        <div class="form-check">
+                                            <input class="form-check-input waste-checkbox" type="radio"
+                                                name="waste-type-1" id="uncooked-food" value="Uncooked Food"
+                                                style="border-radius: 0 !important;">
+                                            <label class="form-check-label" for="uncooked-food">
+                                                Uncooked Food
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Column 2 -->
+                                <div class="col-md-3">
+                                    <div class="radio-container">
+                                        <div class="form-check">
+                                            <input class="form-check-input waste-checkbox" type="radio"
+                                                name="waste-type-2" id="cooked-items" value="Cooked Food"
+                                                style="border-radius: 0 !important;">
+                                            <label class="form-check-label" for="cooked-items">
+                                                Cooked Food
+                                            </label>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <!-- Column 3 -->
+                                <div class="col-md-3">
+                                    <div class="radio-container">
+                                        <div class="form-check">
+                                            <input class="form-check-input waste-checkbox" type="radio"
+                                                name="waste-type-3" id="expired-food-items" value="Expired Food Items"
+                                                style="border-radius: 0 !important;">
+                                            <label class="form-check-label" for="expired-food-items">
+                                                Expired Food Items
+                                            </label>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="mb-3">
+                        <label for="message" style="font-weight: 500; color: #123627;"
+                            class="form-label">Message</label>
+                        <textarea class="form-control" style="background-color: #f7f7f7;" id="message" rows="4"
+                            placeholder="Enter your message" required></textarea>
+                    </div>
+
+                    <button onclick="save()" type="submit" class="btn btn-primary"
+                        style="background-color: #FFA500; border-color: #FFA500; color: #F7F7F7;">Submit</button>
+                </form>
+
+            </div>
         </div>
     </div>
 
     <div class="toast-container">
-        <div id="successToast" class="toast align-items-center text-bg-success border-0" role="alert" aria-live="assertive" aria-atomic="true" style=" position: fixed; top: 94px; left: 10px; z-index: 999;" >
+        <div id="successToast" class="toast align-items-center text-bg-success border-0" role="alert"
+            aria-live="assertive" aria-atomic="true" style=" position: fixed; top: 94px; left: 10px; z-index: 999;">
             <div class="d-flex">
                 <div class="toast-body">
                     Message Sent Successfully!
                 </div>
-                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"
+                    aria-label="Close"></button>
             </div>
         </div>
-        <div id="errorToast" class="toast align-items-center text-white bg-danger border-0" role="alert" aria-live="assertive" aria-atomic="true" style=" position: fixed; top: 94px; left: 10px; z-index: 999;" >
+        <div id="errorToast" class="toast align-items-center text-white bg-danger border-0" role="alert"
+            aria-live="assertive" aria-atomic="true" style=" position: fixed; top: 94px; left: 10px; z-index: 999;">
             <div class="d-flex">
-              <div id="errorToast-body" class="toast-body">
-                Invalid Input Type.
-              </div>
-              <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+                <div id="errorToast-body" class="toast-body">
+                    Invalid Input Type.
+                </div>
+                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"
+                    aria-label="Close"></button>
             </div>
         </div>
     </div>
@@ -358,7 +402,7 @@
             border-color: #dc3545;
         }
     </style>
-    
+
 
     <script>
 
@@ -387,45 +431,45 @@
             radio.addEventListener('click', toggleRadioBusiness);
         });
 
-        let radioWaste1=null
-        let radioWaste2=null
-        let radioWaste3=null
+        let radioWaste1 = null
+        let radioWaste2 = null
+        let radioWaste3 = null
 
         function toggleRadio(event) {
             const clickedRadio = event.target;
             var value = clickedRadio.value;
-            
-            switch(value){
+
+            switch (value) {
                 case "Cooked Food":
-                    if (radioWaste1 == clickedRadio){
+                    if (radioWaste1 == clickedRadio) {
                         clickedRadio.checked = false;
                         radioWaste1 = null
-                    }else{
+                    } else {
                         radioWaste1 = clickedRadio;
                         clickedRadio.checked = true;
-                    
+
                     }
                     break;
 
                 case "Uncooked Food":
-                    if (radioWaste2 == clickedRadio){
+                    if (radioWaste2 == clickedRadio) {
                         clickedRadio.checked = false;
                         radioWaste2 = null
-                    }else{
+                    } else {
                         radioWaste2 = clickedRadio;
                         clickedRadio.checked = true;
-                        
+
                     }
                     break;
 
                 case "Expired Food Items":
-                    if (radioWaste3 == clickedRadio){
+                    if (radioWaste3 == clickedRadio) {
                         clickedRadio.checked = false;
                         radioWaste3 = null
-                    }else{
+                    } else {
                         radioWaste3 = clickedRadio;
                         clickedRadio.checked = true;
-                        
+
                     };
                     break;
             };
@@ -441,11 +485,11 @@
 
 
         const overlay = document.getElementById('overlay');
-        overlay.addEventListener('click', (event) =>{
-            if (event.target === overlay){
+        overlay.addEventListener('click', (event) => {
+            if (event.target === overlay) {
                 toggleMenu();
             }
-        } );
+        });
 
         function isNumber(value) {
             return !isNaN(value) && isFinite(value);
@@ -455,7 +499,7 @@
             const pattern = /^[A-Za-z\s]+$/;
             return pattern.test(name);
         }
-        
+
         function toggleMenu() {
             var menu = document.getElementById('menu');
             var overlay = document.getElementById('overlay');
@@ -492,9 +536,9 @@
             };
 
             emailjs.send('service_cejx207', 'template_hklcdg9', templateParams)
-                .then(function(response) {
+                .then(function (response) {
                     console.log('SUCCESS!', response.status, response.text);
-                }, function(error) {
+                }, function (error) {
                     console.log('FAILED...', error);
                 });
         }
@@ -502,8 +546,8 @@
         function save() {
             emailjs.init("yYLUh01lJ3UJi0sLT");
 
-        
-            document.getElementById('contactForm').addEventListener('submit', function(event) {
+
+            document.getElementById('contactForm').addEventListener('submit', function (event) {
                 event.preventDefault();
             });
 
@@ -540,7 +584,7 @@
 
             isFormValid = true;
 
-            
+
             if (!name || !email || !phone || !message) {
 
                 console.log("FORM DATA NOT VALID!");
@@ -572,7 +616,7 @@
                     phoneC.classList.remove('is-invalid');
                 }
 
-                
+
                 if (!isValidName(name)) {
 
                     var nameC = document.getElementById('name');
@@ -591,7 +635,7 @@
                     nameC.classList.remove('is-invalid');
                 }
 
-                
+
                 if (isFormValid) {
 
                     successToast.show();
@@ -602,7 +646,7 @@
                         successToast.hide();
                     }, 1500);
 
-    
+
                     sendEmail(name, email, phone, message, business, waste);
                 }
             }
@@ -611,26 +655,26 @@
         }
 
 
-        function openForm(){
+        function openForm() {
             var form = document.getElementById('form-overlay');
-            form.style.display ='flex';
+            form.style.display = 'flex';
             document.body.style.overflow = 'hidden';
         }
 
-        function closeForm(){
+        function closeForm() {
             var form = document.getElementById('form-overlay');
             form.style.display = 'none';
             document.body.style.overflow = 'auto';
             document.getElementById('contactForm').reset();
-            
+
             var phone = document.getElementById('phone');
-            if (phone.classList.contains('is-invalid')){
+            if (phone.classList.contains('is-invalid')) {
                 phone.classList.remove('is-invalid');
             }
         }
 
 
-        
+
 
     </script>
 
@@ -702,60 +746,133 @@
     </div>
 
 
-    <div class="our-products-mobile d-md-none" style="display: flex; flex-direction: column; padding-left: 25px; padding-right: 25px; gap: 80px; padding-top: 80px; padding-bottom: 63px; background-color: #f7f7f7;">
+    <div class="our-products-mobile d-md-none"
+        style="display: flex; flex-direction: column; padding-left: 25px; padding-right: 25px; gap: 80px; padding-top: 80px; padding-bottom: 63px; background-color: #f7f7f7;">
         <div>
-            <h2 style="font-family: 'IBM Plex Serif'; font-style: normal; font-weight: 500; font-size: clamp(2em, 2.5vw + 1em, 2.625em); line-height: 48px; letter-spacing: -0.04em; text-transform: capitalize; color: #123627; text-align: left; padding-bottom: 30px;">Our Products</h2>
-            <p style="color: #123627; font-family: 'Plus Jakarta Sans' ; font-style: normal; text-align: left; font-size: 16px; font-weight: 400; line-height: 24px;">We provide topsoil, compost, fish-based nutrients, and customized fertilizers. Our innovative products enhance plant health, reduce costs, and protect the environment, serving agriculture, horticulture, and amenity sectors efficiently.</p>
+            <h2
+                style="font-family: 'IBM Plex Serif'; font-style: normal; font-weight: 500; font-size: clamp(2em, 2.5vw + 1em, 2.625em); line-height: 48px; letter-spacing: -0.04em; text-transform: capitalize; color: #123627; text-align: left; padding-bottom: 30px;">
+                Our Products</h2>
+            <p
+                style="color: #123627; font-family: 'Plus Jakarta Sans' ; font-style: normal; text-align: left; font-size: 16px; font-weight: 400; line-height: 24px;">
+                We provide topsoil, compost, fish-based nutrients, and customized fertilizers. Our innovative products
+                enhance plant health, reduce costs, and protect the environment, serving agriculture, horticulture, and
+                amenity sectors efficiently.</p>
         </div>
         <div>
-            <h2 style="font-family: 'IBM Plex Serif'; font-style: normal; font-weight: 500; font-size: 42px; line-height: 48px; letter-spacing: -0.04em; text-transform: capitalize; color: #123627; padding-bottom: 30px;">Compost</h2>
-            <p style="font-family: 'Plus Jakarta Sans'; font-style: normal; font-size: 22px; font-weight: 500; line-height: 28px; color: #123627; padding-bottom: 30px;">Our premium compost enriches soil and enhances plant health, ensuring lush, thriving gardens and vibrant growth for all your horticultural needs.</p>
-            <img src="our-products-fertilizer-compost.png" class="img-fluid" style="border-radius: 0px 50px; padding-bottom: 30px;">
-            <p style="font-family: 'Plus Jakarta Sans'; font-style: normal; font-weight: 400; font-size: 18px; line-height: 26px; color: #123627; padding-bottom: 30px;">Experience superior results with our top-quality compost. It improves soil structure, promotes robust plant growth, and supports sustainable gardening practices for healthier, more resilient plants.</p>
-            <p style="font-family: 'Plus Jakarta Sans'; font-style: normal; font-weight: 400; font-size: 16px; line-height: 24px; color: #123627;">Contact Tejdeed Organic Fertilizers to learn more about our process and discover how your farm can benefit.</p>
-            <div style="box-sizing: border-box; padding-top: 30px; padding-bottom: 30px; display: flex; flex-direction: column; gap: 30px; align-items: flex-start; border-width: 0.5px 0px; border-style: solid; border-color: #123627;">
-                <span style="font-family: 'Plus Jakarta Sans'; font-style: normal; font-weight: 500; font-size: 22px; line-height: 28px; text-transform: capitalize; color: #123627; text-align: left;">Our Compost Products</span>
+            <h2
+                style="font-family: 'IBM Plex Serif'; font-style: normal; font-weight: 500; font-size: 42px; line-height: 48px; letter-spacing: -0.04em; text-transform: capitalize; color: #123627; padding-bottom: 30px;">
+                Compost</h2>
+            <p
+                style="font-family: 'Plus Jakarta Sans'; font-style: normal; font-size: 22px; font-weight: 500; line-height: 28px; color: #123627; padding-bottom: 30px;">
+                Our premium compost enriches soil and enhances plant health, ensuring lush, thriving gardens and vibrant
+                growth for all your horticultural needs.</p>
+            <img src="our-products-fertilizer-compost.png" class="img-fluid"
+                style="border-radius: 0px 50px; padding-bottom: 30px;">
+            <p
+                style="font-family: 'Plus Jakarta Sans'; font-style: normal; font-weight: 400; font-size: 18px; line-height: 26px; color: #123627; padding-bottom: 30px;">
+                Experience superior results with our top-quality compost. It improves soil structure, promotes robust
+                plant growth, and supports sustainable gardening practices for healthier, more resilient plants.</p>
+            <p
+                style="font-family: 'Plus Jakarta Sans'; font-style: normal; font-weight: 400; font-size: 16px; line-height: 24px; color: #123627;">
+                Contact Tejdeed Organic Fertilizers to learn more about our process and discover how your farm can
+                benefit.</p>
+            <div
+                style="box-sizing: border-box; padding-top: 30px; padding-bottom: 30px; display: flex; flex-direction: column; gap: 30px; align-items: flex-start; border-width: 0.5px 0px; border-style: solid; border-color: #123627;">
+                <span
+                    style="font-family: 'Plus Jakarta Sans'; font-style: normal; font-weight: 500; font-size: 22px; line-height: 28px; text-transform: capitalize; color: #123627; text-align: left;">Our
+                    Compost Products</span>
                 <div style="display: flex; flex-direction: column; gap: 15px; padding: 0; align-items: flex-start;">
-                    <li style=" list-style: none; font-family: 'IBM Plex Serif'; font-style: normal; font-weight: 500; font-size: 18px; line-height: 38px; letter-spacing: -0.02em; text-transform: capitalize; color: #123627; text-align: left;">Green Dune (Bulk)</li>
-                    <li style="list-style: none; font-family: 'IBM Plex Serif'; font-style: normal; font-weight: 500; font-size: 18px; line-height: 38px; letter-spacing: -0.02em; text-transform: capitalize; text-align: left; color: #123627;">Bloomix (20kg Bag)</li>
-                    <li style="list-style: none; font-family: 'IBM Plex Serif'; font-style: normal; font-weight: 500; font-size: 18px; line-height: 38px; letter-spacing: -0.02em; text-transform: capitalize; text-align: left; color: #123627;">Organix (20kg Bag)</li>
+                    <li
+                        style=" list-style: none; font-family: 'IBM Plex Serif'; font-style: normal; font-weight: 500; font-size: 18px; line-height: 38px; letter-spacing: -0.02em; text-transform: capitalize; color: #123627; text-align: left;">
+                        Green Dune (Bulk)</li>
+                    <li
+                        style="list-style: none; font-family: 'IBM Plex Serif'; font-style: normal; font-weight: 500; font-size: 18px; line-height: 38px; letter-spacing: -0.02em; text-transform: capitalize; text-align: left; color: #123627;">
+                        Bloomix (20kg Bag)</li>
+                    <li
+                        style="list-style: none; font-family: 'IBM Plex Serif'; font-style: normal; font-weight: 500; font-size: 18px; line-height: 38px; letter-spacing: -0.02em; text-transform: capitalize; text-align: left; color: #123627;">
+                        Organix (20kg Bag)</li>
 
                 </div>
             </div>
         </div>
         <div>
-            <h2 style="font-family: 'IBM Plex Serif'; font-style: normal; font-weight: 500; font-size: 42px; line-height: 48px; letter-spacing: -0.04em; text-transform: capitalize; color: #123627; padding-bottom: 30px;">Fish Based</h2>
-            <p style="font-family: Plus Jakarta Sans; font-size: normal; font-weight: 500; font-size: 22px; line-height: 28px; padding-bottom: 30px; color: #123627;">Fish fertilizers are rich in essential nutrients, promoting robust plant growth and health. They are eco-friendly and easy to use.</p>
-            <img src="our-products-fertilizer-fish-based.png" class="img-fluid" style="border-radius: 0px 50px; padding-bottom: 30px;">
-            <p style="font-family: 'Plus Jakarta Sans'; font-style: normal; font-weight: 400; font-size: 16px; line-height: 24px; color: #123627; padding-bottom: 30px;">At Tejdeed, our soil scientists and technical experts create customized fertilizers designed to meet the unique needs of your soil. We analyze the specific characteristics of your soil and formulate batches of organic fertilizers that will enrich it, helping you achieve optimal crop yields for the next one to two years.</p>
-            <p style="font-family: 'Plus Jakarta Sans'; font-style: normal; font-weight: 400; font-size: 16px; line-height: 24px; color: #123627; padding-bottom: 30px;">Enhancing soil health, fish fertilizers improve structure and fertility, supporting beneficial microorganisms. They boost root development, resulting in healthier, more resilient crops and higher yields.</p>
-            <div style="box-sizing: border-box; padding-top: 30px; padding-bottom: 30px; display: flex; flex-direction: column; gap: 30px; align-items: flex-start; border-width: 0.5px 0px; border-style: solid; border-color: #123627;">
-                <span style="font-family: 'Plus Jakarta Sans'; font-style: normal; font-weight: 500; font-size: 22px; line-height: 28px; text-transform: capitalize; color: #123627; text-align: left;">Our Fish Based Products</span>
+            <h2
+                style="font-family: 'IBM Plex Serif'; font-style: normal; font-weight: 500; font-size: 42px; line-height: 48px; letter-spacing: -0.04em; text-transform: capitalize; color: #123627; padding-bottom: 30px;">
+                Fish Based</h2>
+            <p
+                style="font-family: Plus Jakarta Sans; font-size: normal; font-weight: 500; font-size: 22px; line-height: 28px; padding-bottom: 30px; color: #123627;">
+                Fish fertilizers are rich in essential nutrients, promoting robust plant growth and health. They are
+                eco-friendly and easy to use.</p>
+            <img src="our-products-fertilizer-fish-based.png" class="img-fluid"
+                style="border-radius: 0px 50px; padding-bottom: 30px;">
+            <p
+                style="font-family: 'Plus Jakarta Sans'; font-style: normal; font-weight: 400; font-size: 16px; line-height: 24px; color: #123627; padding-bottom: 30px;">
+                At Tejdeed, our soil scientists and technical experts create customized fertilizers designed to meet the
+                unique needs of your soil. We analyze the specific characteristics of your soil and formulate batches of
+                organic fertilizers that will enrich it, helping you achieve optimal crop yields for the next one to two
+                years.</p>
+            <p
+                style="font-family: 'Plus Jakarta Sans'; font-style: normal; font-weight: 400; font-size: 16px; line-height: 24px; color: #123627; padding-bottom: 30px;">
+                Enhancing soil health, fish fertilizers improve structure and fertility, supporting beneficial
+                microorganisms. They boost root development, resulting in healthier, more resilient crops and higher
+                yields.</p>
+            <div
+                style="box-sizing: border-box; padding-top: 30px; padding-bottom: 30px; display: flex; flex-direction: column; gap: 30px; align-items: flex-start; border-width: 0.5px 0px; border-style: solid; border-color: #123627;">
+                <span
+                    style="font-family: 'Plus Jakarta Sans'; font-style: normal; font-weight: 500; font-size: 22px; line-height: 28px; text-transform: capitalize; color: #123627; text-align: left;">Our
+                    Fish Based Products</span>
                 <div style="display: flex; flex-direction: column; gap: 15px; padding: 0; align-items: flex-start;">
-                    <li style=" list-style: none; font-family: 'IBM Plex Serif'; font-style: normal; font-weight: 500; font-size: 26px; line-height: 38px; letter-spacing: -0.02em; text-transform: capitalize; color: #123627; text-align: left;">Fish N'Bloom (liquid)</li>
-                    <li style="list-style: none; font-family: 'IBM Plex Serif'; font-style: normal; font-weight: 500; font-size: 26px; line-height: 38px; letter-spacing: -0.02em; text-transform: capitalize; text-align: left; color: #123627;">Ecofish (pellets)</li>
-                    <li style="list-style: none; font-family: 'IBM Plex Serif'; font-style: normal; font-weight: 500; font-size: 26px; line-height: 38px; letter-spacing: -0.02em; text-transform: capitalize; text-align: left; color: #123627;">Nutrifish (powder)</li>
+                    <li
+                        style=" list-style: none; font-family: 'IBM Plex Serif'; font-style: normal; font-weight: 500; font-size: 26px; line-height: 38px; letter-spacing: -0.02em; text-transform: capitalize; color: #123627; text-align: left;">
+                        Fish N'Bloom (liquid)</li>
+                    <li
+                        style="list-style: none; font-family: 'IBM Plex Serif'; font-style: normal; font-weight: 500; font-size: 26px; line-height: 38px; letter-spacing: -0.02em; text-transform: capitalize; text-align: left; color: #123627;">
+                        Ecofish (pellets)</li>
+                    <li
+                        style="list-style: none; font-family: 'IBM Plex Serif'; font-style: normal; font-weight: 500; font-size: 26px; line-height: 38px; letter-spacing: -0.02em; text-transform: capitalize; text-align: left; color: #123627;">
+                        Nutrifish (powder)</li>
 
                 </div>
             </div>
 
         </div>
         <div>
-            <h2 style="font-family: 'IBM Plex Serif'; font-style: normal; font-weight: 500; font-size: 42px; line-height: 48px; letter-spacing: -0.04em; text-transform: capitalize; text-wrap:wrap; text-align: left; padding-bottom: 30px; color: #123627;">Customized Fertilizers</h2>
-            <p style="font-family: 'Plus Jakarta Sans'; font-style: normal; font-weight: 500; font-size: 22px; line-height: 28px; color: #123627; padding-bottom: 30px;">Are you looking for a fertilizer specifically tailored to your farm and the crops you plan to grow?</p>
-            <img src="our-products-fertilizer-custom-fertilizer.png" class="img-fluid" style="border-radius: 0px 50px; padding-bottom: 30px;">
-            <p style="font-family: 'Plus Jakarta Sans'; font-style: normal; font-weight: 400; font-size: 16px; line-height: 24px; color: #123627; padding-bottom: 30px;">At Tejdeed, our soil scientists and technical experts create customized fertilizers designed to meet the unique needs of your soil. We analyze the specific characteristics of your soil and formulate batches of organic fertilizers that will enrich it, helping you achieve optimal crop yields for the next one to two years.</p>
-            <p style="font-family: 'Plus Jakarta Sans'; font-style: normal; font-weight: 400; font-size: 16px; line-height: 24px; color: #123627;">Contact Tejdeed Organic Fertilizers to learn more about our process and discover how your farm can benefit.</p>
+            <h2
+                style="font-family: 'IBM Plex Serif'; font-style: normal; font-weight: 500; font-size: 42px; line-height: 48px; letter-spacing: -0.04em; text-transform: capitalize; text-wrap:wrap; text-align: left; padding-bottom: 30px; color: #123627;">
+                Customized Fertilizers</h2>
+            <p
+                style="font-family: 'Plus Jakarta Sans'; font-style: normal; font-weight: 500; font-size: 22px; line-height: 28px; color: #123627; padding-bottom: 30px;">
+                Are you looking for a fertilizer specifically tailored to your farm and the crops you plan to grow?</p>
+            <img src="our-products-fertilizer-custom-fertilizer.png" class="img-fluid"
+                style="border-radius: 0px 50px; padding-bottom: 30px;">
+            <p
+                style="font-family: 'Plus Jakarta Sans'; font-style: normal; font-weight: 400; font-size: 16px; line-height: 24px; color: #123627; padding-bottom: 30px;">
+                At Tejdeed, our soil scientists and technical experts create customized fertilizers designed to meet the
+                unique needs of your soil. We analyze the specific characteristics of your soil and formulate batches of
+                organic fertilizers that will enrich it, helping you achieve optimal crop yields for the next one to two
+                years.</p>
+            <p
+                style="font-family: 'Plus Jakarta Sans'; font-style: normal; font-weight: 400; font-size: 16px; line-height: 24px; color: #123627;">
+                Contact Tejdeed Organic Fertilizers to learn more about our process and discover how your farm can
+                benefit.</p>
 
         </div>
     </div>
-    <div class="our-products-mobile-contact-us d-md-none" style="padding-top:0; padding-left: 25px; padding-right: 25px; padding-bottom: 80px; background-color: #f7f7f7;">
-        <div style="box-sizing: border-box; border-width: 0.5px; border-style: solid; border-color: #ffffff; background-color: #ffffff; border-radius: 11px; padding: 45px 30px 45px 30px;">
+    <div class="our-products-mobile-contact-us d-md-none"
+        style="padding-top:0; padding-left: 25px; padding-right: 25px; padding-bottom: 80px; background-color: #f7f7f7;">
+        <div
+            style="box-sizing: border-box; border-width: 0.5px; border-style: solid; border-color: #ffffff; background-color: #ffffff; border-radius: 11px; padding: 45px 30px 45px 30px;">
             <div style="display: flex; flex-direction: column; gap: 30px; align-items: center;">
-                <p style="font-family: 'Plus Jakarta Sans'; font-style: normal; font-weight: 400; font-size: 18px; line-height: 26px; text-align: center; color: #000000;">Have any questions? Get in touch with the Tejdeed Organic Fertilizer team to identify the right product for you.</p>
+                <p
+                    style="font-family: 'Plus Jakarta Sans'; font-style: normal; font-weight: 400; font-size: 18px; line-height: 26px; text-align: center; color: #000000;">
+                    Have any questions? Get in touch with the Tejdeed Organic Fertilizer team to identify the right
+                    product for you.</p>
                 <div style="display: flex; flex-direction: column; gap: 15px; width: 100%;">
-                    <button onclick="openEmail()" style=" display: flex; justify-content: center; text-align: center ;border-radius: 11px; border-width: 0.5px; border-style: solid; border-color: #FFA500; background-color: #FFA500;color: #f7f7f7; padding: 12px 60px; font-family: 'Plus Jakarta Sans'; font-style: normal; font-weight: 500; font-size: 18px; line-height: 23px; text-align: center; text-transform: capitalize;">Email Us</button>
-                    <button onclick="openWhatsapp()" style=" display: flex; justify-content: center; text-align: center ;padding: 12px 60px; background-color: #009e4c; border-width: 0.5px; border-radius: 11px; border-style: solid; border-color: #009e4c; color: #f7f7f7; font-family: 'Plus Jakarta Sans'; font-style: normal; font-weight: 500; font-size: 18px; line-height: 23px; text-align: center; text-transform: capitalize;">WhatsApp</button>
+                    <button onclick="openEmail()"
+                        style=" display: flex; justify-content: center; text-align: center ;border-radius: 11px; border-width: 0.5px; border-style: solid; border-color: #FFA500; background-color: #FFA500;color: #f7f7f7; padding: 12px 60px; font-family: 'Plus Jakarta Sans'; font-style: normal; font-weight: 500; font-size: 18px; line-height: 23px; text-align: center; text-transform: capitalize;">Email
+                        Us</button>
+                    <button onclick="openWhatsapp()"
+                        style=" display: flex; justify-content: center; text-align: center ;padding: 12px 60px; background-color: #009e4c; border-width: 0.5px; border-radius: 11px; border-style: solid; border-color: #009e4c; color: #f7f7f7; font-family: 'Plus Jakarta Sans'; font-style: normal; font-weight: 500; font-size: 18px; line-height: 23px; text-align: center; text-transform: capitalize;">WhatsApp</button>
                 </div>
             </div>
         </div>
@@ -763,162 +880,172 @@
 
 
 
-        <!-- Web View --> 
-        <div class="desktop-layout d-none d-md-block"
-            style="width: 100%; position: relative; background-color: #f7f7f7; padding: 7.063em 4.125em; box-sizing: border-box; gap: 3.938em;">
-            <section
-                style="display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start; gap: 5em; text-align: left; color: #123627; font-family: 'Plus Jakarta Sans';">
+    <!-- Web View -->
+    <div class="desktop-layout d-none d-md-block"
+        style="width: 100%; position: relative; background-color: #f7f7f7; padding: 7.063em 4.125em; box-sizing: border-box; gap: 3.938em;">
+        <section
+            style="display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start; gap: 5em; text-align: left; color: #123627; font-family: 'Plus Jakarta Sans';">
+            <div
+                style="align-self: stretch; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start; gap: 1.875em;">
+                <h1
+                    style="margin: 0; position: relative; font-size: clamp(2em, 2.5vw + 1em, 2.625em); letter-spacing: -0.04em; line-height: 1.143em; text-transform: capitalize; font-weight: 500; font-family: 'IBM Plex Serif';">
+                    our products
+                </h1>
                 <div
-                    style="align-self: stretch; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start; gap: 1.875em;">
-                    <h1
-                        style="margin: 0; position: relative; font-size: clamp(2em, 2.5vw + 1em, 2.625em); letter-spacing: -0.04em; line-height: 1.143em; text-transform: capitalize; font-weight: 500; font-family: 'IBM Plex Serif';">
-                        our products
-                    </h1>
-                    <div
-                        style="width: 31.222em; position: relative; font-size: clamp(1rem, 0.9167rem + 0.1736vw, 1.125rem); line-height: 1.444em; display: inline-block; max-width: 100%;">
-                        We provide topsoil, compost, fish-based nutrients, and customized fertilizers. Our innovative
-                        products enhance plant health, reduce costs, and protect the environment, serving agriculture,
-                        horticulture, and amenity sectors efficiently.
-                    </div>
-                    <div class="product-button"
-                        style="display: flex; flex-direction: row; align-items: flex-start; justify-content: flex-start; gap: 0.938em; max-width: 100%;">
-                        <button
-                            style="color:#F7F7F7; background-color:#009E4C !important; border-color:#009E4C !important; box-shadow:0 10px 10px rgba(0, 0, 0, 0.2) !important; border-radius: 7px; border: 1px solid #000; display: flex; flex-direction: row; align-items: center; justify-content: center; padding: 0.563em 1.813em; background-color: transparent;"
-                            onclick="showContent('compost')">
-                            <div
-                                style="position: relative; font-size: clamp(1rem, 0.9167rem + 0.1736vw, 1.125rem); line-height: 1.273em; font-weight: 500; display: inline-block; ">
-                                Compost</div>
-                        </button>
-                        <button
-                            style="border-radius: 7px; border: 1px solid #000; display: flex; flex-direction: row; align-items: center; justify-content: center; padding: 0.563em 1.813em; background-color: transparent;"
-                            onclick="showContent('fish')">
-                            <div
-                                style="position: relative; font-size: clamp(1rem, 0.9167rem + 0.1736vw, 1.125rem); line-height: 1.273em; font-weight: 500; display: inline-block; min-width: 5.182em;">
-                                Fish Based</div>
-                        </button>
-                        <button
-                            style="border-radius: 7px; border: 1px solid #000; display: flex; flex-direction: row; align-items: center; justify-content: center; padding: 0.563em 1.813em; background-color: transparent;"
-                            onclick="showContent('customized')">
-                            <div
-                                style="position: relative; font-size: clamp(1rem, 0.9167rem + 0.1736vw, 1.125rem); line-height: 1.273em; font-weight: 500; display: inline-block; min-width: 5.182em; ">
-                                Customized Fertilizers</div>
-                        </button>
-                    </div>
+                    style="width: 31.222em; position: relative; font-size: clamp(1rem, 0.9167rem + 0.1736vw, 1.125rem); line-height: 1.444em; display: inline-block; max-width: 100%;">
+                    We provide topsoil, compost, fish-based nutrients, and customized fertilizers. Our innovative
+                    products enhance plant health, reduce costs, and protect the environment, serving agriculture,
+                    horticulture, and amenity sectors efficiently.
                 </div>
-                <div
-                    style="align-self: stretch; display: flex; flex-direction: row; flex-wrap: wrap; align-items: flex-start; justify-content: space-between; max-width: 100%; gap: 1.25em;">
-                    <div id="content" data-aos="fade-up"
-                        style="width: 35.125em; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start; gap: 1.875em; min-width: 35.125em; max-width: 100%;">
-                        <!-- Initial content for Compost -->
-                        <h1
-                            style="margin: 0; align-self: stretch; position: relative; font-size: 3em; letter-spacing: -0.04em; line-height: 1em; text-transform: capitalize; font-weight: 500; font-family: 'IBM Plex Serif';">
-                            Compost</h1>
+                <div class="product-button"
+                    style="display: flex; flex-direction: row; align-items: flex-start; justify-content: flex-start; gap: 0.938em; max-width: 100%;">
+                    <button
+                        style="color:#F7F7F7; background-color:#009E4C !important; border-color:#009E4C !important; box-shadow:0 10px 10px rgba(0, 0, 0, 0.2) !important; border-radius: 7px; border: 1px solid #000; display: flex; flex-direction: row; align-items: center; justify-content: center; padding: 0.563em 1.813em; background-color: transparent;"
+                        onclick="showContent('compost')">
                         <div
-                            style="align-self: stretch; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start; padding: 0em 0em 1.813em; gap: 1.875em;">
-                            <div
-                                style="align-self: stretch; position: relative; font-size: 1.375em; line-height: 1.273em; font-weight: 500;">
-                                Our premium compost enriches soil and enhances plant health, ensuring lush, thriving gardens and vibrant growth for all your horticultural needs.</div>
-                            <div style="align-self: stretch; position: relative; font-size: 1.125em; line-height: 1.444em;">
-                                Experience superior results with our top-quality compost. It improves soil structure, promotes robust plant growth, and supports sustainable gardening practices for healthier, more resilient plants.
-                                <br>
-                                <br>
-                                Contact Tejdeed Organic Fertilizers to learn more about our process and discover how your farm can benefit.
-                            </div>
+                            style="position: relative; font-size: clamp(1rem, 0.9167rem + 0.1736vw, 1.125rem); line-height: 1.273em; font-weight: 500; display: inline-block; ">
+                            Compost</div>
+                    </button>
+                    <button
+                        style="border-radius: 7px; border: 1px solid #000; display: flex; flex-direction: row; align-items: center; justify-content: center; padding: 0.563em 1.813em; background-color: transparent;"
+                        onclick="showContent('fish')">
+                        <div
+                            style="position: relative; font-size: clamp(1rem, 0.9167rem + 0.1736vw, 1.125rem); line-height: 1.273em; font-weight: 500; display: inline-block; min-width: 5.182em;">
+                            Fish Based</div>
+                    </button>
+                    <button
+                        style="border-radius: 7px; border: 1px solid #000; display: flex; flex-direction: row; align-items: center; justify-content: center; padding: 0.563em 1.813em; background-color: transparent;"
+                        onclick="showContent('customized')">
+                        <div
+                            style="position: relative; font-size: clamp(1rem, 0.9167rem + 0.1736vw, 1.125rem); line-height: 1.273em; font-weight: 500; display: inline-block; min-width: 5.182em; ">
+                            Customized Fertilizers</div>
+                    </button>
+                </div>
+            </div>
+            <div
+                style="align-self: stretch; display: flex; flex-direction: row; flex-wrap: wrap; align-items: flex-start; justify-content: space-between; max-width: 100%; gap: 1.25em;">
+                <div id="content" data-aos="fade-up"
+                    style="width: 35.125em; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start; gap: 1.875em; min-width: 35.125em; max-width: 100%;">
+                    <!-- Initial content for Compost -->
+                    <h1
+                        style="margin: 0; align-self: stretch; position: relative; font-size: 3em; letter-spacing: -0.04em; line-height: 1em; text-transform: capitalize; font-weight: 500; font-family: 'IBM Plex Serif';">
+                        Compost</h1>
+                    <div
+                        style="align-self: stretch; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start; padding: 0em 0em 1.813em; gap: 1.875em;">
+                        <div
+                            style="align-self: stretch; position: relative; font-size: 1.375em; line-height: 1.273em; font-weight: 500;">
+                            Our premium compost enriches soil and enhances plant health, ensuring lush, thriving gardens
+                            and vibrant growth for all your horticultural needs.</div>
+                        <div style="align-self: stretch; position: relative; font-size: 1.125em; line-height: 1.444em;">
+                            Experience superior results with our top-quality compost. It improves soil structure,
+                            promotes robust plant growth, and supports sustainable gardening practices for healthier,
+                            more resilient plants.
+                            <br>
+                            <br>
+                            Contact Tejdeed Organic Fertilizers to learn more about our process and discover how your
+                            farm can benefit.
                         </div>
-                        <div data-aos="fade-up"
-                            style="align-self: stretch; border-top: 0.5px solid #123627; border-bottom: 0.5px solid #123627; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start; padding: 1.813em 0em 1.813em; gap: 0.938em;">
-                            <div 
-                                style="align-self: stretch; position: relative; font-size: 1.375em; line-height: 1.273em; text-transform: capitalize; font-weight: 500;">
-                                Our Compost Products</div>
+                    </div>
+                    <div data-aos="fade-up"
+                        style="align-self: stretch; border-top: 0.5px solid #123627; border-bottom: 0.5px solid #123627; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start; padding: 1.813em 0em 1.813em; gap: 0.938em;">
+                        <div
+                            style="align-self: stretch; position: relative; font-size: 1.125em; line-height: 1.273em; text-transform: capitalize; font-weight: 500;">
+                            Our Compost Products</div>
+                        <div
+                            style="align-self: stretch; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start; font-family: 'IBM Plex Serif';">
                             <div
-                                style="align-self: stretch; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start; font-family: 'IBM Plex Serif';">
+                                style="align-self: stretch; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start; gap: 0.938em;">
                                 <div
-                                    style="align-self: stretch; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start; gap: 0.938em;">
-                                    <div
-                                        style="align-self: stretch; position: relative; font-size: 1.125em; letter-spacing: -0.02em; line-height: 1.188em; text-transform: capitalize; font-weight: 500;">
-                                        Green Dune (Bulk Product)</div>
-                                    <h2
-                                        style="margin: 0; align-self: stretch; position: relative; font-size: 1.125em; letter-spacing: -0.02em; line-height: 1.188em; text-transform: capitalize; font-weight: 500; font-family: inherit;">
-                                        Bloomix (20kg Bag)</h2>
-                                    <h2
-                                        style="margin: 0; align-self: stretch; position: relative; font-size: 1.125em; letter-spacing: -0.02em; line-height: 1.188em; text-transform: capitalize; font-weight: 500; font-family: inherit;">
-                                        Organix (20kg Bag)</h2>
-                                </div>
+                                    style="align-self: stretch; position: relative; font-size: 1.375em; letter-spacing: -0.02em; line-height: 1.188em; text-transform: capitalize; font-weight: 500;">
+                                    Green Dune (Bulk Product)</div>
+                                <h2
+                                    style="margin: 0; align-self: stretch; position: relative; font-size: 1.375em; letter-spacing: -0.02em; line-height: 1.188em; text-transform: capitalize; font-weight: 500; font-family: inherit;">
+                                    Bloomix (20kg Bag)</h2>
+                                <h2
+                                    style="margin: 0; align-self: stretch; position: relative; font-size: 1.375em; letter-spacing: -0.02em; line-height: 1.188em; text-transform: capitalize; font-weight: 500; font-family: inherit;">
+                                    Organix (20kg Bag)</h2>
                             </div>
                         </div>
                     </div>
-                    <div id="product-to-be-aligned"
-                        style=" flex: 1 1 38.875rem; max-width: 100%; display: flex; align-items: center; justify-content: right;">
-                        <img id="product-image" 
-                            style="display:flex ; max-width: 100%; max-height: 100%; object-fit: contain;" loading="lazy"
-                            alt="compost" src="compost.png" />
+                </div>
+                <div id="product-to-be-aligned"
+                    style=" flex: 1 1 38.875rem; max-width: 100%; display: flex; align-items: center; justify-content: right;">
+                    <img id="product-image"
+                        style="display:flex ; max-width: 100%; max-height: 100%; object-fit: contain;" loading="lazy"
+                        alt="compost" src="compost.png" />
+                </div>
+            </div>
+
+            <div
+                style="width: 100%; box-sizing: border-box; border-width: 0.5px; background-color: #ffffff; border-radius: 11px; padding: 45px 30px;">
+                <div style="display: flex; flex-direction: row; flex-wrap: wrap; gap: 20px; justify-content: center;"
+                    class="button-container">
+                    <div style="display: flex; flex-direction: column; flex: 1 1 33%;">
+                        <p
+                            style="width: 30em; font-family: 'Plus Jakarta Sans'; font-style: normal; font-weight: 400; font-size: 18px; line-height: 26px; text-align: left; color: #000000; margin: 0;">
+                            Have any questions? Get in touch with the Tejdeed Organic Fertilizer team to identify the
+                            right product for you.
+                        </p>
+                    </div>
+                    <div style="display: flex; flex-direction: column; align-items: center; max-width: 192px;">
+                        <button onclick="openEmail()"
+                            style="width: 192px; height: 50px; display: flex; justify-content: center; align-items: center; text-align: center; border-radius: 11px; border-width: 0.5px; border-style: solid; border-color: #FFA500; background-color: #FFA500; color: #f7f7f7; padding: 12px 0; font-family: 'Plus Jakarta Sans'; font-style: normal; font-weight: 500; font-size: 18px; line-height: 23px; text-transform: capitalize;">
+                            Email Us
+                        </button>
+                    </div>
+                    <div style="display: flex; flex-direction: column; align-items: center; max-width: 192px;">
+                        <button onclick="openWhatsapp()"
+                            style="width: 192px; height: 50px; display: flex; justify-content: center; align-items: center; text-align: center; padding: 12px 0; background-color: #009e4c; border-width: 0.5px; border-radius: 11px; border-style: solid; border-color: #009e4c; color: #f7f7f7; font-family: 'Plus Jakarta Sans'; font-style: normal; font-weight: 500; font-size: 18px; line-height: 23px; text-transform: capitalize;">
+                            WhatsApp
+                        </button>
                     </div>
                 </div>
+            </div>
 
-                <div style="width: 100%; box-sizing: border-box; border-width: 0.5px; background-color: #ffffff; border-radius: 11px; padding: 45px 30px;">
-                    <div style="display: flex; flex-direction: row; flex-wrap: wrap; gap: 20px; justify-content: center;" class="button-container">
-                        <div style="display: flex; flex-direction: column; flex: 1 1 33%;">
-                            <p style="width: 30em; font-family: 'Plus Jakarta Sans'; font-style: normal; font-weight: 400; font-size: 18px; line-height: 26px; text-align: left; color: #000000; margin: 0;">
-                                Have any questions? Get in touch with the Tejdeed Organic Fertilizer team to identify the right product for you.
-                            </p>
-                        </div>
-                        <div style="display: flex; flex-direction: column; align-items: center; max-width: 192px;">
-                            <button onclick="openEmail()" style="width: 192px; height: 50px; display: flex; justify-content: center; align-items: center; text-align: center; border-radius: 11px; border-width: 0.5px; border-style: solid; border-color: #FFA500; background-color: #FFA500; color: #f7f7f7; padding: 12px 0; font-family: 'Plus Jakarta Sans'; font-style: normal; font-weight: 500; font-size: 18px; line-height: 23px; text-transform: capitalize;">
-                                Email Us
-                            </button>
-                        </div>
-                        <div style="display: flex; flex-direction: column; align-items: center; max-width: 192px;">
-                            <button onclick="openWhatsapp()" style="width: 192px; height: 50px; display: flex; justify-content: center; align-items: center; text-align: center; padding: 12px 0; background-color: #009e4c; border-width: 0.5px; border-radius: 11px; border-style: solid; border-color: #009e4c; color: #f7f7f7; font-family: 'Plus Jakarta Sans'; font-style: normal; font-weight: 500; font-size: 18px; line-height: 23px; text-transform: capitalize;">
-                                WhatsApp
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-            </section>
-        </div>
+        </section>
+    </div>
 
 
-        <script>
-            function showContent(contentType) {
-                const contentDiv = document.getElementById('content');
-                const image = document.getElementById('product-image');
-                let content = '';
-                let imageSrc = '';
+    <script>
+        function showContent(contentType) {
+            const contentDiv = document.getElementById('content');
+            const image = document.getElementById('product-image');
+            let content = '';
+            let imageSrc = '';
 
-                switch (contentType) {
-                    case 'compost':
-                        content = '<h1 data-aos="fade-up" style="margin: 0; align-self: stretch; position: relative; font-size: 3em; letter-spacing: -0.04em; line-height: 1em; text-transform: capitalize; font-weight: 500; font-family: \'IBM Plex Serif\';">Compost</h1><div data-aos="fade-up" style="align-self: stretch; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start; padding: 0em 0em 1.813em; gap: 1.875em;"><div data-aos="fade-up" style="align-self: stretch; position: relative; font-size: 1.375em; line-height: 1.273em; font-weight: 500;">Our premium compost enriches soil and enhances plant health, ensuring lush, thriving gardens and vibrant growth for all your horticultural needs.</div><div data-aos="fade-up" style="align-self: stretch; position: relative; font-size: 1.125em; line-height: 1.444em;">Experience superior results with our top-quality compost. It improves soil structure, promotes robust plant growth, and supports sustainable gardening practices for healthier, more resilient plants.<br><br>Contact Tejdeed Organic Fertilizers to learn more about our process and discover how your farm can benefit.</div></div> <div data-aos="fade-up" style="align-self: stretch; border-top: 0.5px solid #123627; border-bottom: 0.5px solid #123627; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start; padding: 1.813em 0em 1.813em; gap: 0.938em;"><div style="align-self: stretch; position: relative; font-size: 1.375em; line-height: 1.273em; text-transform: capitalize; font-weight: 500;">Our Compost Products</div><div style="align-self: stretch; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start; font-family: \'IBM Plex Serif\';"><div style="align-self: stretch; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start; gap: 0.938em;"><div style="align-self: stretch; position: relative; font-size: 1.125em; letter-spacing: -0.02em; line-height: 1.188em; text-transform: capitalize; font-weight: 500;">Green Dune (Bulk Product)</div><h2 style="margin: 0; align-self: stretch; position: relative; font-size: 1.125em; letter-spacing: -0.02em; line-height: 1.188em; text-transform: capitalize; font-weight: 500; font-family: inherit;">Bloomix (20kg Bag)</h2><h2 style="margin: 0; align-self: stretch; position: relative; font-size: 1.125em; letter-spacing: -0.02em; line-height: 1.188em; text-transform: capitalize; font-weight: 500; font-family: inherit;">Organix (20kg Bag)</h2></div></div></div>';
-                        imageSrc = 'compost.png';
-                        break;
-                    case 'fish':
-                        content = '<h1 data-aos="fade-up" style="margin: 0; align-self: stretch; position: relative; font-size: 3em; letter-spacing: -0.04em; line-height: 1em; text-transform: capitalize; font-weight: 500; font-family: \'IBM Plex Serif\';">Fish Based</h1><div data-aos="fade-up" style="align-self: stretch; border-bottom: 0.5px solid #123627; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start; padding: 0em 0em 1.813em; gap: 1.875em;"><div data-aos="fade-up" style="align-self: stretch; position: relative; font-size: 1.375em; line-height: 1.273em; font-weight: 500;">Fish fertilizers are rich in essential nutrients, promoting robust plant growth and health. They are eco-friendly and easy to use.</div><div data-aos="fade-up" style="align-self: stretch; position: relative; font-size: 1.125em; line-height: 1.444em;">Enhancing soil health, fish fertilizers improve structure and fertility, supporting beneficial microorganisms. They boost root development, resulting in healthier, more resilient crops and higher yields.</div></div><div data-aos="fade-up" style="align-self: stretch; border-bottom: 0.5px solid #123627; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start; padding: 0em 0em 1.813em; gap: 0.938em;"><div style="align-self: stretch; position: relative; font-size: 1.375em; line-height: 1.273em; text-transform: capitalize; font-weight: 500;">Our Fish Based Products</div><div style="align-self: stretch; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start; font-family: \'IBM Plex Serif\';"><div style="align-self: stretch; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start; gap: 0.938em;"><div style="align-self: stretch; position: relative; font-size: 1.125em; letter-spacing: -0.02em; line-height: 1.188em; text-transform: capitalize; font-weight: 500;">Fish N\'Bloom (liquid)</div><h2 style="margin: 0; align-self: stretch; position: relative; font-size: 1.125em; letter-spacing: -0.02em; line-height: 1.188em; text-transform: capitalize; font-weight: 500; font-family: inherit;">Ecofish (pellets)</h2><h2 style="margin: 0; align-self: stretch; position: relative; font-size: 1.125em; letter-spacing: -0.02em; line-height: 1.188em; text-transform: capitalize; font-weight: 500; font-family: inherit;">Nutrifish (powder)</h2></div></div></div>';
-                        imageSrc = 'fish-based.png';
-                        break;
-                    case 'customized':
-                        content = '<h1 data-aos="fade-up" style="margin: 0; align-self: stretch; position: relative; font-size: 3em; letter-spacing: -0.04em; line-height: 1em; text-transform: capitalize; font-weight: 500; font-family: \'IBM Plex Serif\';">Customized Fertilizers</h1><div data-aos="fade-up" style="align-self: stretch; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start; padding: 0em 0em 1.813em; gap: 1.875em;"><div data-aos="fade-up" style="align-self: stretch; position: relative; font-size: 1.375em; line-height: 1.273em; font-weight: 500;">Are you looking for a fertilizer specifically tailored to your farm and the crops you plan to grow?</div><div data-aos="fade-up" style="align-self: stretch; position: relative; font-size: 1.125em; line-height: 1.444em;">At Tejdeed, our soil scientists and technical experts create customized fertilizers designed to meet the unique needs of your soil. We analyze the specific characteristics of your soil and formulate batches of organic fertilizers that will enrich it, helping you achieve optimal crop yields for the next one to two years.<br><br>Contact Tejdeed Organic Fertilizers to learn more about our process and discover how your farm can benefit.</div></div>';
-                        imageSrc = 'customize-fertilizer.png';
-                        break;
-                }
-
-                contentDiv.innerHTML = content;
-                image.src = imageSrc;
-            
-                // button stuff
-                removeActiveStyles();
-                const buttons = document.querySelectorAll('.product-button button');
-                buttons.forEach(button => {
-                    if (button.getAttribute('onclick').includes(contentType)) {
-                        button.style.backgroundColor = '#009E4C';
-                        button.style.color = '#F7F7F7';
-                        button.style.borderColor = '#009E4C';
-                        button.style.boxShadow = '0 10px 10px rgba(0, 0, 0, 0.2)';
-                        button.style.transition = 'box-shadow 0.2s ease';
-                    }
-                });
+            switch (contentType) {
+                case 'compost':
+                    content = '<h1 data-aos="fade-up" style="margin: 0; align-self: stretch; position: relative; font-size: 3em; letter-spacing: -0.04em; line-height: 1em; text-transform: capitalize; font-weight: 500; font-family: \'IBM Plex Serif\';">Compost</h1><div data-aos="fade-up" style="align-self: stretch; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start; padding: 0em 0em 1.813em; gap: 1.875em;"><div data-aos="fade-up" style="align-self: stretch; position: relative; font-size: 1.375em; line-height: 1.273em; font-weight: 500;">Our premium compost enriches soil and enhances plant health, ensuring lush, thriving gardens and vibrant growth for all your horticultural needs.</div><div data-aos="fade-up" style="align-self: stretch; position: relative; font-size: 1.125em; line-height: 1.444em;">Experience superior results with our top-quality compost. It improves soil structure, promotes robust plant growth, and supports sustainable gardening practices for healthier, more resilient plants.<br><br>Contact Tejdeed Organic Fertilizers to learn more about our process and discover how your farm can benefit.</div></div> <div data-aos="fade-up" style="align-self: stretch; border-top: 0.5px solid #123627; border-bottom: 0.5px solid #123627; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start; padding: 1.813em 0em 1.813em; gap: 0.938em;"><div style="align-self: stretch; position: relative; font-size: 1.125em; line-height: 1.273em; text-transform: capitalize; font-weight: 500;">Our Compost Products</div><div style="align-self: stretch; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start; font-family: \'IBM Plex Serif\';"><div style="align-self: stretch; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start; gap: 0.938em;"><div style="align-self: stretch; position: relative; font-size: 1.375em; letter-spacing: -0.02em; line-height: 1.188em; text-transform: capitalize; font-weight: 500;">Green Dune (Bulk Product)</div><h2 style="margin: 0; align-self: stretch; position: relative; font-size: 1.375em; letter-spacing: -0.02em; line-height: 1.188em; text-transform: capitalize; font-weight: 500; font-family: inherit;">Bloomix (20kg Bag)</h2><h2 style="margin: 0; align-self: stretch; position: relative; font-size: 1.375em; letter-spacing: -0.02em; line-height: 1.188em; text-transform: capitalize; font-weight: 500; font-family: inherit;">Organix (20kg Bag)</h2></div></div></div>';
+                    imageSrc = 'compost.png';
+                    break;
+                case 'fish':
+                    content = '<h1 data-aos="fade-up" style="margin: 0; align-self: stretch; position: relative; font-size: 3em; letter-spacing: -0.04em; line-height: 1em; text-transform: capitalize; font-weight: 500; font-family: \'IBM Plex Serif\';">Fish Based</h1><div data-aos="fade-up" style="align-self: stretch; border-bottom: 0.5px solid #123627; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start; padding: 0em 0em 1.813em; gap: 1.875em;"><div data-aos="fade-up" style="align-self: stretch; position: relative; font-size: 1.375em; line-height: 1.273em; font-weight: 500;">Fish fertilizers are rich in essential nutrients, promoting robust plant growth and health. They are eco-friendly and easy to use.</div><div data-aos="fade-up" style="align-self: stretch; position: relative; font-size: 1.125em; line-height: 1.444em;">Enhancing soil health, fish fertilizers improve structure and fertility, supporting beneficial microorganisms. They boost root development, resulting in healthier, more resilient crops and higher yields.</div></div><div data-aos="fade-up" style="align-self: stretch; border-bottom: 0.5px solid #123627; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start; padding: 0em 0em 1.813em; gap: 0.938em;"><div style="align-self: stretch; position: relative; font-size: 1.125em; line-height: 1.273em; text-transform: capitalize; font-weight: 500;">Our Fish Based Products</div><div style="align-self: stretch; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start; font-family: \'IBM Plex Serif\';"><div style="align-self: stretch; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start; gap: 0.938em;"><div style="align-self: stretch; position: relative; font-size: 1.375em; letter-spacing: -0.02em; line-height: 1.188em; text-transform: capitalize; font-weight: 500;">Fish N\'Bloom (liquid)</div><h2 style="margin: 0; align-self: stretch; position: relative; font-size: 1.375em; letter-spacing: -0.02em; line-height: 1.188em; text-transform: capitalize; font-weight: 500; font-family: inherit;">Ecofish (pellets)</h2><h2 style="margin: 0; align-self: stretch; position: relative; font-size: 1.375em; letter-spacing: -0.02em; line-height: 1.188em; text-transform: capitalize; font-weight: 500; font-family: inherit;">Nutrifish (powder)</h2></div></div></div>';
+                    imageSrc = 'fish-based.png';
+                    break;
+                case 'customized':
+                    content = '<h1 data-aos="fade-up" style="margin: 0; align-self: stretch; position: relative; font-size: 3em; letter-spacing: -0.04em; line-height: 1em; text-transform: capitalize; font-weight: 500; font-family: \'IBM Plex Serif\';">Customized Fertilizers</h1><div data-aos="fade-up" style="align-self: stretch; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start; padding: 0em 0em 1.813em; gap: 1.875em;"><div data-aos="fade-up" style="align-self: stretch; position: relative; font-size: 1.375em; line-height: 1.273em; font-weight: 500;">Are you looking for a fertilizer specifically tailored to your farm and the crops you plan to grow?</div><div data-aos="fade-up" style="align-self: stretch; position: relative; font-size: 1.125em; line-height: 1.444em;">At Tejdeed, our soil scientists and technical experts create customized fertilizers designed to meet the unique needs of your soil. We analyze the specific characteristics of your soil and formulate batches of organic fertilizers that will enrich it, helping you achieve optimal crop yields for the next one to two years.<br><br>Contact Tejdeed Organic Fertilizers to learn more about our process and discover how your farm can benefit.</div></div>';
+                    imageSrc = 'customize-fertilizer.png';
+                    break;
             }
 
-            function removeActiveStyles() {
+            contentDiv.innerHTML = content;
+            image.src = imageSrc;
+
+            // button stuff
+            removeActiveStyles();
+            const buttons = document.querySelectorAll('.product-button button');
+            buttons.forEach(button => {
+                if (button.getAttribute('onclick').includes(contentType)) {
+                    button.style.backgroundColor = '#009E4C';
+                    button.style.color = '#F7F7F7';
+                    button.style.borderColor = '#009E4C';
+                    button.style.boxShadow = '0 10px 10px rgba(0, 0, 0, 0.2)';
+                    button.style.transition = 'box-shadow 0.2s ease';
+                }
+            });
+        }
+
+        function removeActiveStyles() {
             const buttons = document.querySelectorAll('.product-button button');
             buttons.forEach(button => {
                 button.style.backgroundColor = 'transparent';
@@ -928,8 +1055,8 @@
                 button.style.boxShadow = 'none';
                 button.style.transition = 'none';
             });
-    }
-        </script>
+        }
+    </script>
 
 
 
@@ -959,7 +1086,7 @@
                 </div>
 
             </div>
-           
+
         </div>
         <div data-aos="fade-up" class=" row no-gutters g-0 m-0">
             <div id="our-mission-img-left-width" class="col-md d-flex justify-content-start" style="padding-top: 25vw;">
@@ -1237,7 +1364,8 @@
 
     <div class="animation-container"
         style="position: relative; width: auto; height: auto; background: #00a651; padding: 50px 0;">
-        <h1 style="margin-left: 40px; width: 224px; height: 48px; font-family: 'Askan'; font-style: normal; font-weight: 500; font-size: 42px; line-height: 48px; text-transform: capitalize; color: white;">
+        <h1
+            style="margin-left: 40px; width: 224px; height: 48px; font-family: 'Askan'; font-style: normal; font-weight: 500; font-size: 42px; line-height: 48px; text-transform: capitalize; color: white;">
             Our Process
         </h1>
         <div style="position: relative; width: 100%; max-width: 680px; height: 680px; margin: auto;">
@@ -1249,36 +1377,46 @@
             <div id="dial"
                 style="position: absolute; top: 50%; left: 50%; width: 70%; height: 70%; transform: translate(-50%, -50%) rotate(0deg); border-radius: 50%; transition: transform 0.5s ease-in-out;">
                 <div class="icon-container" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0;">
-                    <div class="img-meta" style="background-color: #25734B; border-radius: 50%; padding: 12px; position: absolute; width: 3.5em; height: 3.5em; top: 0; left: 50%; transform: translate(-50%, -80%);">
+                    <div class="img-meta"
+                        style="background-color: #25734B; border-radius: 50%; padding: 12px; position: absolute; width: 3.5em; height: 3.5em; top: 0; left: 50%; transform: translate(-50%, -80%);">
                         <img src="an-icon-3.svg" alt="Icon 1" style="width: 100%; height: 100%;">
                     </div>
                 </div>
-                <div class="icon-container" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; transform: rotate(72deg);">
-                    <div class="img-meta" style="border-radius: 50%; padding: 12px; position: absolute; width: 3.5em; height: 3.5em; top: 0; left: 50%; transform: translate(-50%, -80%);">
+                <div class="icon-container"
+                    style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; transform: rotate(72deg);">
+                    <div class="img-meta"
+                        style="border-radius: 50%; padding: 12px; position: absolute; width: 3.5em; height: 3.5em; top: 0; left: 50%; transform: translate(-50%, -80%);">
                         <img src="an-icon-2.svg" alt="Icon 2" style="width: 100%; height: 100%;">
                     </div>
                 </div>
-                <div class="icon-container" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; transform: rotate(144deg);">
-                    <div class="img-meta" style="border-radius: 50%; padding: 12px; position: absolute; width: 3.5em; height: 3.5em; top: 0; left: 50%; transform: translate(-50%, -80%);">
+                <div class="icon-container"
+                    style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; transform: rotate(144deg);">
+                    <div class="img-meta"
+                        style="border-radius: 50%; padding: 12px; position: absolute; width: 3.5em; height: 3.5em; top: 0; left: 50%; transform: translate(-50%, -80%);">
                         <img src="an-icon-1.svg" alt="Icon 3" style="width: 100%; height: 100%;">
                     </div>
                 </div>
-                <div class="icon-container" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; transform: rotate(216deg);">
-                    <div class="img-meta" style="border-radius: 50%; padding: 12px; position: absolute; width: 3.5em; height: 3.5em; top: 0; left: 50%; transform: translate(-50%, -80%);">
+                <div class="icon-container"
+                    style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; transform: rotate(216deg);">
+                    <div class="img-meta"
+                        style="border-radius: 50%; padding: 12px; position: absolute; width: 3.5em; height: 3.5em; top: 0; left: 50%; transform: translate(-50%, -80%);">
                         <img src="an-icon-5.svg" alt="Icon 4" style="width: 100%; height: 100%;">
                     </div>
                 </div>
-                <div class="icon-container" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; transform: rotate(288deg);">
-                    <div class="img-meta" style="border-radius: 50%; padding: 12px; position: absolute; width: 3.5em; height: 3.5em; top: 0; left: 50%; transform: translate(-50%, -80%);">
+                <div class="icon-container"
+                    style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; transform: rotate(288deg);">
+                    <div class="img-meta"
+                        style="border-radius: 50%; padding: 12px; position: absolute; width: 3.5em; height: 3.5em; top: 0; left: 50%; transform: translate(-50%, -80%);">
                         <img src="an-icon-4.svg" alt="Icon 5" style="width: 100%; height: 100%;">
                     </div>
                 </div>
-                
+
             </div>
             <div id="description"
                 style="position: absolute; top: 50%; left: 50%; width: 60%; transform: translate(-50%, -50%); text-align: center; z-index: 4;">
                 <h2 style="margin: 0; font-size: 18px; color: white;">Step <span id="step-number">1</span></h2>
-                <p id="step-description" style=" font-size: 22px; color: rgb(255, 255, 255); padding:15px; text-wrap: pretty;">
+                <p id="step-description"
+                    style=" font-size: 22px; color: rgb(255, 255, 255); padding:15px; text-wrap: pretty;">
                     Tejdeed waste bins are distributed to restaurants and food processors.
                 </p>
             </div>
@@ -1335,8 +1473,8 @@
                 Process</a>
         </header>
         <div style=" flex: 1; display: flex; justify-content: center; padding: 0; margin: 0;">
-        <img style="align-self: stretch; width: 100%; height: 100%;  object-fit:contain; margin-top: 1em;"
-            alt="" src="animation-mobile-view.jpg" />
+            <img style="align-self: stretch; width: 100%; height: 100%;  object-fit:contain; margin-top: 1em;" alt=""
+                src="animation-mobile-view.jpg" />
         </div>
         <section
             style=" flex: 1; align-self: stretch; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start; max-width: 100%; text-align: left; color: #fff; font-family: 'Plus Jakarta Sans'; margin-top: 1em;">
@@ -1344,7 +1482,8 @@
                 style="align-self: stretch; border-top: 0.5px solid rgba(247, 247, 247, 0.4); border-bottom: 0.1px solid rgba(247, 247, 247, 0.4); box-sizing: border-box; display: flex; flex-direction: row; align-items: center; justify-content: center; padding: 1.188em 0em; max-width: 100%;">
                 <div
                     style="flex: 1; position: relative; font-size: 1em; line-height: 1.5em; display: inline-block; max-width: 100%;">
-                    <ol style="list-style:none; text-wrap:pretty; margin: 0; font-family: inherit; font-size: inherit; padding: 0;">
+                    <ol
+                        style="list-style:none; text-wrap:pretty; margin: 0; font-family: inherit; font-size: inherit; padding: 0;">
                         <li>1. Tejdeed waste bins are distributed to restaurants and food processors.
                         </li>
                     </ol>
@@ -1354,7 +1493,8 @@
                 style="align-self: stretch; border-bottom: 0.5px solid rgba(247, 247, 247, 0.4); box-sizing: border-box; display: flex; flex-direction: row; align-items: center; justify-content: center; padding: 1.25em 0em 1.188em; max-width: 100%;">
                 <div
                     style="flex: 1; position: relative; font-size: 1em; line-height: 1.5em; display: inline-block; max-width: 100%;">
-                    <ol style="list-style:none; text-wrap:pretty; margin: 0; font-family: inherit; font-size: inherit; padding:0">
+                    <ol
+                        style="list-style:none; text-wrap:pretty; margin: 0; font-family: inherit; font-size: inherit; padding:0">
                         <li>2. Dedicated trucks collect food waste from various locations promptly.
                         </li>
                     </ol>
@@ -1364,7 +1504,8 @@
                 style="align-self: stretch; border-bottom: 0.5px solid rgba(247, 247, 247, 0.4); box-sizing: border-box; display: flex; flex-direction: row; align-items: center; justify-content: center; padding: 1.25em 0em 1.188em; max-width: 100%;">
                 <div
                     style="flex: 1; position: relative; font-size: 1em; line-height: 1.5em; display: inline-block; max-width: 100%;">
-                    <ol style="list-style:none; text-wrap:pretty; margin: 0; font-family: inherit; font-size: inherit; padding:0;">
+                    <ol
+                        style="list-style:none; text-wrap:pretty; margin: 0; font-family: inherit; font-size: inherit; padding:0;">
                         <li>3. Waste is processed and converted into valuable, useful products.
                         </li>
                     </ol>
@@ -1374,7 +1515,8 @@
                 style="align-self: stretch; border-bottom: 0.5px solid rgba(247, 247, 247, 0.4); box-sizing: border-box; display: flex; flex-direction: row; align-items: center; justify-content: center; padding: 1.25em 0em 1.188em; max-width: 100%;">
                 <div
                     style="flex: 1; position: relative; font-size: 1em; line-height: 1.5em; display: inline-block; max-width: 100%;">
-                    <ol style="list-style:none; text-wrap:pretty; margin: 0; font-family: inherit; font-size: inherit; padding:0;">
+                    <ol
+                        style="list-style:none; text-wrap:pretty; margin: 0; font-family: inherit; font-size: inherit; padding:0;">
                         <li>4. Organic fertilizer is produced from the processed waste materials.
                         </li>
                     </ol>
@@ -1384,7 +1526,8 @@
                 style="align-self: stretch; border-bottom: 0.5px solid rgba(247, 247, 247, 0.4); box-sizing: border-box; display: flex; flex-direction: row; align-items: center; justify-content: center; padding: 1.25em 0em 1.188em; max-width: 100%;">
                 <div
                     style="flex: 1; position: relative; font-size: 1em; line-height: 1.5em; display: inline-block; max-width: 100%;">
-                    <ol style="list-style:none; text-wrap:pretty;  margin: 0; font-family: inherit; font-size: inherit; padding:0;">
+                    <ol
+                        style="list-style:none; text-wrap:pretty;  margin: 0; font-family: inherit; font-size: inherit; padding:0;">
                         <li>5. Vegetables are grown using the high-quality organic fertilizer produced.</li>
                     </ol>
                 </div>
@@ -1392,7 +1535,7 @@
         </section>
     </div>
 
-    
+
 
     <div class="container-fluid g-0 m-0"
         style=" position: relative; background-color: #fff;color: #123627; font-family: 'IBM Plex Serif';padding: 6vw 0px; text-align: left;">
@@ -1420,7 +1563,7 @@
                 </div>
 
             </div>
-         
+
         </div>
         <div data-aos="fade-up" class=" row no-gutters g-0 m-0">
             <div id="join-us-img-left-width" class="col-md d-flex justify-content-start" style="margin-top: 31rem;">
@@ -1469,7 +1612,7 @@
                     font-size: 18px;
                     font-family: 'Plus Jakarta Sans';
                     ">
-                            <div style="
+                        <div style="
                     display: flex;
                     flex-direction: column;
                     align-items: flex-start;
@@ -1479,7 +1622,7 @@
                     gap: 30px;
                     max-width: 100%;
                     ">
-                                <h3 style="
+                            <h3 style="
                     margin: 0;
                     align-self: stretch;
                     position: relative;
@@ -1489,23 +1632,23 @@
                     font-family: inherit;
                     color: #009E4C;
                     ">
-                                    Are you a hotel, restaurant, supermarket, or food processing
-                                    facility?
-                                </h3>
-                                <div
-                                    style="align-self: stretch; position: relative; line-height: 26px; font-size: clamp(1rem, 0.9697rem + 0.1294vw, 1.125rem);">
-                                    Join us in our mission to create a greener, cleaner future for
-                                    everyone. By partnering with us, you not only reduce your
-                                    environmental footprint but also contribute to the growth of
-                                    sustainable agriculture.
-                                </div>
-                                <div
-                                    style="align-self: stretch; position: relative; line-height: 26px; font-size: clamp(1rem, 0.9697rem + 0.1294vw, 1.125rem);">
-                                    Your collaboration ensures that organic waste is transformed into
-                                    high-quality organic fertilizers, promoting environmentally friendly
-                                    practices and supporting the local farming community.
-                                </div>
-                                <button onclick="openForm()" style="
+                                Are you a hotel, restaurant, supermarket, or food processing
+                                facility?
+                            </h3>
+                            <div
+                                style="align-self: stretch; position: relative; line-height: 26px; font-size: clamp(1rem, 0.9697rem + 0.1294vw, 1.125rem);">
+                                Join us in our mission to create a greener, cleaner future for
+                                everyone. By partnering with us, you not only reduce your
+                                environmental footprint but also contribute to the growth of
+                                sustainable agriculture.
+                            </div>
+                            <div
+                                style="align-self: stretch; position: relative; line-height: 26px; font-size: clamp(1rem, 0.9697rem + 0.1294vw, 1.125rem);">
+                                Your collaboration ensures that organic waste is transformed into
+                                high-quality organic fertilizers, promoting environmentally friendly
+                                practices and supporting the local farming community.
+                            </div>
+                            <button onclick="openForm()" style="
                     cursor: pointer;
                     border: none;
                     padding: 13.5px 30px;
@@ -1517,7 +1660,7 @@
                     justify-content: center;
                     white-space: nowrap;
                     ">
-                                    <div style="
+                                <div style="
                         position: relative;
                         font-size: 18px;
                         text-transform: capitalize;
@@ -1528,11 +1671,11 @@
                         display: inline-block;
                         min-width: 77px;
                     ">
-                                        Join Now
-                                    </div>
-                                </button>
-                            </div>
+                                    Join Now
+                                </div>
+                            </button>
                         </div>
+                    </div>
 
 
                     <div class="d-md-none" style="
@@ -1566,8 +1709,8 @@
                 flex-shrink: 0;
                 object-fit: cover;
                 " loading="lazy" alt="" src="join-us-1.png" />
-                
-                <div class="px-4 px-md-0" style="
+
+                    <div class="px-4 px-md-0" style="
                 padding-right: clamp(1.563rem, 0.3478rem + 9.7218vw, 12.5rem) !important;
                 width: 100%;
                 position: relative;
@@ -1577,10 +1720,10 @@
                 box-sizing: border-box;
                 font-size: clamp(1rem, 0.9697rem + 0.1294vw, 1.125rem);
                 ">
-                    Let's work together to turn food waste into opportunity and make a
-                    positive impact on our environment. Join Tejdeed Fertilizers today and
-                    let's move towards a more green and sustainable future for everyone.
-                </div>
+                        Let's work together to turn food waste into opportunity and make a
+                        positive impact on our environment. Join Tejdeed Fertilizers today and
+                        let's move towards a more green and sustainable future for everyone.
+                    </div>
 
 
 
@@ -1614,24 +1757,25 @@
                     Contact Us</h2>
                 <div
                     style=" font-size: clamp(0.875em, 2vw, 1.125em); line-height: clamp(1.2em, 2.5vw, 1.444em); font-family: 'Plus Jakarta Sans'; display: inline-block; max-width: 100%;">
-                    For more information, please contact us via email<br class="d-none d-md-block"> or WhatsApp. We are dedicated to providing the<br class="d-none d-md-block"> highest quality
+                    For more information, please contact us via email<br class="d-none d-md-block"> or WhatsApp. We are
+                    dedicated to providing the<br class="d-none d-md-block"> highest quality
                     products locally.</div>
 
-                
+
                 <div class="email-buttons" style="display: flex; gap: 10px;">
                     <button onclick="openEmail()"
-                    style="cursor: pointer; border: 0.5px solid #FFA500; padding: clamp(0.5em, 1.5vw, 0.75em) clamp(2em, 5vw, 3.688em); background-color: #FFA500; border-radius: 11px; white-space: nowrap;">
-                    <div
-                        style="font-size: clamp(1em, 2vw, 1.125em); text-transform: capitalize; font-weight: 500; font-family: 'Plus Jakarta Sans'; color: #f7f7f7; text-align: center; display: inline-block; min-width: 4em;">
-                        Email Us</div>
+                        style="cursor: pointer; border: 0.5px solid #FFA500; padding: clamp(0.5em, 1.5vw, 0.75em) clamp(2em, 5vw, 3.688em); background-color: #FFA500; border-radius: 11px; white-space: nowrap;">
+                        <div
+                            style="font-size: clamp(1em, 2vw, 1.125em); text-transform: capitalize; font-weight: 500; font-family: 'Plus Jakarta Sans'; color: #f7f7f7; text-align: center; display: inline-block; min-width: 4em;">
+                            Email Us</div>
                     </button>
                     <button onclick="openWhatsapp()"
-                    style="cursor: pointer; border: 0.5px solid #009e4c; padding: clamp(0.5em, 1.5vw, 0.75em) clamp(2em, 5vw, 3.688em); background-color: #009e4c; border-radius: 11px; white-space: nowrap;">
-                    <div
-                        style="font-size: clamp(1em, 2vw, 1.125em); text-transform: capitalize; font-weight: 500; font-family: 'Plus Jakarta Sans'; color: #f7f7f7; text-align: center; display: inline-block; min-width: 4em;">
-                        WhatsApp</div>
-                </button>
-                </div>    
+                        style="cursor: pointer; border: 0.5px solid #009e4c; padding: clamp(0.5em, 1.5vw, 0.75em) clamp(2em, 5vw, 3.688em); background-color: #009e4c; border-radius: 11px; white-space: nowrap;">
+                        <div
+                            style="font-size: clamp(1em, 2vw, 1.125em); text-transform: capitalize; font-weight: 500; font-family: 'Plus Jakarta Sans'; color: #f7f7f7; text-align: center; display: inline-block; min-width: 4em;">
+                            WhatsApp</div>
+                    </button>
+                </div>
 
             </div>
 
@@ -1641,51 +1785,56 @@
     <div class="container-fluid"
         style="display: flex; flex-direction: column; align-items: left; padding: 32px 8vw; background-color: #009E4C;">
         <div class="row" style="padding-top: 3vw;padding-bottom: 3vw;">
-        <div class="col-md d-flex justify-content-start mb-3 mb-md-0">
-            <div style="display: flex; justify-content: left;">
-            <img src="tejdeed-logo-union-new-new.png" alt="Logo" style="width: 8.313em; height: 2.116em;">
+            <div class="col-md d-flex justify-content-start mb-3 mb-md-0">
+                <div style="display: flex; justify-content: left;">
+                    <img src="tejdeed-logo-union-new-new.png" alt="Logo" style="width: 8.313em; height: 2.116em;">
+                </div>
+            </div>
+            <div class="col-md d-flex justify-content-start justify-content-md-end mt-3 mt-md-0 mb-3 mb-md-0 ">
+                <div class="d-flex gap-3">
+                    <img src="facebook.svg" alt="Facebook" style="width: 2em; height: 2em;">
+                    <a href="https://www.instagram.com/tejdeedfertilizer/" target="_blank">
+                        <img src="instagram-logo.svg" alt="Instagram" style="width: 2em; height: 2em;">
+                    </a>
+                    <img src="linkedin.svg" alt="LinkedIn" style="width: 2em; height: 2rem;">
+                    <img src="youtube.svg" alt="YouTube" style="width: 2em; height: 2em;">
+                    <img src="twitter.svg" alt="Twitter" style="width: 2em; height: 2em;">
+                </div>
             </div>
         </div>
-        <div class="col-md d-flex justify-content-start justify-content-md-end mt-3 mt-md-0 mb-3 mb-md-0 ">
-            <div class="d-flex gap-3">
-            <img src="facebook.svg" alt="Facebook" style="width: 2em; height: 2em;">
-            <a href="https://www.instagram.com/tejdeedfertilizer/" target="_blank">
-                <img src="instagram-logo.svg" alt="Instagram" style="width: 2em; height: 2em;">
-            </a>
-            <img src="linkedin.svg" alt="LinkedIn" style="width: 2em; height: 2rem;">
-            <img src="youtube.svg" alt="YouTube" style="width: 2em; height: 2em;">
-            <img src="twitter.svg" alt="Twitter" style="width: 2em; height: 2em;">
+        <div class="row mb-5 mb-md-0"
+            style="padding-top: 3vw;padding-bottom: 3vw; border-top: 0.5px solid rgba(255, 255, 255, 0.2); ">
+            <div class="col-md d-flex justify-content-start mt-3 mt-md-0">
+                <div
+                    style="font-size: clamp(1.5em, 2vw, 2.625em); color: #ffffff; font-family: 'IBM Plex Sans', sans-serif; font-weight: 500;">
+                    Get in Touch</div>
             </div>
-        </div>
-        </div>
-        <div class="row mb-5 mb-md-0" style="padding-top: 3vw;padding-bottom: 3vw; border-top: 0.5px solid rgba(255, 255, 255, 0.2); ">
-        <div class="col-md d-flex justify-content-start mt-3 mt-md-0">
             <div
-            style="font-size: clamp(1.5em, 2vw, 2.625em); color: #ffffff; font-family: 'IBM Plex Sans', sans-serif; font-weight: 500;">
-            Get in Touch</div>
-        </div>
-        <div class="col-md d-flex justify-content-start justify-content-md-end flex-wrap flex-md-nowrap mt-3 mt-md-0">
-            <div class="px-1 mt-2 mt-md-0 mb-2 mb-md-0"
-            style="display: flex; align-items: center; gap: 12px; color: #ffffff; font-size: clamp(0.875em, 1.2vw, 1em); padding-bottom: 5px;">
-            <img src="email-icon.svg" alt="Email" style="width: 1.5em; height: 1.5em;" />
-            <span style="font-family: 'Plus Jakarta Sans'; font-weight: 500;">info@tejdeed.com</span>
+                class="col-md d-flex justify-content-start justify-content-md-end flex-wrap flex-md-nowrap mt-3 mt-md-0">
+                <div class="px-1 mt-2 mt-md-0 mb-2 mb-md-0"
+                    style="display: flex; align-items: center; gap: 12px; color: #ffffff; font-size: clamp(0.875em, 1.2vw, 1em); padding-bottom: 5px;">
+                    <img src="email-icon.svg" alt="Email" style="width: 1.5em; height: 1.5em;" />
+                    <span style="font-family: 'Plus Jakarta Sans'; font-weight: 500;">info@tejdeed.com</span>
+                </div>
+                <div class="px-1 mt-2 mt-md-0 mb-2 mb-md-0"
+                    style="display: flex; align-items: center; gap: 12px; font-size: clamp(0.875em, 1.2vw, 1em); padding-bottom: 5px;">
+                    <img src="phone-icon.svg" alt="Phone" style="width: 1.5em; height: 1.5em;" />
+                    <a href="tel:+971561012803"
+                        style="font-family: 'Plus Jakarta Sans'; font-weight: 500; color: #ffffff; text-decoration: none;">+971
+                        56 101 2803</a>
+                </div>
             </div>
-            <div class="px-1 mt-2 mt-md-0 mb-2 mb-md-0"
-            style="display: flex; align-items: center; gap: 12px; font-size: clamp(0.875em, 1.2vw, 1em); padding-bottom: 5px;">
-            <img src="phone-icon.svg" alt="Phone" style="width: 1.5em; height: 1.5em;" />
-            <a href="tel:+971561012803" style="font-family: 'Plus Jakarta Sans'; font-weight: 500; color: #ffffff; text-decoration: none;">+971 56 101 2803</a>
-            </div>
-        </div>
         </div>
         <div class="row"
-                style="padding-top: 32px;padding-bottom: 32px; border-top: 0.5px solid rgba(255, 255, 255, 0.2); ">
-                <div class="col-md d-flex justify-content-start">
-                    <div class="footer-copyright"
-                        style="width: 100%; display: flex; align-items: left; text-align: left; color: #ffffff; font-size: clamp(0.75em, 1vw, 0.875em); gap: 4.76vw;">
-                        <p style="margin: 10px 0;">© Tajdeed 2024</p>
-                        <p style="margin-top: 10px;">Tejdeed Technologies: Renewing and reviving discarded materials to reduce costs and clean the environment. Join us in our mission.</p>
-                    </div>
+            style="padding-top: 32px;padding-bottom: 32px; border-top: 0.5px solid rgba(255, 255, 255, 0.2); ">
+            <div class="col-md d-flex justify-content-start">
+                <div class="footer-copyright"
+                    style="width: 100%; display: flex; align-items: left; text-align: left; color: #ffffff; font-size: clamp(0.75em, 1vw, 0.875em); gap: 4.76vw;">
+                    <p style="margin: 10px 0;">© Tajdeed 2024</p>
+                    <p style="margin-top: 10px;">Tejdeed Technologies: Renewing and reviving discarded materials to
+                        reduce costs and clean the environment. Join us in our mission.</p>
                 </div>
+            </div>
         </div>
     </div>
 
