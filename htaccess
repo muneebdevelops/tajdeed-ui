@@ -6,3 +6,10 @@ RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}\.html -f
 RewriteRule ^(.*)$ $1.html [L]
+
+Redirect 301 /fertilizer.html http://www.tejdeed.com/fertilizer
+Redirect 301 /index.html http://www.tejdeed.com/home
+Redirect 301 /plastic.html http://www.tejdeed.com/plastic
+Redirect 301 /gas.html http://www.tejdeed.com/gas
+Redirect 301 /biomass.html http://www.tejdeed.com/biomass
+
