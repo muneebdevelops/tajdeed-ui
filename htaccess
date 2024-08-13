@@ -3,11 +3,11 @@
 # This domain inherits the “PHP” package.
 # php -- END cPanel-generated handler, do not edit
 RewriteEngine On
-RewriteRule ^fertilizer\.html$ http://www.tejdeed.com/fertilizer [L,R=301]
-RewriteRule ^index\.html$ http://www.tejdeed.com/home [L,R=301]
-RewriteRule ^plastic\.html$ http://www.tejdeed.com/plastic [L,R=301]
-RewriteRule ^gas\.html$ http://www.tejdeed.com/gas [L,R=301]
-RewriteRule ^biomass\.html$ http://www.tejdeed.com/biomass [L,R=301]
+RewriteRule ^fertilizer$ fertilizer.html [L]
+RewriteRule ^index$ index.html [L]
+RewriteRule ^plastic$ plastic.html [L]
+RewriteRule ^gas$ gas.html [L]
+RewriteRule ^biomass$ biomass.html [L]
 
 
 # Enable caching for images, fonts, and PDFs
